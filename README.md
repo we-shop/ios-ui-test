@@ -23,3 +23,5 @@ For iOS devices you need to have Mac and installed XCode app.
 
 5) Launch line:
 pytest test_uat.py
+
+###
