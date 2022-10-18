@@ -1,0 +1,11 @@
+{ "capabilities": {
+  "appium:deviceName": "21f050e03a027ece",
+  "appium:platformName": "Android",
+  "appium:platformVersion": "10",
+  "appium:appPackage": "com.socialsuperstore",
+  "appium:appActivity": "com.socialsuperstore.ui.activity.LauncherActivity",
+  "autoGrantPermissions": true,
+  "appium:unicodeKeyboard": true,
+  "appium:noReset:": false,
+  "appium:resetKeyboard": true }
+}
