@@ -113,7 +113,7 @@ desired_cap_ios_COMMENTED = {
 # }
 
 # fetching capabilities
-json_f = open(os.getcwd() + '/ios/ios_caps.json') # travic CI
+json_f = open(os.getcwd() + '/ios_caps.json') # travic CI
 #json_f = open('ios_caps.json') # local
 desired_cap = json.load(json_f)
 json_f.close()
