@@ -24,7 +24,7 @@ def test_search_request_and_clear_field(login_model, debug_model, search_model, 
 	search_model.search_and_clear_field(selenium)
 
 # iOS done
-def atest_add_and_remove_product_from_wishlist(login_model, debug_model, search_model, product_page_model, selenium):
+def test_add_and_remove_product_from_wishlist(login_model, debug_model, search_model, product_page_model, selenium):
 	debug_model.switch_to_uat(selenium)
 	login_model.login_only(selenium)
 	search_model.search_product_and_open_detail_page(selenium)
