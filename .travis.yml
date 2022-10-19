@@ -15,3 +15,5 @@ python:
   - "3.9"
 script: 
   - "pytest test_uat.py"
+after_script:
+  - "sleep 1"
