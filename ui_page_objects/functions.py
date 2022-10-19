@@ -220,22 +220,23 @@ def handle_notification_alert(driver):
 
 # FILE MANIPUPATION FUNCTIONS
 def create_temp_file_and_write_data(data):
-	file = open(os.getcwd() + "/temp_data.txt", "w+") #"/ios/temp_data.txt", "w+")
+	#file = open(os.getcwd() + "/temp_data.txt", "w+") #"/ios/temp_data.txt", "w+")
+	file = open("temp_data.txt", "w+")
 	file.write(str(data)+"\n")
 	file.close()
 
 def update_temp_file(data):
-	with open(os.getcwd() + "/temp_data.txt", "a") as f:
+	with open("temp_data.txt", "a") as f:
 		f.write(f"{str(data)}\n")
 
 def read_data_from_temp_file():
-	file = open(os.getcwd() + "/temp_data.txt", "r")
+	file = open("temp_data.txt", "r")
 	data = file.read().splitlines()
 	file.close()
 	return data
 
 def clear_data_from_temp_file():
-	file = open(os.getcwd() + "/temp_data.txt", "w+")
+	file = open("temp_data.txt", "w+")
 	file.close()
 
 
