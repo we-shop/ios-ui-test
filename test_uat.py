@@ -20,6 +20,7 @@ def atest_login_with_incorrect_credentials(login_model, debug_model, selenium):
 #iOS done
 def test_search_request_and_clear_field(login_model, debug_model, search_model, selenium):
 	debug_model.switch_to_uat(selenium)
+	print("something!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	login_model.login_only(selenium)
 	print("something!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	search_model.search_and_clear_field(selenium)
@@ -27,6 +28,7 @@ def test_search_request_and_clear_field(login_model, debug_model, search_model, 
 # iOS done
 def test_add_and_remove_product_from_wishlist(login_model, debug_model, search_model, product_page_model, selenium):
 	debug_model.switch_to_uat(selenium)
+	print("something2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	login_model.login_only(selenium)
 	print("something2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 	search_model.search_product_and_open_detail_page(selenium)
