@@ -223,21 +223,15 @@ def create_temp_file_and_write_data(data):
 	#file = open(os.getcwd() + "/temp_data.txt", "w+") #"/ios/temp_data.txt", "w+")
 	file = open(os.getcwd() + "/temp_data.txt", "w+")
 	file.write(str(data)+"\n")
-	print("###Created")
 	file.close()
 
 def update_temp_file(data):
 	with open(os.getcwd() + "/temp_data.txt", "a") as f:
 		f.write(f"{str(data)}\n")
 
-	print("###updated")
-
 def read_data_from_temp_file():
 	file = open(os.getcwd() + "/temp_data.txt", "r")
 	data = file.read().splitlines()
-	print("###")
-	print(data)
-	print("###")
 	file.close()
 	return data
 

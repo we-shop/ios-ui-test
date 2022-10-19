@@ -63,7 +63,7 @@ def generate_json(bucket_tags):
 	}
 
 
-	with open('ios_caps.json', 'w', encoding='utf-8') as f:
+	with open(os.getcwd() + '/ios_caps.json', 'w', encoding='utf-8') as f:
 		json.dump(desired_cap, f, ensure_ascii=False, indent=4)
 
 	print("Successfully updated ios_caps.json caps!")
