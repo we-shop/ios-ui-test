@@ -13,9 +13,9 @@ pp = pprint.PrettyPrinter(indent=4)
 # get apps from s3 bucket
 ########################################
 # Local credentials
-ACCESS_KEY = "xtest"
-SECRET_KEY = "xtest"
-SESSION_TOKEN = "xtest"
+# ACCESS_KEY = "xtest"
+# SECRET_KEY = "xtest"
+# SESSION_TOKEN = "xtest"
 
 # AWS credentials
 # ACCESS_KEY = os.getenv("ACCESS_KEY_ID")
@@ -28,7 +28,13 @@ SESSION_TOKEN = "xtest"
 # BS_ACCESS_KEY = os.getenv("BS_ACCESS_KEY")
 
 
-# AWS boto session init + credentials
+# CREDS
+credentials = boto3.Session().get_credentials()
+
+ACCESS_KEY = credentials.access_key
+SECRET_KEY = credentials.secret_key
+SESSION_TOKEN = credentials.token
+
 session = boto3.Session( 
 		 aws_access_key_id=ACCESS_KEY, 
 		 aws_secret_access_key=SECRET_KEY,
@@ -141,7 +147,7 @@ def upload_app_to_BS():
 	files = {'file': (LATEST_FILE_IOS, open(LATEST_FILE_IOS, 'rb'))}
 	response = requests.post('https://api-cloud.browserstack.com/app-automate/upload', 
 				files=files, 
-				auth=('xtest', 'xtest'))
+				auth=('mishaa_uqQmsb', 'ysB7toT5j5V2zNz4ywRE'))
 
 
 	return json.loads(response.text)["app_url"]
