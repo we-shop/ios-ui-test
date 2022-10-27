@@ -13,9 +13,9 @@ pp = pprint.PrettyPrinter(indent=4)
 # get apps from s3 bucket
 ########################################
 # Local credentials
-ACCESS_KEY = ""
-SECRET_KEY = ""
-SESSION_TOKEN = ""
+ACCESS_KEY = "xtest"
+SECRET_KEY = "xtest"
+SESSION_TOKEN = "xtest"
 
 # AWS credentials
 # ACCESS_KEY = os.getenv("ACCESS_KEY_ID")
