@@ -31,6 +31,11 @@ pp = pprint.PrettyPrinter(indent=4)
 BS_LOGIN = os.getenv("BS_LOGIN")
 BS_SECRET = os.getenv("BS_SECRET")
 
+xxx = []
+
+xxx.append(BS_LOGIN)
+print(xxx)
+
 # CREDS
 credentials = boto3.Session().get_credentials()
 
