@@ -127,7 +127,7 @@ json_f.close()
 def selenium(request):
     #webdriver
     selenium = webdriver.Remote(
-      command_executor=f'https://{BS_LOGIN}:{BS_SECRET}@hub-cloud.browserstack.com/wd/hub',
+      command_executor=f'https://mishatt_TZ84Lg:fcd9xqWeoVZUgpeZzz5t@hub-cloud.browserstack.com/wd/hub',
       desired_capabilities=desired_cap)
     yield selenium
     selenium.quit() # marking test is finished for Browserstack
