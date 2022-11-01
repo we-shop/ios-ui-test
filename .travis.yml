@@ -14,9 +14,8 @@ notifications:
 python: 
   - "3.9"
 script:
-  - "python aws_ios.py" 
-#  - "pytest PARTtest_uat.py"
-#before_script:
-#  - "python aws_ios.py"
+ - "pytest PARTtest_uat.py"
+before_script:
+ - "python aws_ios.py"
 after_script:
   - "sleep 1"

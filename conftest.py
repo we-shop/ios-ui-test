@@ -125,7 +125,7 @@ json_f.close()
 # Customizing appium driver for Browserstack
 @pytest.fixture(autouse=True)
 def selenium(request):
-    webdriver
+    #webdriver
     selenium = webdriver.Remote(
       command_executor=f'https://{BS_LOGIN}:{BS_SECRET}@hub-cloud.browserstack.com/wd/hub',
       desired_capabilities=desired_cap)

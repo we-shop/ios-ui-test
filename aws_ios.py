@@ -199,13 +199,13 @@ def check_ios_app_tags(path_to_file, tag_set):
 
 generate_json(check_ios_app_tags(LATEST_APP_PATH_AND_ID[0], get_tag_of_certain_file(LATEST_APP_PATH_AND_ID[1])))
 
+# debug block, can be removed
+# json_f = open(os.getcwd() + "/ios_caps.json")
+# #json_f = open('ios_caps.json') # local
+# desired_cap = json.load(json_f)
+# json_f.close()
 
-json_f = open(os.getcwd() + "/ios_caps.json")
-#json_f = open('ios_caps.json') # local
-desired_cap = json.load(json_f)
-json_f.close()
-
-print(desired_cap)
+# print(desired_cap)
 
 #################################
 # DEBUG Just download latest app
