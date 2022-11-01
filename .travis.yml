@@ -14,7 +14,7 @@ notifications:
 python: 
   - "3.9"
 script:
- - "python tt.py" #"pytest PARTtest_uat.py"
+ - "pytest PARTtest_uat.py"
 before_script:
  - "python aws_ios.py"
 after_script:
