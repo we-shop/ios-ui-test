@@ -31,10 +31,13 @@ pp = pprint.PrettyPrinter(indent=4)
 BS_LOGIN = os.getenv("BS_LOGIN")
 BS_SECRET = os.getenv("BS_SECRET")
 
-xxx = []
 
-xxx.append(BS_LOGIN)
-print(xxx)
+json_f = open(os.getcwd() + "/ios_caps.json")
+#json_f = open('ios_caps.json') # local
+desired_cap = json.load(json_f)
+json_f.close()
+
+print(desired_cap)
 
 # CREDS
 credentials = boto3.Session().get_credentials()
