@@ -4,5 +4,5 @@
     "project": "First Python project",
     "build": "browserstack-iOS",
     "name": "iOS_tests",
-    "app_url": "bs://4633be6c7209546707a29ea8f05b69c13983a24d"
+    "app_url": "test"
 }
