@@ -126,6 +126,7 @@ json_f.close()
 @pytest.fixture(autouse=True)
 def selenium(request):
     #webdriver
+    print(desired_cap)
     selenium = webdriver.Remote(
       command_executor=f'https://mishatt_TZ84Lg:fcd9xqWeoVZUgpeZzz5t@hub-cloud.browserstack.com/wd/hub',
       desired_capabilities=desired_cap)
