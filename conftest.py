@@ -14,6 +14,10 @@ import json
 
 from dotenv import load_dotenv
 
+# needed for pytest-html report configuration
+from py.xml import html
+
+
 load_dotenv()
 
 # Read from file function
@@ -35,7 +39,6 @@ BS_LOGIN = os.getenv("BS_LOGIN")
 BS_SECRET = os.getenv("BS_SECRET")
 
 prefs = {"download.default_directory": os.getcwd() + "/"}
-
 
 #caps for Browserstack
 # "device" : "Samsung Galaxy S21",
@@ -122,6 +125,10 @@ json_f = open(os.getcwd() + "/ios_caps.json")
 desired_cap = json.load(json_f)
 json_f.close()
 
+
+# BS sessuib data list
+SESSION_URLS = []
+
 # Customizing appium driver for Browserstack
 @pytest.fixture(autouse=True)
 def selenium(request):
@@ -129,7 +136,29 @@ def selenium(request):
     selenium = webdriver.Remote(
       command_executor=f'https://{BS_LOGIN}:{BS_SECRET}@hub-cloud.browserstack.com/wd/hub',
       desired_capabilities=desired_cap)
+
+
+    get_session_data = selenium.execute_script('browserstack_executor: {"action": "getSessionDetails"}')
+    converted_session_data = json.loads(get_session_data)
+
+    
+    BS_SESSION_URL = f"https://app-automate.browserstack.com/dashboard/v2/builds/{converted_session_data['build_hashed_id']}/sessions/{converted_session_data['hashed_id']}"
+    
+    SESSION_URLS.append(BS_SESSION_URL)
+
     yield selenium
+
+    if request.node.rep_call.outcome == "passed":
+        test_status = 'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"<tr>", "reason": "<trs>"}}'.replace("<tr>", "passed").replace("<trs>", f"All good! Test {request.node.rep_call.head_line} passed!")
+    elif request.node.rep_call.outcome == "failed":
+        test_status = 'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"<tr>", "reason": "<trs>"}}'.replace("<tr>", "failed").replace("<trs>", f"Test {request.node.rep_call.head_line} failed! Need to check!")
+    else:
+        print(f"Something wrong! Check test status {ERROR}") # may be skipped issue
+    
+
+    # mark test as passed/failed
+    selenium.execute_script(test_status)
+
     selenium.quit() # marking test is finished for Browserstack
     #selenium.close_app() # making app in background, because of pre-sets app restoring in fresh state o next launch
     clear_data_from_temp_file() # clearing data in temp_data.txt
@@ -145,6 +174,28 @@ def selenium(request):
 #     selenium.close_app() # making app in background, because of pre-sets app restoring in fresh state o next launch
 #     clear_data_from_temp_file() # clearing data in temp_data.txt
 
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    # extend pytest html plugin
+    pytest_html = item.config.pluginmanager.getplugin('html')
+
+
+    # execute all other hooks to obtain the report object
+    outcome = yield
+    report = outcome.get_result()
+
+    # set a report attribute for each phase of a call, which can
+    # be "setup", "call", "teardown"
+    setattr(item, "rep_" + report.when, report)    
+
+    extra = getattr(report, 'extra', [])
+
+    _html = f'<div><a href="{SESSION_URLS[-1]}">{SESSION_URLS[-1]}</a></div>'
+
+    if report.when == 'teardown':
+        extra.append(pytest_html.extras.html(_html))
+        
 
 #FIXTURES PAGE OBJECT
 @pytest.fixture()
