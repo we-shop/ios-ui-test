@@ -16,7 +16,7 @@ python:
 script: 
   - "pytest PARTtest_uat.py"
 before_script:
-  - "aws_ios.py"
+  - "python aws_ios.py"
 after_script:
   - "sleep 1"
   - "python email_scr.py"
