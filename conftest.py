@@ -128,6 +128,7 @@ json_f.close()
 
 # BS sessuib data list
 SESSION_URLS = []
+SESSION_URLS_PUBLIC = []
 
 # Customizing appium driver for Browserstack
 @pytest.fixture(autouse=True)
@@ -143,8 +144,9 @@ def selenium(request):
 
     
     BS_SESSION_URL = f"https://app-automate.browserstack.com/dashboard/v2/builds/{converted_session_data['build_hashed_id']}/sessions/{converted_session_data['hashed_id']}"
-    
     SESSION_URLS.append(BS_SESSION_URL)
+    BS_PUBLIC_SESSION_URL = converted_session_data["public_url"]
+    SESSION_URLS_PUBLIC.append(BS_PUBLIC_SESSION_URL)
 
     yield selenium
 
@@ -191,8 +193,10 @@ def pytest_runtest_makereport(item, call):
 
     extra = getattr(report, 'extra', [])
 
-    _html = f'<div><a href="{SESSION_URLS[-1]}">{SESSION_URLS[-1]}</a></div>'
-
+    #_html = f'<div><a href="{SESSION_URLS[-1]}">{SESSION_URLS[-1]}</a></div>'
+    _html = f'<div><p>Public URL: <a href="{SESSION_URLS_PUBLIC[-1]}">{SESSION_URLS_PUBLIC[-1]}</a></p><div><p>BS private URL: <a href="{SESSION_URLS[-1]}">{SESSION_URLS[-1]}</a></p>'
+        
+        
     if report.when == 'teardown':
         extra.append(pytest_html.extras.html(_html))
         
