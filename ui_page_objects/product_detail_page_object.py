@@ -65,7 +65,7 @@ class ProductDetailPage:
 	# iOS done
 	def add_product_to_wishlist_and_check_in_profile(self, driver):
 		# add product to wishlist
-		GET_PRODUCT_NAME = el_acc_id(driver, PRODUCT_NAME_PRICE_BLOCK).text
+		GET_PRODUCT_NAME = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 		WISHLIST_NAME = []
 		click_on_star_btn = acc_id_click(driver, WISHLIST_STAR_BUTTON)
 		get_add_btn_text = el_xpath(driver, ADD_BUTTON_IN_WISHLIST).text
@@ -117,7 +117,7 @@ class ProductDetailPage:
 		except:
 			pass
 
-		get_product_name_from_product_detail_page = el_acc_id(driver, PRODUCT_NAME_PRICE_BLOCK).text
+		get_product_name_from_product_detail_page = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 
 		# checking correctness of added product to checklist
 		assert get_product_name_from_product_detail_page == GET_PRODUCT_NAME
@@ -130,7 +130,7 @@ class ProductDetailPage:
 
 		read_product_title = el_acc_id(driver, FEED_PRODUCT_TITLE).text
 		product_title_click = acc_id_click(driver, FEED_PRODUCT_TITLE)
-		read_product_name_on_detail_page = el_acc_id(driver, PRODUCT_NAME_PRICE_BLOCK).text
+		read_product_name_on_detail_page = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 
 		assert read_product_title == read_product_name_on_detail_page
 
@@ -152,7 +152,7 @@ class ProductDetailPage:
 		click_on_first_product_in_feed = acc_id_click(driver, FEED_PRODUCT_TITLE)
 
 		# product detail page steps > add to post
-		read_product_name = el_acc_id(driver, PRODUCT_NAME_PRICE_BLOCK).text
+		read_product_name = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 		open_product_sub_menu = acc_id_click(driver, PRODUCT_PAGE_SUB_MENU)
 		click_on_add_to_post_sub_menu_item = xpath_click(driver, FOOTER_ITEM_REC_PRODUCT)
 
@@ -175,7 +175,7 @@ class ProductDetailPage:
 		click_on_first_product_in_feed = acc_id_click(driver, FEED_PRODUCT_TITLE)
 
 		# product detail page steps > add to question
-		read_product_name = el_acc_id(driver, PRODUCT_NAME_PRICE_BLOCK).text
+		read_product_name = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 		open_product_sub_menu = acc_id_click(driver, PRODUCT_PAGE_SUB_MENU)
 		click_on_add_to_question_sub_menu_item = xpath_click(driver, FOOTER_ITEM_ASK_QUESTION)
 
