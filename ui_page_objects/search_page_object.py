@@ -41,7 +41,7 @@ class SearchPage:
 	#iOS done
 	def search_product_and_open_detail_page(self, driver):
 		# search request
-		switch_to_search_menu = acc_id_click(driver, FOOTER_ITEM_SEARCH)
+		#switch_to_search_menu = acc_id_click(driver, FOOTER_ITEM_SEARCH) # noot needed, because search is gone after click
 
 		is_no_search = False
 		try:
