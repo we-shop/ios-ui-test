@@ -69,10 +69,9 @@ class SearchPage:
 
 		first_item_in_search_result_click = xpath_click(driver, FIRST_ITEM_NAME_SEARCH)
 
-		print(3)
 		print(el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text)
-		# assert product name on product detail page
-		#assert "samsung" in el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text.lower()
+		#assert product name on product detail page
+		assert "samsung" in el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text.lower()
 		
 
 	def search_specific_product_and_open_detail_page(self, driver):

@@ -2,7 +2,7 @@ from appium.webdriver.common.mobileby import By
 from appium.webdriver.common.mobileby import MobileBy
 
 # LIST OF iOS LOCATORS FOR SEARCH PAGE MODEL
-PRODUCT_NAME_PRICE_BLOCK = "//XCUIElementTypeStaticText[contains(@name, 'Shareback')]/../.." #"titleTextView" #//XCUIElementTypeTextView[@name="titleTextView"]
+PRODUCT_NAME_PRICE_BLOCK = '(//XCUIElementTypeStaticText[contains(@name, "Shareback")]/../XCUIElementTypeTextView)[2]' #"titleTextView" #//XCUIElementTypeTextView[@name="titleTextView"]
 WISHLIST_STAR_BUTTON = "//*[contains(@label, 'star')]" #"saveToWishListButton"
 ADD_BUTTON_IN_WISHLIST = '(//XCUIElementTypeButton[@name="wishlistItemActionButton"])[1]'
 NAME_OF_WISHLIST_INPUT_FIELD = "wishlistNameTextField"
