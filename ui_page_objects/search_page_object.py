@@ -42,7 +42,21 @@ class SearchPage:
 	def search_product_and_open_detail_page(self, driver):
 		# search request
 		switch_to_search_menu = acc_id_click(driver, FOOTER_ITEM_SEARCH)
-		click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
+
+		is_no_search = False
+		try:
+			click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
+
+		except:
+			is_no_search = True
+
+		if is_no_search:
+			scroll_down_ios(driver)
+			click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
+		else:
+			pass
+
+
 		make_request_in_search_field = acc_id_keys(driver, COLLAPSED_SEARCH_INPUT_FIELD, "Samsung")
 		select_suggested_search_item = xpath_click(driver, SELECT_SUGGESTED_ITEM_SEARCH)
 
