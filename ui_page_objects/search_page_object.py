@@ -43,18 +43,18 @@ class SearchPage:
 		# search request
 		#switch_to_search_menu = acc_id_click(driver, FOOTER_ITEM_SEARCH) # noot needed, because search is gone after click
 
-		is_no_search = False
-		try:
-			click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
+		#is_no_search = False
+		#try:
+		click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
 
-		except:
-			is_no_search = True
+		#except:
+		#	is_no_search = True
 
-		if is_no_search:
-			scroll_down_ios(driver)
-			click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
-		else:
-			pass
+		#if is_no_search:
+		#	scroll_down_ios(driver)
+		#	click_on_search_btn_in_head_bar = acc_id_click(driver, SEARCH_BTN_HEAD_BAR)
+		#else:
+		#	pass
 
 
 		make_request_in_search_field = acc_id_keys(driver, COLLAPSED_SEARCH_INPUT_FIELD, "Samsung")
@@ -66,8 +66,10 @@ class SearchPage:
 		assert "samsung" in first_item_in_search_result_text.lower()
 
 		# go to product detail page
+
 		first_item_in_search_result_click = xpath_click(driver, FIRST_ITEM_NAME_SEARCH)
 
+		print(3)
 		print(el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text)
 		# assert product name on product detail page
 		#assert "samsung" in el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text.lower()

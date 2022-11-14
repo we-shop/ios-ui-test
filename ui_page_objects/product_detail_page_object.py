@@ -29,7 +29,7 @@ class ProductDetailPage:
 		# 	attrs.append([attr['name'], attr['value']])
 		# print(attrs)
 
-		click_on_star_btn = acc_id_click(driver, WISHLIST_STAR_BUTTON)
+		click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 		get_add_btn_text = el_xpath(driver, ADD_BUTTON_IN_WISHLIST).text
 		
 		is_removed = None
@@ -47,18 +47,18 @@ class ProductDetailPage:
 
 		if is_removed:
 			# add product to wishlist
-			click_on_star_btn = id_click(driver, WISHLIST_STAR_BUTTON)
+			click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 			click_on_add_to_wishlist_btn = xpath_click(driver, ADD_BUTTON_IN_WISHLIST)
 			
 			# remove product from wishlist
-			click_on_star_btn = id_click(driver, WISHLIST_STAR_BUTTON)
+			click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 			get_remove_btn_text = el_xpath(driver, ADD_BUTTON_IN_WISHLIST).text
 			assert get_remove_btn_text == "Remove"	
 
 			click_on_remove_from_wishlist_btn = xpath_click(driver, ADD_BUTTON_IN_WISHLIST)
 		else:
 			# remove product from wishlist
-			click_on_star_btn = id_click(driver, WISHLIST_STAR_BUTTON)
+			click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 			get_remove_btn_text = el_xpath(driver, ADD_BUTTON_IN_WISHLIST).text
 			click_on_remove_from_wishlist_btn = xpath_click(driver, ADD_BUTTON_IN_WISHLIST)
 
@@ -67,7 +67,7 @@ class ProductDetailPage:
 		# add product to wishlist
 		GET_PRODUCT_NAME = el_xpath(driver, PRODUCT_NAME_PRICE_BLOCK).text
 		WISHLIST_NAME = []
-		click_on_star_btn = acc_id_click(driver, WISHLIST_STAR_BUTTON)
+		click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 		get_add_btn_text = el_xpath(driver, ADD_BUTTON_IN_WISHLIST).text
 
 		is_removed = None
@@ -89,7 +89,7 @@ class ProductDetailPage:
 
 		if is_removed:
 			# add product to wishlist
-			click_on_star_btn = acc_id_click(driver, WISHLIST_STAR_BUTTON)
+			click_on_star_btn = xpath_click(driver, WISHLIST_STAR_BUTTON)
 			click_on_add_to_wishlist_btn = xpath_click(driver, ADD_BUTTON_IN_WISHLIST)
 			#toast_msg_wishlist_added = get_toast_msg(driver)
 			#assert toast_msg_wishlist_added == "Product added to your wishlist!"
