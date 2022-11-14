@@ -98,6 +98,8 @@ class ProductDetailPage:
 		click_on_back_btn = acc_id_click(driver, CLOSE_BTN)
 		time.sleep(1)
 		driver.back() # additional step
+		time.sleep(1)
+		driver.back() # additional step
 		profile_footer_icon_click = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		wishlist_profile_click = xpath_click(driver, PROFILE_WISHLIST_TAB)
 
