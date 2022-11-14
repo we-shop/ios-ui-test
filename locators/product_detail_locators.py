@@ -20,6 +20,7 @@ PRODUCT_NAME_PRODUCTS_TAB_FILLED_IMAGE = '//XCUIElementTypeOther/XCUIElementType
 PRODUCT_NAME_POST_CREATION = "//XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther//XCUIElementTypeStaticText[@name]"
 
 
+
 # //XCUIElementTypeButton[@name="Add to post"]
 # //XCUIElementTypeButton[@name="Ask a question"]
 
