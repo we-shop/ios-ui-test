@@ -10,7 +10,7 @@ SAVE_BTN_NEW_WISHLIST = "saveButton"
 NAME_OF_WISHLIST_PRODUCT_PAGE = '(//XCUIElementTypeStaticText[@name="wishlistItemTitleLabel"])[1]'
 CLOSE_BTN = "Close"
 
-WISHLIST_ITEMS_TITLE_LIST = '//XCUIElementTypeCollectionView[@name="wishlistCollectionsView"]/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText'
+WISHLIST_ITEMS_TITLE_LIST = '//XCUIElementTypeStaticText[contains(@name, "titleLabel")]' #'//XCUIElementTypeCollectionView[@name="wishlistCollectionsView"]/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText'
 LIST_OF_ITEMS_INSIDE_WISHLIST = '//XCUIElementTypeCollectionView[@name="collectionDetailsCollectionView"]/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText[1]'
 FEED_PRODUCT_TITLE = 'nameLabel'
 BUY_NOW_BTN = 'defaultOfferBuyButton'
