@@ -140,7 +140,6 @@ def selenium(request):
 			command_executor=f'https://{BS_LOGIN}:{BS_SECRET}@hub-cloud.browserstack.com/wd/hub',
 			desired_capabilities=desired_cap)
 
-		selenium.implicitly_wait(10)
 
 		get_session_data = selenium.execute_script('browserstack_executor: {"action": "getSessionDetails"}')
 		converted_session_data = json.loads(get_session_data)
