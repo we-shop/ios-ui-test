@@ -63,8 +63,8 @@ def generate_json(bucket_tags):
 
 
 	desired_cap = {
-	  "device" : "iPhone 14",
-	  "os_version" : "16",
+	  "device" : "iPhone 11",
+	  "os_version" : "15",
 	  "project" : "First Python project", 
 	  "build" : "browserstack-iOS",
 	  "name" : "iOS_tests",
