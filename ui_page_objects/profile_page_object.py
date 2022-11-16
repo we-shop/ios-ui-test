@@ -111,7 +111,7 @@ class ProfilePage:
 
 		# go to settings > edit
 		click_on_edit_profile_btn = acc_id_click(driver, PROFILE_SETTINGS_BTN)
-		#click_on_settings_edit_btn = id_click(driver, PROFILE_SETTINGS_EDIT_BTN)
+		click_on_settings_edit_btn = id_click(driver, PROFILE_SETTINGS_EDIT_BTN)
 
 		# COMMENTED, BECAUSE CAMERA UPLOAD WAS CHANGED
 		# temprorary flow is not fully completed [WILL BE FINISHED IN FUTURE > UPLOAD STAGE IS NOT COMPLETED]
