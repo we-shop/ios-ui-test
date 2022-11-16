@@ -40,17 +40,17 @@ import time
 # 	product_page_model.add_product_to_wishlist_and_check_in_profile(selenium)
 
 # # iOS done
-def test_open_product_website(debug_model, login_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	product_page_model.open_product_website(selenium)
+#def test_open_product_website(debug_model, login_model, product_page_model, selenium):
+#	debug_model.switch_to_uat(selenium)
+#	login_model.login_only(selenium)
+#	product_page_model.open_product_website(selenium)
 
 
-# # iOS done
-# def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	product_page_model.add_product_to_post(selenium)
+# iOS done
+def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
+ 	debug_model.switch_to_uat(selenium)
+ 	login_model.login_only(selenium)
+ 	product_page_model.add_product_to_post(selenium)
 
 
 # # iOS done
