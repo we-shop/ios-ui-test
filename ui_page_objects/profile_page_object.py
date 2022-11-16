@@ -210,6 +210,8 @@ class ProfilePage:
 
 		# refresh manupulation to see new profile data
 		click_on_back_btn = driver.back() #acc_id_click(driver, BACK_BTN)
+		time.sleep(0.4)
+		click_on_back_btn_second_time = driver.back()
 		#click_on_footer_home_btn = acc_id_click(driver, FOOTER_ITEM_HOME)
 		#click_on_footer_profile_btn = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
