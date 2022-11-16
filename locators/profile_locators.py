@@ -10,6 +10,9 @@ FOOTER_ITEM_INBOX = "notificationsTabBarItem"
 FOOTER_ITEM_PROFILE = "profileTabBarItem"
 PLUS_BUTTON = "sticky plus button"
 
+#FEED PART
+FEED_PAGE_AVATAR_ICON = "avatarView"
+
 # PROFILE ITEMS
 PROFILE_FIRST_N_LAST_NAMES = "nameLabel"
 PROFILE_USERNAME = "usernameLabel"
