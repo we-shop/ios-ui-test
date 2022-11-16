@@ -51,7 +51,7 @@ THIRD_BTN_IN_FOLLOWERS_TAB = "(//XCUIElementTypeButton[@name='actionButton'])[3]
 
 PROFILE_EDIT_FIRST_NAME_FIELD = '//XCUIElementTypeTextField[@name="firstNameTextField"]'
 PROFILE_EDIT_LAST_NAME_FIELD = '//XCUIElementTypeTextField[@name="lastNameTextField"]'
-PROFILE_EDIT_INTERESTS_ALL_CHECKBOXES = '//XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeImage[2]'
+PROFILE_EDIT_INTERESTS_ALL_CHECKBOXES = '//XCUIElementTypeOther[3]/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeButton/..' #'//XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeImage[2]'
 PROFILE_EDIT_BIO_FIELD = '//XCUIElementTypeTextView[@name="introductionTextField"]'
 PROFILE_EDIT_SAVE_CHANGES_BTN = '//XCUIElementTypeButton[@name="saveButton"]'
 SUCCESS_MSG_PROFILE = '//XCUIElementTypeStaticText[@name="Profile details updated successfully."]'
