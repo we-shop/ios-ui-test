@@ -177,7 +177,8 @@ class ProductDetailPage:
 
 		# going to detail product page
 		click_on_home_footer_btn = acc_id_click(driver, FOOTER_ITEM_HOME)
-		scroll_on_feed_page_ios(driver)
+		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
+		scroll_on_feed_page_start_ios(driver)
 		click_on_first_product_in_feed = acc_id_click(driver, FEED_PRODUCT_TITLE)
 
 		# product detail page steps > add to question
