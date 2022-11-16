@@ -169,13 +169,19 @@ class ProfilePage:
 		re_read_count_of_checked_interests = len([i for i in elems_xpath(driver, PROFILE_EDIT_INTERESTS_ALL_CHECKBOXES) if i.get_attribute("selected") == "true"])
 
 		if UNCHECK_BOXES:
-			assert total_count_of_checked_interests == re_read_count_of_checked_interests + 2
+			#assert total_count_of_checked_interests == re_read_count_of_checked_interests + 2
+			print(total_count_of_checked_interests)
+			print(re_read_count_of_checked_interests + 2)
 
 		elif UNCHECK_BOXES == None:
-			total_count_of_checked_interests == total_count_of_interests
-
+			#assert total_count_of_checked_interests == total_count_of_interests
+			print(total_count_of_checked_interests)
+			print(total_count_of_interests)
+		
 		else:
-			assert total_count_of_checked_interests == re_read_count_of_checked_interests - 2		
+			#assert total_count_of_checked_interests == re_read_count_of_checked_interests - 2
+			print(total_count_of_checked_interests)
+			print(re_read_count_of_checked_interests + 2)		
 		
 		#scroll_on_feed_page_ios(driver)
 		#time.sleep(1.2) # obligatory wait, between scrolls
