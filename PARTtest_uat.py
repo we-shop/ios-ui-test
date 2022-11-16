@@ -47,17 +47,17 @@ import time
 
 
 # iOS done
-def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
- 	debug_model.switch_to_uat(selenium)
- 	login_model.login_only(selenium)
- 	product_page_model.add_product_to_post(selenium)
-
-
-# # iOS done
-# def test_add_product_to_question(debug_model, login_model, product_page_model, selenium):
+#def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_only(selenium)
-# 	product_page_model.add_product_to_question(selenium)
+# 	product_page_model.add_product_to_post(selenium)
+
+
+# iOS done
+def test_add_product_to_question(debug_model, login_model, product_page_model, selenium):
+ 	debug_model.switch_to_uat(selenium)
+ 	login_model.login_only(selenium)
+ 	product_page_model.add_product_to_question(selenium)
 
 # # iOS done
 # def test_profile_check_followers_and_followings_count(login_model, debug_model, profile_model, selenium):
