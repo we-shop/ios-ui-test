@@ -152,9 +152,9 @@ class ProductDetailPage:
 	def add_product_to_post(self, driver):
 		# going to detail product page
 		click_on_home_footer_btn = acc_id_click(driver, FOOTER_ITEM_HOME)
-		time.sleep(2)
+		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
 		scroll_on_feed_page_start_ios(driver)
-		time.sleep(2)
+		#time.sleep(2)
 		click_on_first_product_in_feed = acc_id_click(driver, FEED_PRODUCT_TITLE)
 
 		# product detail page steps > add to post
