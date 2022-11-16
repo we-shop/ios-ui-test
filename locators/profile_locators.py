@@ -41,7 +41,7 @@ FOLLOWERS_COUNT = "(//*[contains(@name, 'followersInfoView')]/XCUIElementTypeSta
 FOLLOWINGS_COUNT = "(//*[contains(@name, 'followingInfoView')]/XCUIElementTypeStaticText)[1]"
 FOLLOWERS_LABEL_PROFILE = "//XCUIElementTypeStaticText[@name='Followers']"
 FOLLOWINGS_LABEL_PROFILE = "(//XCUIElementTypeStaticText[@name='Following'])[1]"
-PROFILE_FOLLOWERS_TAB_ALL_ITEMS = "(//XCUIElementTypeButton[@name='followButton'])/XCUIElementTypeStaticText"
+PROFILE_FOLLOWERS_TAB_ALL_ITEMS = "(//XCUIElementTypeButton[@name='actionButton'])"
 
 
 FIRST_BTN_IN_FOLLOWERS_TAB = "((//XCUIElementTypeButton[@name='followButton'])/XCUIElementTypeStaticText)[1]"
