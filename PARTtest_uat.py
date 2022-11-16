@@ -100,8 +100,6 @@ def test_profile_follow_unfollow_followers_following_tabs(login_model, debug_mod
 # 	debug_model.switch_to_uat_version_check(selenium)
 # 	profile_model.about_version_check(selenium)
 
-
-
 # # iOS in progress
 # def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
