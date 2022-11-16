@@ -1,8 +1,8 @@
 {
-    "device": "iPhone 14",
-    "os_version": "16",
-    "project": "iOS ",
+    "device": "iPhone 11",
+    "os_version": "15",
+    "project": "iOS Weshop",
     "build": "browserstack-iOS",
-    "name": "iOS_tests",
+    "name": "iOS test",
     "app_url": "test"
 }
