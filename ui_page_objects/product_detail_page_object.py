@@ -188,9 +188,9 @@ class ProductDetailPage:
 
 		# assert product name on question creation step #2
 		xpath_keys(driver, QUESTION_TEXT_STEP_ONE, random_question_text)
-		click_next_btn = acc_id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
-		click_next_btn_again = acc_id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_next_btn_again = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# assert product name on post creation step #1				
 		assert el_xpath(driver, PRODUCT_NAME_PRODUCTS_TAB_FILLED_IMAGE).is_displayed()
