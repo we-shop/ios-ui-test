@@ -44,9 +44,9 @@ FOLLOWINGS_LABEL_PROFILE = "(//XCUIElementTypeStaticText[@name='Following'])[1]"
 PROFILE_FOLLOWERS_TAB_ALL_ITEMS = "(//XCUIElementTypeButton[@name='actionButton'])"
 
 
-FIRST_BTN_IN_FOLLOWERS_TAB = "((//XCUIElementTypeButton[@name='followButton'])/XCUIElementTypeStaticText)[1]"
-SECOND_BTN_IN_FOLLOWERS_TAB = "((//XCUIElementTypeButton[@name='followButton'])/XCUIElementTypeStaticText)[2]"
-THIRD_BTN_IN_FOLLOWERS_TAB = "((//XCUIElementTypeButton[@name='followButton'])/XCUIElementTypeStaticText)[3]"
+FIRST_BTN_IN_FOLLOWERS_TAB = "(//XCUIElementTypeButton[@name='actionButton'])[1]"
+SECOND_BTN_IN_FOLLOWERS_TAB = "(//XCUIElementTypeButton[@name='actionButton'])[2]"
+THIRD_BTN_IN_FOLLOWERS_TAB = "(//XCUIElementTypeButton[@name='actionButton'])[3]"
 
 
 PROFILE_EDIT_FIRST_NAME_FIELD = '//XCUIElementTypeTextField[@name="firstNameTextField"]'
