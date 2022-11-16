@@ -32,7 +32,7 @@ PROFILE_SIGN_OUT_MODAL_YES_BTN = '//XCUIElementTypeButton[@name="Yes"]'
 PROFILE_POSTS_TAB = '//XCUIElementTypeStaticText[contains(@name, "Posts (")]'
 FOOTER_ITEM_NEW_POST = '//XCUIElementTypeStaticText[contains(@name, "Questions (")]'
 PROFILE_WISHLIST_TAB = '//XCUIElementTypeStaticText[contains(@name, "Wishlists (")]'
-#BROWSER_URL_BAR = "TabBarItemTitle"
+BROWSER_URL_BAR = "TabBarItemTitle"
 
 FOLLOWERS_COUNT = "(//*[contains(@name, 'followersInfoView')]/XCUIElementTypeStaticText)[1]"
 FOLLOWINGS_COUNT = "(//*[contains(@name, 'followingInfoView')]/XCUIElementTypeStaticText)[1]"
@@ -65,7 +65,7 @@ DEACTIVATE_ACC_ACCEPT_IN_MODAL = '//XCUIElementTypeButton[@name="deactivateButto
 READ_WELCOME_TEXT_LOGIN_SCREEN = '//XCUIElementTypeStaticText[@name="We’re so glad to have you around."]'
 
 
-BROWSER_URL_BAR = '//XCUIElementTypeOther[@name="TopBrowserBar"]//XCUIElementTypeButton[@name="URL"]' #"//XCUIElementTypeOther[@name='URL']"
+#BROWSER_URL_BAR = '//XCUIElementTypeOther[@name="TopBrowserBar"]//XCUIElementTypeButton[@name="URL"]' #"//XCUIElementTypeOther[@name='URL']"
 MENU_TERMS = "Terms of use"
 MENU_POLICY = "Privacy policy"
 MENU_COOKIE = "Cookie policy"
