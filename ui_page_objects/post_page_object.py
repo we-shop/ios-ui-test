@@ -21,6 +21,7 @@ class PostPage:
 		PRODUCT_ID = str(random.randint(1000, 10000000))
 
 		# product creation step 1 (search)
+		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE) # needed, because "+" btn not appears now on default page
 		plus_button_click = acc_id_click(driver, PLUS_BUTTON)
 		click_on_footer_new_post_btn = acc_id_click(driver, REC_PRODUCT_PLUS_MENU)
 		click_in_srch_field = xpath_click(driver, SEARCH_INPUT_POST_CREATION_STEP_ONE)

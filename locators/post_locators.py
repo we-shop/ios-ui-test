@@ -8,7 +8,7 @@ FOOTER_ITEM_ASK_QUESTION = "//XCUIElementTypeButton[@name='Ask a question']"
 
 
 # new post
-ASK_QUESTION_PLUS_MENU = "Ask Question"
+ASK_QUESTION_PLUS_MENU = "Ask a Question"
 REC_PRODUCT_PLUS_MENU = "Recommend a product"
 SEARCH_INPUT_POST_CREATION_STEP_ONE = "//XCUIElementTypeButton[@name='Find products to recommend']"
 SEARCH_PRODUCT_POST_CREATION = "//XCUIElementTypeSearchField[@name='Search']"
