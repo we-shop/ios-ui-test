@@ -618,7 +618,7 @@ class PostPage:
 		select_flag_content = xpath_click(driver, POST_DOTS_SUB_MENU_EDIT_POST)
 		read_all_flag_reasons = elems_xpath(driver, POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS)
 		select_random_flag_reason = read_all_flag_reasons[random.randint(0, len(read_all_flag_reasons))].click()
-		read_success_message_title = el_id(driver, POST_FLAG_CONTENT_SUCCESS_WIN_TITLE).text
+		read_success_message_title = el_xpath(driver, POST_FLAG_CONTENT_SUCCESS_WIN_TITLE).text
 
 		assert read_success_message_title == "Thanks for letting us know"
 		click_on_done_btn = xpath_click(driver, POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN)
