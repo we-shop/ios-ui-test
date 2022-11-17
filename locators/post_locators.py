@@ -38,6 +38,13 @@ POST_TIME_AGO_TEXT = "creationDateLabel"
 FEED_POST_DESCRIPTION = "readMoreLabel"
 
 READ_ALL_PRODUCT_LINEAR_LAYOUTS = "//XCUIElementTypePageIndicator"
+# feed | sub-menu of post
+POST_DOTS_SUB_MENU = '//XCUIElementTypeButton[@name="menuButton"]'
+POST_DOTS_SUB_MENU_EDIT_POST = '//XCUIElementTypeButton[@name="editButton"]'
+POST_DOTS_SUB_MENU_DELETE_POST = '//XCUIElementTypeButton[@name="deleteButton"]'
+POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS = "//XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeOther"
+POST_FLAG_CONTENT_SUCCESS_WIN_TITLE = '//XCUIElementTypeStaticText[@name="successTitleLabel"]'
+POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN = '//XCUIElementTypeButton[@name="closeButton"]'
 
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
 # SEARCH_RESULT_PRODUCT_ONE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.CheckBox"
