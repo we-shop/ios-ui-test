@@ -45,6 +45,7 @@ POST_DOTS_SUB_MENU_DELETE_POST = '//XCUIElementTypeButton[@name="deleteButton"]'
 POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS = "//XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeOther"
 POST_FLAG_CONTENT_SUCCESS_WIN_TITLE = '//XCUIElementTypeStaticText[@name="successTitleLabel"]'
 POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN = '//XCUIElementTypeButton[@name="closeButton"]'
+CONTINUE_WITHOUT_PRODUCT_BTN = '//*[contains(@value, "Yes")]' #accept deletion of post/question
 
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
 # SEARCH_RESULT_PRODUCT_ONE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.CheckBox"
@@ -103,7 +104,7 @@ POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN = '//XCUIElementTypeButton[@name="closeBu
 # MODAL_TITLE_TEXT = "com.socialsuperstore:id/titleTopText"
 # CLOSE_MODAL_BTN = "com.socialsuperstore:id/closeButton"
 # LET_ME_ADD_PRODUCT_FIRST_BTN = "com.socialsuperstore:id/negativeButton"
-# CONTINUE_WITHOUT_PRODUCT_BTN = "com.socialsuperstore:id/positiveButton"
+
 
 
 
