@@ -8,7 +8,8 @@ import os
 from datetime import datetime
 
 # getting current date
-cur_date = datetime.today().strftime('%d-%m-%Y')
+TEST_RESULT = os.getenv("TRAVIS_TEST_RESULT")
+cur_date = datetime.today().strftime('%d-%m-%Y') + "Test result:" + TEST_RESULT
 
 
 recipients_list = ["abavabaraba@gmail.com", "mike_zone@ukr.net"] #, "danilo.lapegna@weshop.co.uk"]
