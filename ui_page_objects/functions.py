@@ -133,6 +133,15 @@ def acc_id_keys(driver, locator, keys):
 	except:
 		print(f"Element to enter value by ACCESSIBILITY ID: {locator} is not found!")
 
+def long_wait_el_acc_id(driver, locator):
+	try:
+		WebDriverWait(driver, 20).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+		return driver.find_element(MobileBy.ACCESSIBILITY_ID, locator)
+	except:
+		print(f"Element to find by ACCESSIBILITY ID: {locator} is not found!")
+		print(f"{ERROR}")
+
+
 def get_toast_msg(driver):
 	toast_locator = "/hierarchy/android.widget.Toast"
 	
