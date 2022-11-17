@@ -143,7 +143,7 @@ class PostPage:
 
 		# asserting step 4
 		time.sleep(2) # obligatory wait, because of flow
-		bread_crumbs_text_step_4 = el_id(driver, QUESTION_BREAD_CRUMBS).text
+		bread_crumbs_text_step_4 = el_xpath(driver, QUESTION_BREAD_CRUMBS).text
 		assert bread_crumbs_text_step_4 == "4 / 4"
 
 		# question creation step 4 (add caption and publish)
