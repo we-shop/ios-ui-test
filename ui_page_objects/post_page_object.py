@@ -151,10 +151,10 @@ class PostPage:
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# check if question created (checking title/caption in feed)
-		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
+		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
 		#scroll_on_feed_page(driver) # not actual now, because of header block
 		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
-		time.sleep(2.5)
+		#time.sleep(2.5)
 		scroll_on_feed_page_start_ios(driver)
 		get_correct_text_by_id(driver, FEED_POST_DESCRIPTION, QUESTION_ID)
 
