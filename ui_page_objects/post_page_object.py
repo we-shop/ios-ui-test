@@ -116,6 +116,7 @@ class PostPage:
 
 		all_texts = elems_xpath(driver, ALL_TEXT_STYLES)
 		random_text_style_click = all_texts[random.randint(0, 5)].click()
+		time.sleep(0.5)
 		switch_to_text_colour_tab = acc_id_click(driver, BACKGROUND_TEXT_COLOUR_TAB)
 		all_text_clrs = elems_xpath(driver, ALL_TEXT_COLOURS)
 		random_clrs_click = all_text_clrs[random.randint(0, 8)].click()
