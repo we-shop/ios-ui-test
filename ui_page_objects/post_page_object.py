@@ -57,8 +57,8 @@ class PostPage:
 		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
 		scroll_up_on_feed_page(driver)
-		open_sub_menu_of_post = id_click(driver, POST_DOTS_SUB_MENU)
-		edit_post_sub_menu_click = elems_id(driver, POST_SUB_MENU_ACTION_ITEMS_ID)[0].click()
+		open_sub_menu_of_post = xpath_click(driver, POST_DOTS_SUB_MENU)
+		edit_post_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_EDIT_POST)
 
 		# edit post part
 		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
@@ -80,14 +80,14 @@ class PostPage:
 
 		# delete part
 		scroll_up_on_feed_page(driver)
-		re_open_sub_menu_of_post = id_click(driver, POST_DOTS_SUB_MENU)
-		delete_post_sub_menu_click = elems_id(driver, POST_SUB_MENU_ACTION_ITEMS_ID)[1].click()
-		accept_deletion_in_modal = id_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
+		re_open_sub_menu_of_post = xpath_click(driver, POST_DOTS_SUB_MENU)
+		delete_post_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_DELETE_POST)
+		accept_deletion_in_modal = xpath_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
 
 		# verify that post was deleted
 		read_toast_msg = get_toast_msg(driver)
 		scroll_on_feed_page(driver)
-		re_re_read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text
+		re_re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert read_toast_msg == "Your post has been deleted"
 		assert re_re_read_post_title != f"edited {read_post_title}"
@@ -163,8 +163,8 @@ class PostPage:
 		read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
 		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
-		open_sub_menu_of_question = id_click(driver, POST_DOTS_SUB_MENU)
-		edit_question_sub_menu_click = elems_id(driver, POST_SUB_MENU_ACTION_ITEMS_ID)[0].click()
+		open_sub_menu_of_question = xpath_click(driver, POST_DOTS_SUB_MENU)
+		edit_question_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_EDIT_POST)
 
 		# edit question part
 		edit_question_banner_text = id_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
@@ -191,9 +191,9 @@ class PostPage:
 		assert re_read_question_title == f"edited {read_question_title}"
 
 		# delete part
-		re_open_sub_menu_of_question = id_click(driver, POST_DOTS_SUB_MENU)
-		delete_post_sub_menu_click = elems_id(driver, POST_SUB_MENU_ACTION_ITEMS_ID)[1].click()
-		accept_deletion_in_modal = id_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
+		re_open_sub_menu_of_question = xpath_click(driver, POST_DOTS_SUB_MENU)
+		delete_post_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_DELETE_POST)
+		accept_deletion_in_modal = xpath_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
 
 		# verify that question was deleted
 		read_toast_msg = get_toast_msg(driver)
@@ -614,12 +614,12 @@ class PostPage:
 			else:
 				scroll_down_deep(driver)
 
-		open_sub_menu_of_post = id_click(driver, POST_DOTS_SUB_MENU)
+		open_sub_menu_of_post = xpath_click(driver, POST_DOTS_SUB_MENU)
 		select_flag_content = xpath_click(driver, POST_DOTS_SUB_MENU_EDIT_POST)
-		read_all_flag_reasons = elems_id(driver, POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS)
+		read_all_flag_reasons = elems_xpath(driver, POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS)
 		select_random_flag_reason = read_all_flag_reasons[random.randint(0, len(read_all_flag_reasons))].click()
 		read_success_message_title = el_id(driver, POST_FLAG_CONTENT_SUCCESS_WIN_TITLE).text
 
 		assert read_success_message_title == "Thanks for letting us know"
-		click_on_done_btn = id_click(driver, POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN)
+		click_on_done_btn = xpath_click(driver, POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN)
 		
