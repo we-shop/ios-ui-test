@@ -70,7 +70,7 @@ class PostPage:
 		publish_btn_click = id_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify post data after edit
-		wait_element = el_id(driver, POST_TIME_AGO_TEXT)
+		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
 		scroll_on_feed_page(driver)
 		re_read_count_of_linear_carousel_items = len(elems_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS))
 		re_read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text
@@ -151,7 +151,7 @@ class PostPage:
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# check if question created (checking title/caption in feed)
-		wait_element = el_id(driver, POST_TIME_AGO_TEXT)
+		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
 		#scroll_on_feed_page(driver) # not actual now, because of header block
 		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
 		time.sleep(2.5)
