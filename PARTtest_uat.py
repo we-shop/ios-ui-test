@@ -76,7 +76,7 @@ import time
 # 	login_model.login_go_to_profile(selenium)
 # 	profile_model.follow_few_users(selenium)
 
-# # iOS done
+# # iOS done # # NEED TO TALK TO EGOR
 # def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_go_to_profile(selenium)
