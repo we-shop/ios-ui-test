@@ -142,6 +142,7 @@ class PostPage:
 		next_btn_step_click = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# asserting step 4
+		time.sleep(2) # obligatory wait, because of flow
 		bread_crumbs_text_step_4 = el_id(driver, QUESTION_BREAD_CRUMBS).text
 		assert bread_crumbs_text_step_4 == "4 / 4"
 

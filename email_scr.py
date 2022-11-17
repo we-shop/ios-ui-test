@@ -69,7 +69,7 @@ def email_sender(recipient):
 
 # send report email(s)
 if len(recipients_list) > 0:
-	if TEST_RESULT == '1'
+	if TEST_RESULT == '1':
 		for i in recipients_list:
 			email_sender(i)
 			time.sleep(0.5)
