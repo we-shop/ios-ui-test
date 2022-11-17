@@ -167,6 +167,7 @@ class PostPage:
 		edit_question_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_EDIT_POST)
 
 		# edit question part
+		el_acc_id(driver, QUESTION_TEXT_STEP_ONE).clear()
 		edit_question_banner_text = id_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
