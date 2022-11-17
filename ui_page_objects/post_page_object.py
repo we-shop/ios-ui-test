@@ -62,8 +62,8 @@ class PostPage:
 
 		# edit post part
 		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
-		click_on_next_btn = id_click(driver, STEP_BTN_ADD_PRODUCT)
-		click_on_next_btn_again = id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn = id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn_again = id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# final step
 		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_post_title}")
@@ -168,22 +168,26 @@ class PostPage:
 
 		# edit question part
 		edit_question_banner_text = id_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
-		click_on_next_btn = id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# verify that edited text visible on next step
-		get_edited_question_banner_text = el_id(driver, QUESTION_TEXT_MEDIA_TAB).text
+		get_edited_question_banner_text = el_xpath(driver, QUESTION_TEXT_MEDIA_TAB).text
 		assert get_edited_question_banner_text == f"Edited question {read_question_title}"
-		click_on_next_btn_again = id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn_again = acc_id_click(driver, DONE_STEP_BTN_ADD_PRODUCT)
 
 		# next step
+		click_on_next_btn_again = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
-		click_step_further = id_click(driver, STEP_BTN_ADD_PRODUCT)
+		click_step_further = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# next step
 		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_question_title}")
 		publish_btn_click = id_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify question data after edit
+		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		scroll_on_feed_page_start_ios(driver)
+		time.sleep(0.3) # for sure
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
 
@@ -196,10 +200,10 @@ class PostPage:
 		accept_deletion_in_modal = xpath_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
 
 		# verify that question was deleted
-		read_toast_msg = get_toast_msg(driver)
+		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
 		re_re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
 
-		assert read_toast_msg == "Your post has been deleted"
+		assert read_message_after_deletion == "Your post has been deleted"
 		assert re_re_read_question_title != f"edited {read_question_title}"
 		
 
