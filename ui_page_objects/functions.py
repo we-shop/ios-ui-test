@@ -135,7 +135,7 @@ def acc_id_keys(driver, locator, keys):
 
 def long_wait_el_acc_id(driver, locator):
 	try:
-		WebDriverWait(driver, 20).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+		WebDriverWait(driver, 25).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
 		return driver.find_element(MobileBy.ACCESSIBILITY_ID, locator)
 	except:
 		print(f"Element to find by ACCESSIBILITY ID: {locator} is not found!")
