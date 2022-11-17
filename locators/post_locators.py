@@ -27,6 +27,7 @@ PUBLISH_BTN_ADD_PRODUCT = "//XCUIElementTypeButton[@name='Publish']"
 QUESTION_TEXT_STEP_ONE = "//XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextView" #"//XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextView"
 QUESTION_BREAD_CRUMBS = "//XCUIElementTypeStaticText[@name='pageIndexLabel']"
 QUESTION_UPLOAD_FROM_DESIGNS = "//XCUIElementTypeButton[@name='Popular designs']"
+QUESTION_TEXT_MEDIA_TAB = '//XCUIElementTypeStaticText[contains(@value, "Test question number")]'
 CUSTOM_BACKGROUND_ITEMS = "//XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeImage"
 SAVE_BTN_BACKGROUND_ITEMS = "Save"
 ALL_TEXT_STYLES = "//XCUIElementTypeCollectionView/XCUIElementTypeCell"
@@ -46,6 +47,7 @@ POST_DOTS_SUB_MENU_FLAG_CONTENT_ITEMS = "//XCUIElementTypeOther/XCUIElementTypeO
 POST_FLAG_CONTENT_SUCCESS_WIN_TITLE = '//XCUIElementTypeStaticText[@name="successTitleLabel"]'
 POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN = '//XCUIElementTypeButton[@name="closeButton"]'
 CONTINUE_WITHOUT_PRODUCT_BTN = '//*[contains(@value, "Yes")]' #accept deletion of post/question
+DELETION_FEED_POST_MESSAGE = 'Your post has been deleted'
 
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
 # SEARCH_RESULT_PRODUCT_ONE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.CheckBox"
