@@ -156,7 +156,7 @@ class PostPage:
 		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
 		#time.sleep(2.5)
 		scroll_on_feed_page_start_ios(driver)
-		get_correct_text_by_id(driver, FEED_POST_DESCRIPTION, QUESTION_ID)
+		get_correct_text_by_acc_id(driver, FEED_POST_DESCRIPTION, QUESTION_ID)
 
 	def question_edit_and_deletion(self, driver):
 		# starting from opened feed
