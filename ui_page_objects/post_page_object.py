@@ -97,6 +97,7 @@ class PostPage:
 		QUESTION_ID = str(random.randint(1000, 10000000))
 
 		# question creation step 1 (question title)
+		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE) # needed, because "+" btn not appears now on default page
 		plus_button_click = acc_id_click(driver, PLUS_BUTTON)
 		click_on_footer_new_question_btn = acc_id_click(driver, ASK_QUESTION_PLUS_MENU)
 		fill_question_text = xpath_keys(driver, QUESTION_TEXT_STEP_ONE, f"Test question number {QUESTION_ID}")

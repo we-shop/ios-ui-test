@@ -10,7 +10,7 @@ from datetime import datetime
 # getting current date
 TEST_RESULT = os.getenv("TRAVIS_TEST_RESULT")
 TRAVIS_EVENT_TYPE = os.getenv("TRAVIS_EVENT_TYPE")
-cur_date = datetime.today().strftime('%d-%m-%Y') + "Test result:" + TEST_RESULT + " | " + TRAVIS_EVENT_TYPE
+cur_date = datetime.today().strftime('%d-%m-%Y') # + "Test result:" + TEST_RESULT + " | " + TRAVIS_EVENT_TYPE
 
 
 recipients_list = ["abavabaraba@gmail.com", "mike_zone@ukr.net"] #, "danilo.lapegna@weshop.co.uk"]
@@ -69,9 +69,10 @@ def email_sender(recipient):
 
 # send report email(s)
 if len(recipients_list) > 0:
-	for i in recipients_list:
-		email_sender(i)
-		time.sleep(0.5)
+	if TEST_RESULT == '1'
+		for i in recipients_list:
+			email_sender(i)
+			time.sleep(0.5)
 
 else:
 	print(f"{ERORR} RECIPIENT LIST IS EMPTY!")
