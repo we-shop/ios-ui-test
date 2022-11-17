@@ -178,7 +178,7 @@ class PostPage:
 
 		# next step
 		click_on_next_btn_again = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
-		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
+		#remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
 		click_step_further = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# next step
