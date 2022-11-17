@@ -153,6 +153,7 @@ class PostPage:
 		# check if question created (checking title/caption in feed)
 		wait_element = el_id(driver, POST_TIME_AGO_TEXT)
 		#scroll_on_feed_page(driver) # not actual now, because of header block
+		wait_for_user_avatar_icon = el_acc_id(driver, FEED_PAGE_AVATAR_ICON)
 		scroll_on_feed_page_start_ios(driver)
 		get_correct_text_by_id(driver, FEED_POST_DESCRIPTION, QUESTION_ID)
 
