@@ -54,7 +54,7 @@ class PostPage:
 	def product_edit_and_deletion(self, driver):
 		# starting from opened feed
 		read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
-		read_count_of_linear_carousel_items = len(elems_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS))
+		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
 		scroll_up_on_feed_page(driver)
 		open_sub_menu_of_post = id_click(driver, POST_DOTS_SUB_MENU)
@@ -72,7 +72,7 @@ class PostPage:
 		# verify post data after edit
 		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
 		scroll_on_feed_page(driver)
-		re_read_count_of_linear_carousel_items = len(elems_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS))
+		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
@@ -161,7 +161,7 @@ class PostPage:
 	def question_edit_and_deletion(self, driver):
 		# starting from opened feed
 		read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
-		read_count_of_linear_carousel_items = len(elems_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS))
+		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
 		open_sub_menu_of_question = id_click(driver, POST_DOTS_SUB_MENU)
 		edit_question_sub_menu_click = elems_id(driver, POST_SUB_MENU_ACTION_ITEMS_ID)[0].click()
@@ -184,7 +184,7 @@ class PostPage:
 		publish_btn_click = id_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify question data after edit
-		re_read_count_of_linear_carousel_items = len(elems_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS))
+		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
