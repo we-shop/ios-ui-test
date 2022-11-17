@@ -76,11 +76,11 @@ import time
 # 	login_model.login_go_to_profile(selenium)
 # 	profile_model.follow_few_users(selenium)
 
-# iOS done
-def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
- 	debug_model.switch_to_uat(selenium)
- 	login_model.login_go_to_profile(selenium)
- 	profile_model.edit_profile(selenium)
+# # iOS done
+# def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.edit_profile(selenium)
 
 # # iOS done
 # def test_profile_deactivate_account_flow(login_model, debug_model, profile_model, selenium):
@@ -139,11 +139,11 @@ def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
 # 	login_model.login_only(selenium)
 # 	post_model.ask_question(selenium)
 
-# def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	post_model.ask_question(selenium)
-# 	post_model.question_edit_and_deletion(selenium)
+def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
+ 	debug_model.switch_to_uat(selenium)
+ 	login_model.login_only(selenium)
+ 	post_model.ask_question(selenium)
+ 	post_model.question_edit_and_deletion(selenium)
 
 # def test_self_question_like_and_comment_check(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
