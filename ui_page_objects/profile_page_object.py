@@ -225,14 +225,14 @@ class ProfilePage:
 		assert read_bio_text == RANDOM_BIO_NAME
 
 	# iOS in done	
-	def deactivate_account_and_login_after(self, driver):
+	def delete_account_and_login_after(self, driver):
 		# deactivate account
 		click_on_settings_btn = acc_id_click(driver, PROFILE_SETTINGS_BTN)
 		scroll_on_settings_page_ios(driver)
 		#driver.swipe(start_x=94, start_y=2422, end_x=64, end_y=975, duration=650)
 		delete_acc_click = acc_id_click(driver, SETTINGS_DEACTIVATE_ACC)
 		delete_acc_btn_click = xpath_click(driver, DEACTIVATE_ACCOUNT_BTN)
-		wait_del_my_acc_button = xpath_click(driver, DEACTIVATE_ACC_ACCEPT_IN_MODAL)
+		wait_del_my_acc_button = el_xpath(driver, DEACTIVATE_ACC_ACCEPT_IN_MODAL)
 
 		# go back to menu flow
 		click_on_go_back_btn = xpath_click(driver, DEACTIVATE_ACC_GO_BACK_BTN)
@@ -245,8 +245,7 @@ class ProfilePage:
 		delete_acc_btn_click_again = xpath_click(driver, DEACTIVATE_ACCOUNT_BTN)
 		
 
-
-		# block is not actual, because functionality was changed
+		# block is not actual, because of bug
 		# check if user logged out
 		#already_have_account_btn_click = id_click(driver, ALREADY_HAVE_ACC_LOGIN_SCREEN)
 		#read_welcome_back_text_on_login_screen = el_xpath(driver, READ_WELCOME_TEXT_LOGIN_SCREEN).text
