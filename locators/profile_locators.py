@@ -69,6 +69,7 @@ DEACTIVATE_ACC_GO_BACK_BTN = '//XCUIElementTypeLink[@name="Terms and Conditions"
 READ_WELCOME_TEXT_LOGIN_SCREEN = '//XCUIElementTypeStaticText[@name="We’re so glad to have you around."]'
 
 
+
 #BROWSER_URL_BAR = '//XCUIElementTypeOther[@name="TopBrowserBar"]//XCUIElementTypeButton[@name="URL"]' #"//XCUIElementTypeOther[@name='URL']"
 MENU_TERMS = "Terms of use"
 MENU_POLICY = "Privacy policy"
