@@ -168,7 +168,8 @@ class PostPage:
 
 		# edit question part
 		#el_acc_id(driver, QUESTION_TEXT_STEP_ONE).clear()
-		el_xpath(driver, QUESTION_TEXT_STEP_ONE).set_value("")
+		el_xpath(driver, QUESTION_TEXT_STEP_ONE).clear() #set_value("")
+		time.sleep(1)
 		edit_question_banner_text = xpath_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
