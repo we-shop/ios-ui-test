@@ -177,8 +177,8 @@ class PostPage:
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# verify that edited text visible on next step
-		get_edited_question_banner_text = el_xpath(driver, QUESTION_TEXT_MEDIA_TAB).text
-		#assert get_edited_question_banner_text == f"Edited question {read_question_title}"
+		get_edited_question_banner_text = el_xpath(driver, QUESTION_EDITED_TEXT_MEDIA_TAB).text
+		assert get_edited_question_banner_text == f"Edited question {read_question_title}"
 		click_on_next_btn_again = acc_id_click(driver, DONE_STEP_BTN_ADD_PRODUCT)
 
 		# next step
