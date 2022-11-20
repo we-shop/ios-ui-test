@@ -463,7 +463,16 @@ class ProfilePage:
 
 
 		# going to profile settings
+		# handle notification alert
 		handle_notification_alert(driver)
+
+		# handling info block after login
+		try:
+			xpath_click(driver, CLOSE_BTN_LOGIN)
+		except:
+			pass
+
+
 		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		click_on_settings_btn = acc_id_click(driver, PROFILE_SETTINGS_BTN)
 		scroll_down_ios(driver)
