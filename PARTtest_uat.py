@@ -98,9 +98,9 @@ import time
 # 	profile_model.customer_support_page_check(selenium)
 
 # # iOS done # configured for UAT
-def test_profile_about_version_check(debug_model, profile_model, selenium):
-	debug_model.switch_to_uat_version_check(selenium)
-	profile_model.about_version_check(selenium)
+# def test_profile_about_version_check(debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat_version_check(selenium)
+# 	profile_model.about_version_check(selenium)
 
 # # iOS in progress
 # def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
@@ -139,11 +139,11 @@ def test_profile_about_version_check(debug_model, profile_model, selenium):
 # 	login_model.login_only(selenium)
 # 	post_model.ask_question(selenium)
 
-# def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
-#  	debug_model.switch_to_uat(selenium)
-#  	login_model.login_only(selenium)
-#  	post_model.ask_question(selenium)
-#  	post_model.question_edit_and_deletion(selenium)
+def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.ask_question(selenium)
+	post_model.question_edit_and_deletion(selenium)
 
 # def test_self_question_like_and_comment_check(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
