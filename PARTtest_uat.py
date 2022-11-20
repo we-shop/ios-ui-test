@@ -84,6 +84,7 @@ import time
 # 	profile_model.edit_profile(selenium)
 
 # # iOS done
+@pytest.mark.xfail
 def test_profile_delete_account_flow(login_model, debug_model, profile_model, selenium):
 	debug_model.switch_to_uat(selenium)
 	login_model.login_go_to_profile(selenium)
