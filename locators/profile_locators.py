@@ -35,7 +35,7 @@ PROFILE_SIGN_OUT_MODAL_YES_BTN = '//XCUIElementTypeButton[@name="Yes"]'
 PROFILE_POSTS_TAB = '//XCUIElementTypeStaticText[contains(@name, "Posts (")]'
 FOOTER_ITEM_NEW_POST = '//XCUIElementTypeStaticText[contains(@name, "Questions (")]'
 PROFILE_WISHLIST_TAB = '//XCUIElementTypeStaticText[contains(@name, "Wishlists (")]'
-BROWSER_URL_BAR = "TabBarItemTitle"
+BROWSER_URL_BAR = "//XCUIElementTypeOther[@name='URL']" #"TabBarItemTitle"
 
 FOLLOWERS_COUNT = "(//*[contains(@name, 'followersInfoView')]/XCUIElementTypeStaticText)[1]"
 FOLLOWINGS_COUNT = "(//*[contains(@name, 'followingInfoView')]/XCUIElementTypeStaticText)[1]"

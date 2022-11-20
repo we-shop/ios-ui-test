@@ -393,35 +393,35 @@ class ProfilePage:
 		# Terms check
 		click_on_menu_terms = acc_id_click(driver, MENU_TERMS)
 		
-		page_url_terms = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_terms = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "legal.we.shop" in page_url_terms
 		click_done_btn_to_go_back = xpath_click(driver, MENU_DONE_BUTTON_ALL_LEGAL_PAGES)
 		#print(page_url_terms)
 
 		# Privacy policy check
 		click_on_menu_privacy_policy = acc_id_click(driver, MENU_POLICY)
-		page_url_privacy_policy = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_privacy_policy = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "legal.we.shop" in page_url_privacy_policy
 		click_done_btn_to_go_back = xpath_click(driver, MENU_DONE_BUTTON_ALL_LEGAL_PAGES)
 		#print(page_url_privacy_policy)
 
 		# Cookie policy check
 		click_on_menu_cookies = acc_id_click(driver, MENU_COOKIE)
-		page_url_cookie = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_cookie = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "help.we.shop" in page_url_cookie
 		click_done_btn_to_go_back = xpath_click(driver, MENU_DONE_BUTTON_ALL_LEGAL_PAGES)
 		#print(page_url_cookie)
 
 		# Acknowledgements check
 		click_on_menu_acknowledgements = acc_id_click(driver, MENU_ACKNOWLEDGEMENTS)
-		page_url_acknowledgements = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_acknowledgements = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "help.we.shop" in page_url_acknowledgements
 		click_done_btn_to_go_back = xpath_click(driver, MENU_DONE_BUTTON_ALL_LEGAL_PAGES)
 		#print(page_url_acknowledgements)
 
 		# Community Guidelines check
 		click_on_menu_community_guidelines = acc_id_click(driver, MENU_COMMUNITY_GUIDES)
-		page_url_cummunity_guides = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_cummunity_guides = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "help.we.shop" in page_url_cummunity_guides
 		click_done_btn_to_go_back = xpath_click(driver, MENU_DONE_BUTTON_ALL_LEGAL_PAGES)
 		#print(page_url_cummunity_guides)
@@ -435,7 +435,7 @@ class ProfilePage:
 		click_on_settings_customer_support = acc_id_click(driver, PROFILE_SETTINGS_CUST_SUPPORT)
 
 		# Customer support check
-		page_url_terms = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url_terms = el_xpath(driver, BROWSER_URL_BAR).text
 		assert "help.we.shop" in page_url_terms
 
 	
