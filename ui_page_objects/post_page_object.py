@@ -210,7 +210,7 @@ class PostPage:
 
 		# verify that question was deleted
 		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
-		re_re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
+		re_re_read_question_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert read_message_after_deletion == "Your post has been deleted"
 		assert re_re_read_question_title != f"edited {read_question_title}"
