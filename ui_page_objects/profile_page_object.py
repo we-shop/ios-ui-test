@@ -230,28 +230,41 @@ class ProfilePage:
 		click_on_settings_btn = acc_id_click(driver, PROFILE_SETTINGS_BTN)
 		scroll_on_settings_page_ios(driver)
 		#driver.swipe(start_x=94, start_y=2422, end_x=64, end_y=975, duration=650)
-		deactivate_acc_click = acc_id_click(driver, SETTINGS_DEACTIVATE_ACC)
-		deactivate_acc_btn_click = xpath_click(driver, DEACTIVATE_ACCOUNT_BTN)
-		accept_are_you_sure_modal = xpath_click(driver, DEACTIVATE_ACC_ACCEPT_IN_MODAL)
+		delete_acc_click = acc_id_click(driver, SETTINGS_DEACTIVATE_ACC)
+		delete_acc_btn_click = xpath_click(driver, DEACTIVATE_ACCOUNT_BTN)
+		wait_del_my_acc_button = xpath_click(driver, DEACTIVATE_ACC_ACCEPT_IN_MODAL)
 
+		# go back to menu flow
+		click_on_go_back_btn = xpath_click(driver, DEACTIVATE_ACC_GO_BACK_BTN)
+		driver.back()
+		
+		assert el_acc_id(driver, SETTINGS_DEACTIVATE_ACC).text == 'Delete your account'
+
+		# re-enter to delete acc flow
+		delete_acc_click_again = acc_id_click(driver, SETTINGS_DEACTIVATE_ACC)
+		delete_acc_btn_click_again = xpath_click(driver, DEACTIVATE_ACCOUNT_BTN)
+		
+
+
+		# block is not actual, because functionality was changed
 		# check if user logged out
 		#already_have_account_btn_click = id_click(driver, ALREADY_HAVE_ACC_LOGIN_SCREEN)
-		read_welcome_back_text_on_login_screen = el_xpath(driver, READ_WELCOME_TEXT_LOGIN_SCREEN).text
+		#read_welcome_back_text_on_login_screen = el_xpath(driver, READ_WELCOME_TEXT_LOGIN_SCREEN).text
 
-		assert read_welcome_back_text_on_login_screen == "We’re so glad to have you around."
+		#assert read_welcome_back_text_on_login_screen == "We’re so glad to have you around."
 
 		# login after deactivation
 		# login_field = id_keys(driver, LOG_FIELD, self.LOGIN)
 		# password_field = id_keys(driver, PASS_FIELD, self.PASSWORD)
 		# sign_in_btn_click = id_click(driver, SIGN_IN_BTN)
 
-		click_on_sign_in_btn = xpath_click(driver, SIGN_IN_BTN)
-		login_field = acc_id_keys(driver, LOG_FIELD, self.LOGIN)
-		password_field = acc_id_keys(driver, PASS_FIELD, self.PASSWORD)
-		sign_in_btn_click = acc_id_click(driver, MAKE_LOGIN_BTN)	
+		#click_on_sign_in_btn = xpath_click(driver, SIGN_IN_BTN)
+		#login_field = acc_id_keys(driver, LOG_FIELD, self.LOGIN)
+		#password_field = acc_id_keys(driver, PASS_FIELD, self.PASSWORD)
+		#sign_in_btn_click = acc_id_click(driver, MAKE_LOGIN_BTN)	
 
 		# going to profile from footer menu (to make sure you are already logged in)
-		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
+		#click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
 	def following_count_manipulations_in_profile(self, driver):
 		# read count of followers and following
