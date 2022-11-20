@@ -194,7 +194,7 @@ class PostPage:
 
 		# verify question data after edit
 		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
-		time.sleep(8.5) # for sure # NEED TO FIX
+		#time.sleep(8.5) # for sure # NEED TO FIX
 		scroll_on_feed_page_start_ios(driver)
 		time.sleep(0.5) # for sure
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
