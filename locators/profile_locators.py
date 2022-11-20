@@ -64,10 +64,9 @@ PROFILE_EDIT_YOUR_DETAILS_TITLE = "Your details"
 
 SETTINGS_DEACTIVATE_ACC = "Delete your account"
 DEACTIVATE_ACCOUNT_BTN = '//XCUIElementTypeButton[@name="Delete my account"]'
-DEACTIVATE_ACC_ACCEPT_IN_MODAL = '//XCUIElementTypeButton[@name="cancelButton"]'
-DEACTIVATE_ACC_GO_BACK_BTN = '//XCUIElementTypeLink[@name="Terms and Conditions"]'
+DEACTIVATE_ACC_ACCEPT_IN_MODAL = '//XCUIElementTypeButton[@name="deactivateButton"]'
+DEACTIVATE_ACC_GO_BACK_BTN = '//XCUIElementTypeButton[@name="cancelButton"]'
 READ_WELCOME_TEXT_LOGIN_SCREEN = '//XCUIElementTypeStaticText[@name="We’re so glad to have you around."]'
-
 
 
 #BROWSER_URL_BAR = '//XCUIElementTypeOther[@name="TopBrowserBar"]//XCUIElementTypeButton[@name="URL"]' #"//XCUIElementTypeOther[@name='URL']"
