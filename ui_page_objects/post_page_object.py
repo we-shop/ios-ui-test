@@ -66,7 +66,7 @@ class PostPage:
 		click_on_next_btn_again = id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# final step
-		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_post_title}")
+		caption_input_edit = xpath_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_post_title}")
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify post data after edit
@@ -169,7 +169,7 @@ class PostPage:
 		# edit question part
 		#el_acc_id(driver, QUESTION_TEXT_STEP_ONE).clear()
 		el_xpath(driver, QUESTION_TEXT_STEP_ONE).clear() #set_value("")
-		time.sleep(1)
+		time.sleep(0.5)
 		edit_question_banner_text = xpath_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
@@ -184,13 +184,16 @@ class PostPage:
 		click_step_further = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# next step
-		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_question_title}")
+		el_xpath(driver, CAPTION_INPUT_FIELD).clear()
+		time.sleep(0.5)
+		caption_input_edit = xpath_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_question_title}")
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify question data after edit
 		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		time.sleep(0.5) # for sure
 		scroll_on_feed_page_start_ios(driver)
-		time.sleep(0.3) # for sure
+		time.sleep(0.5) # for sure
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
 
