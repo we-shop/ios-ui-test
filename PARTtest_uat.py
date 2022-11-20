@@ -84,10 +84,10 @@ import time
 # 	profile_model.edit_profile(selenium)
 
 # # iOS done
-# def test_profile_deactivate_account_flow(login_model, debug_model, profile_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_go_to_profile(selenium)
-# 	profile_model.deactivate_account_and_login_after(selenium)
+def test_profile_deactivate_account_flow(login_model, debug_model, profile_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_go_to_profile(selenium)
+	profile_model.deactivate_account_and_login_after(selenium)
 
 # # iOS done
 # def test_profile_info_pages(login_model, debug_model, profile_model, selenium):
