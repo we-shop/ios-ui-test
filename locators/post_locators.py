@@ -28,6 +28,7 @@ QUESTION_TEXT_STEP_ONE = "//XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIEle
 QUESTION_BREAD_CRUMBS = "//XCUIElementTypeStaticText[@name='pageIndexLabel']"
 QUESTION_UPLOAD_FROM_DESIGNS = "//XCUIElementTypeButton[@name='Popular designs']"
 QUESTION_TEXT_MEDIA_TAB = '//XCUIElementTypeStaticText[contains(@value, "Test question number")]'
+QUESTION_EDITED_TEXT_MEDIA_TAB = '//XCUIElementTypeStaticText[contains(@value, "Edited question")]'
 CUSTOM_BACKGROUND_ITEMS = "//XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeImage"
 SAVE_BTN_BACKGROUND_ITEMS = "Save"
 ALL_TEXT_STYLES = "//XCUIElementTypeCollectionView/XCUIElementTypeCell"
