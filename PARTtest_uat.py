@@ -91,16 +91,16 @@ import time
 # 	profile_model.delete_account_and_login_after(selenium)
 
 # # iOS done
-def test_profile_info_pages(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.info_pages_check(selenium)
-	profile_model.customer_support_page_check(selenium)
+# def test_profile_info_pages(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.info_pages_check(selenium)
+# 	profile_model.customer_support_page_check(selenium)
 
 # # iOS done # configured for UAT
-# def test_profile_about_version_check(debug_model, profile_model, selenium):
-# 	debug_model.switch_to_uat_version_check(selenium)
-# 	profile_model.about_version_check(selenium)
+def test_profile_about_version_check(debug_model, profile_model, selenium):
+	debug_model.switch_to_uat_version_check(selenium)
+	profile_model.about_version_check(selenium)
 
 # # iOS in progress
 # def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
