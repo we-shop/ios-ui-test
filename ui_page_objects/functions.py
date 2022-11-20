@@ -141,6 +141,14 @@ def long_wait_el_acc_id(driver, locator):
 		print(f"Element to find by ACCESSIBILITY ID: {locator} is not found!")
 		print(f"{ERROR}")
 
+def long_wait_el_xpath(driver, locator):
+	try:
+		WebDriverWait(driver, 25).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+		return driver.find_element(MobileBy.XPATH, locator)
+	except:
+		print(f"Element to find by ACCESSIBILITY ID: {locator} is not found!")
+		print(f"{ERROR}")
+
 
 def get_toast_msg(driver):
 	toast_locator = "/hierarchy/android.widget.Toast"

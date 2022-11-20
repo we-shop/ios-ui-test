@@ -133,8 +133,9 @@ class PostPage:
 		click_in_srch_field = xpath_click(driver, SEARCH_INPUT_POST_CREATION_STEP_ONE)
 		time.sleep(0.5)
 		search_product_for_question = xpath_keys(driver, SEARCH_PRODUCT_POST_CREATION, "Xiaomi" + "\n")
-		time.sleep(3) #wait for sure
+		#time.sleep(3) #wait for sure
 		#driver.keyevent(66) # additional execution: send_enter_key_adb(driver) # NEED TO REDEBUG
+		long_wait_of_radio_btn = long_wait_el_xpath(driver, SEARCH_RESULT_PRODUCT_ONE)
 		fill_radio_btn_product_one = xpath_click(driver, SEARCH_RESULT_PRODUCT_ONE)
 		fill_radio_btn_product_two = xpath_click(driver, SEARCH_RESULT_PRODUCT_TWO)
 		fill_radio_btn_product_three = xpath_click(driver, SEARCH_RESULT_PRODUCT_THREE)
