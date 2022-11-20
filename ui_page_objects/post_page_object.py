@@ -67,7 +67,7 @@ class PostPage:
 
 		# final step
 		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_post_title}")
-		publish_btn_click = id_click(driver, PUBLISH_BTN_ADD_PRODUCT)
+		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify post data after edit
 		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
@@ -168,7 +168,8 @@ class PostPage:
 
 		# edit question part
 		#el_acc_id(driver, QUESTION_TEXT_STEP_ONE).clear()
-		edit_question_banner_text = id_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
+		el_xpath(driver, QUESTION_TEXT_STEP_ONE).set_value("")
+		edit_question_banner_text = xpath_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# verify that edited text visible on next step
@@ -183,7 +184,7 @@ class PostPage:
 
 		# next step
 		caption_input_edit = id_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_question_title}")
-		publish_btn_click = id_click(driver, PUBLISH_BTN_ADD_PRODUCT)
+		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify question data after edit
 		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
