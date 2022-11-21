@@ -263,7 +263,7 @@ class PostPage:
 		# check if comment exist
 		read_comments_count = None
 
-		if el_id(driver, COMMENTS_IN_POST).text == "Add a comment":
+		if el_xpath(driver, COMMENTS_IN_POST).text == "Add a comment":
 			read_comments_count = 0
 		else:
 			read_comments_count = int(el_xpath(driver, COMMENTS_IN_POST).text.split(" ")[0])
@@ -480,7 +480,7 @@ class PostPage:
 		# manipulation with comments
 		read_comments_count = None
 
-		if el_id(driver, COMMENTS_IN_POST).text == "Add a comment":
+		if el_xpath(driver, COMMENTS_IN_POST).text == "Add a comment":
 			read_comments_count = 0
 		else:
 			read_comments_count = int(el_xpath(driver, COMMENTS_IN_POST).text.split(" ")[0])
