@@ -80,7 +80,7 @@ MENU_DONE_BUTTON_ALL_LEGAL_PAGES = "//XCUIElementTypeButton[@name='Done']"
 
 
 APP_VERSION_SETTINGS_ABOUT = '(//XCUIElementTypeStaticText[contains(@name,"WeShop")])[2]' #'//XCUIElementTypeStaticText[contains(@name, "com.socialsuperstore.debug")]'
-
+PROFILE_FIRST_ITEM_IN_POSTS_TAB = "(//XCUIElementTypeStaticText[@name='titleLabel'])[1]"
 
 
 # FOLLOWERS_COUNT = "com.socialsuperstore:id/profileFollowersCount"
