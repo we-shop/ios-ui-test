@@ -62,6 +62,7 @@ FOOTER_ITEM_EDIT_COMMENT = '//XCUIElementTypeStaticText[@name="Edit comment"]'
 FOOTER_ITEM_DELETE_COMMENT = '//XCUIElementTypeStaticText[@name="Delete comment"]'
 FOOTER_ITEM_CANCEL = '//XCUIElementTypeStaticText[@name="Cancel"]'
 NO_COMMENTS_STUB = 'emptyMessageLabel' # //XCUIElementTypeStaticText[@name="emptyMessageLabel"]
+COMMENT_EDIT_CANCEL_CROSS_BTN = '//XCUIElementTypeOther[@name="inputBar"]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeButton'
 
 
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
