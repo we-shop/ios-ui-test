@@ -75,8 +75,10 @@ class PostPage:
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify post data after edit
-		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
+		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		time.sleep(3) # for sure # NEED TO FIX IN FUTURE
 		scroll_on_feed_page_start_ios(driver)
+		time.sleep(0.3)		
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
@@ -204,7 +206,7 @@ class PostPage:
 
 		# verify question data after edit
 		long_wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
-		#time.sleep(8.5) # for sure # NEED TO FIX
+		time.sleep(3) # for sure # NEED TO FIX IN FUTURE
 		scroll_on_feed_page_start_ios(driver)
 		time.sleep(0.5) # for sure
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
