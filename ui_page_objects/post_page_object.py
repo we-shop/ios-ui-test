@@ -297,6 +297,7 @@ class PostPage:
 			print(f"{EXISTING_COMMENTS_IN_NEW_POST}")
 
 		click_on_comments_btn = xpath_click(driver, GO_TO_COMMENTS_BTN)
+		wait_input_field = el_acc_id(driver, COMMENTS_INPUT_TEXT_FIELD)
 		type_test_comment = id_keys(driver, COMMENTS_INPUT_TEXT_FIELD, "self test comment for post")
 		click_on_send_comments_btn = acc_id_click(driver, COMMENTS_SEND_BTN)
 		time.sleep(1.1) # obligatory wait to avoid warning modal window
