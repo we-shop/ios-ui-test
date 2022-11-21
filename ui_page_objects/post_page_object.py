@@ -102,7 +102,7 @@ class PostPage:
 		re_re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert read_message_after_deletion == "Your post has been deleted"
-		assert re_re_read_post_title != f"edited {read_question_title}"
+		assert re_re_read_post_title != f"edited {read_post_title}"
 
 
 	def ask_question(self, driver):
