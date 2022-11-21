@@ -108,6 +108,7 @@ import time
 # 	login_model.login_only(selenium)
 # 	post_model.recommend_product(selenium)
 
+# iOS done
 def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
 	debug_model.switch_to_uat(selenium)
 	login_model.login_only(selenium)

@@ -82,8 +82,8 @@ class PostPage:
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
-		print(re_read_count_of_linear_carousel_items)
-		print(re_read_count_of_linear_carousel_items - 1)
+		#print(re_read_count_of_linear_carousel_items)
+		#print(re_read_count_of_linear_carousel_items - 1)
 		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
 		assert re_read_post_title == f"edited {read_post_title}"
 
@@ -212,8 +212,8 @@ class PostPage:
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 		re_read_question_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
-		print(re_read_count_of_linear_carousel_items)
-		print(re_read_count_of_linear_carousel_items - 1)
+		#print(re_read_count_of_linear_carousel_items)
+		#print(re_read_count_of_linear_carousel_items - 1)
 		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
 		assert re_read_question_title == f"edited {read_question_title}"
 
