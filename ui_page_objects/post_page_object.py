@@ -27,10 +27,10 @@ class PostPage:
 		click_in_srch_field = xpath_click(driver, SEARCH_INPUT_POST_CREATION_STEP_ONE)
 		search_product_for_post = xpath_keys(driver, SEARCH_PRODUCT_POST_CREATION, "Samsung\n")
 
-
-		#fill_radio_btn_product_one = xpath_click(driver, SEARCH_RESULT_PRODUCT_ONE)
-		#fill_radio_btn_product_two = xpath_click(driver, SEARCH_RESULT_PRODUCT_TWO)
-		
+		# selecting found products
+		long_wait_of_radio_btn = long_wait_el_xpath(driver, SEARCH_RESULT_PRODUCT_ONE)
+		fill_radio_btn_product_one = xpath_click(driver, SEARCH_RESULT_PRODUCT_ONE)
+		fill_radio_btn_product_two = xpath_click(driver, SEARCH_RESULT_PRODUCT_TWO)
 		fill_radio_btn_product_three = xpath_click(driver, SEARCH_RESULT_PRODUCT_THREE)
 		done_btn_search_product_result_click = acc_id_click(driver, DONE_BTN_ADD_PRODUCT)
 		use_product_image_click = xpath_click(driver, PRODUCT_ADD_FOOTER_ITEM_MEDIA)
@@ -47,13 +47,13 @@ class PostPage:
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# check if product created (checking title/caption in feed)
-		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
-		scroll_on_feed_page_ios(driver)
+		wait_element = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		scroll_on_feed_page_start_ios(driver)
 		get_correct_text_by_acc_id(driver, FEED_POST_DESCRIPTION, PRODUCT_ID)
 
 	def product_edit_and_deletion(self, driver):
 		# starting from opened feed
-		read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
+		read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
 		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
 		scroll_up_on_feed_page(driver)
@@ -62,35 +62,40 @@ class PostPage:
 
 		# edit post part
 		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
-		click_on_next_btn = id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
-		click_on_next_btn_again = id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
+		click_on_next_btn_again = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# final step
+		el_xpath(driver, CAPTION_INPUT_FIELD).clear()
+		time.sleep(1.3)
 		caption_input_edit = xpath_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_post_title}")
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 		# verify post data after edit
 		wait_element = el_acc_id(driver, POST_TIME_AGO_TEXT)
-		scroll_on_feed_page(driver)
+		scroll_on_feed_page_start_ios(driver)
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
-		re_read_post_title = el_id(driver, FEED_POST_DESCRIPTION).text
+		re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
 		assert re_read_post_title == f"edited {read_post_title}"
 
 		# delete part
-		scroll_up_on_feed_page(driver)
+		#scroll_up_on_feed_page(driver)
 		re_open_sub_menu_of_post = xpath_click(driver, POST_DOTS_SUB_MENU)
 		delete_post_sub_menu_click = xpath_click(driver, POST_DOTS_SUB_MENU_DELETE_POST)
 		accept_deletion_in_modal = xpath_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
 
 		# verify that post was deleted
-		read_toast_msg = get_toast_msg(driver)
-		scroll_on_feed_page(driver)
+		#read_toast_msg = get_toast_msg(driver)
+		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
+		long_wait_element_again = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		scroll_on_feed_page_start_ios(driver)
+		time.sleep(0.5) # for sure
 		re_re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
-		assert read_toast_msg == "Your post has been deleted"
-		assert re_re_read_post_title != f"edited {read_post_title}"
+		assert read_message_after_deletion == "Your post has been deleted"
+		assert re_re_read_post_title != f"edited {read_question_title}"
 
 
 	def ask_question(self, driver):
@@ -161,7 +166,7 @@ class PostPage:
 
 	def question_edit_and_deletion(self, driver):
 		# starting from opened feed
-		read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
+		read_question_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text.split(" ")[-1]
 		read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
 
 		open_sub_menu_of_question = xpath_click(driver, POST_DOTS_SUB_MENU)
@@ -198,10 +203,10 @@ class PostPage:
 		scroll_on_feed_page_start_ios(driver)
 		time.sleep(0.5) # for sure
 		re_read_count_of_linear_carousel_items = int(el_xpath(driver, READ_ALL_PRODUCT_LINEAR_LAYOUTS).get_attribute("value")[-1])
-		re_read_question_title = el_id(driver, FEED_POST_DESCRIPTION).text
+		re_read_question_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
-		#assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
-		#assert re_read_question_title == f"edited {read_question_title}"
+		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
+		assert re_read_question_title == f"edited {read_question_title}"
 
 		# delete part
 		re_open_sub_menu_of_question = xpath_click(driver, POST_DOTS_SUB_MENU)

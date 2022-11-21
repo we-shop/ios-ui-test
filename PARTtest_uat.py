@@ -140,11 +140,11 @@ def test_post_create_new_product_edit_delete(debug_model, login_model, post_mode
 # 	post_model.ask_question(selenium)
 
 # iOS Done - latest
-# def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	post_model.ask_question(selenium)
-# 	post_model.question_edit_and_deletion(selenium)
+def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.ask_question(selenium)
+	post_model.question_edit_and_deletion(selenium)
 
 # def test_self_question_like_and_comment_check(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
