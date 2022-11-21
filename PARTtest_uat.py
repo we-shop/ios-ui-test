@@ -7,7 +7,7 @@ import time
 # def atest_switch_env(debug_model, selenium):
 #	debug_model.switch_to_uat(selenium)
 
-iOS done
+# iOS done
 def test_login_and_logout(login_model, debug_model, selenium):
 	debug_model.switch_to_uat(selenium)
 	login_model.login_with_assert(selenium)
