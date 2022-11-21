@@ -51,6 +51,19 @@ CONTINUE_WITHOUT_PRODUCT_BTN = '//*[contains(@value, "Yes")]' #accept deletion o
 DELETION_FEED_POST_MESSAGE = 'Your post has been deleted'
 PRODUCT_EDIT_FIRST_CHECKBOX = '(//XCUIElementTypeButton[@name="active checkbox icon"])[1]'
 
+# comments
+LIKES_IN_POST = '//XCUIElementTypeCell[5]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]'
+COMMENTS_IN_POST = '//XCUIElementTypeButton[@name="commentsButton"]/.'
+GO_TO_COMMENTS_BTN = '//XCUIElementTypeButton[@name="commentsButton"]'
+COMMENTS_INPUT_TEXT_FIELD = 'inputTextView' #'//XCUIElementTypeTextView[@name="inputTextView"]'
+COMMENTS_SEND_BTN = 'sendButton' #'//XCUIElementTypeButton[@name="sendButton"]'
+COMMENT_TEXT_ID = 'commentTextLabel'
+FOOTER_ITEM_EDIT_COMMENT = '//XCUIElementTypeStaticText[@name="Edit comment"]'
+FOOTER_ITEM_DELETE_COMMENT = '//XCUIElementTypeStaticText[@name="Delete comment"]'
+FOOTER_ITEM_CANCEL = '//XCUIElementTypeStaticText[@name="Cancel"]'
+NO_COMMENTS_STUB = 'emptyMessageLabel' # //XCUIElementTypeStaticText[@name="emptyMessageLabel"]
+
+
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
 # SEARCH_RESULT_PRODUCT_ONE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.CheckBox"
 # SEARCH_RESULT_PRODUCT_TWO = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.CheckBox"
