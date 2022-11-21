@@ -209,10 +209,10 @@ class PostPage:
 		accept_deletion_in_modal = xpath_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
 
 		# verify that question was deleted
+		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
 		long_wait_element_again = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
 		scroll_on_feed_page_start_ios(driver)
 		time.sleep(0.5) # for sure
-		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
 		re_re_read_question_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
 
 		assert read_message_after_deletion == "Your post has been deleted"
