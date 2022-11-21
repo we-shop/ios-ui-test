@@ -271,7 +271,7 @@ def scroll_on_feed_page_ios(driver):
 def scroll_on_feed_page_start_ios(driver):
 	time.sleep(2)
 	action = TouchAction(driver)
-	action.press(x=230, y=479).wait(1000).move_to(x=230, y=169).release().perform()
+	action.press(x=230, y=479).wait(1000).move_to(x=230, y=158).release().perform()
 	time.sleep(0.3)
 
 def scroll_on_post_page_ios(driver):
