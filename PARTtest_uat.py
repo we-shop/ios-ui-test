@@ -61,10 +61,10 @@ import time
 # 	product_page_model.add_product_to_question(selenium)
 
 # # iOS done
-def test_profile_check_followers_and_followings_count(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.followings_followers_count(selenium)
+# def test_profile_check_followers_and_followings_count(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.followings_followers_count(selenium)
 
 # # iOS done
 # def test_profile_follow_unfollow_followers_following_tabs(login_model, debug_model, profile_model, selenium):
@@ -108,11 +108,11 @@ def test_profile_check_followers_and_followings_count(login_model, debug_model, 
 # 	login_model.login_only(selenium)
 # 	post_model.recommend_product(selenium)
 
-# def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	post_model.recommend_product(selenium)
-# 	post_model.product_edit_and_deletion(selenium)
+def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.recommend_product(selenium)
+	post_model.product_edit_and_deletion(selenium)
 
 # def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
@@ -139,6 +139,7 @@ def test_profile_check_followers_and_followings_count(login_model, debug_model, 
 # 	login_model.login_only(selenium)
 # 	post_model.ask_question(selenium)
 
+# iOS Done - latest
 # def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_only(selenium)
