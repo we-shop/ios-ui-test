@@ -172,7 +172,7 @@ class PostPage:
 		wait_inp_field = el_xpath(driver, QUESTION_TEXT_STEP_ONE)
 		time.sleep(0.5)
 		el_xpath(driver, QUESTION_TEXT_STEP_ONE).clear() #set_value("")
-		time.sleep(0.5)
+		time.sleep(1.3)
 		edit_question_banner_text = xpath_keys(driver, QUESTION_TEXT_STEP_ONE, f"Edited question {read_question_title}")
 		click_on_next_btn = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
@@ -188,7 +188,7 @@ class PostPage:
 
 		# next step
 		el_xpath(driver, CAPTION_INPUT_FIELD).clear()
-		time.sleep(0.5)
+		time.sleep(1.3)
 		caption_input_edit = xpath_keys(driver, CAPTION_INPUT_FIELD, f"edited {read_question_title}")
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
