@@ -331,8 +331,8 @@ def taking_you_to_win_ios(driver):
 
 # Long press function
 def long_click_id(driver, locator):
-	WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
-	element = driver.find_element(By.ID, locator)
+	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+	element = driver.find_element(MobileBy.ACCESSIBILITY_ID, locator)
 	actions = TouchAction(driver)
 	actions.long_press(element)
 	actions.perform()
