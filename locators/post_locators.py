@@ -49,6 +49,7 @@ POST_FLAG_CONTENT_SUCCESS_WIN_TITLE = '//XCUIElementTypeStaticText[@name="succes
 POST_FLAG_CONTENT_SUCCESS_WIN_DONE_BTN = '//XCUIElementTypeButton[@name="closeButton"]'
 CONTINUE_WITHOUT_PRODUCT_BTN = '//*[contains(@value, "Yes")]' #accept deletion of post/question
 DELETION_FEED_POST_MESSAGE = 'Your post has been deleted'
+PRODUCT_EDIT_FIRST_CHECKBOX = '(//XCUIElementTypeButton[@name="active checkbox icon"])[1]'
 
 # ADD_FIRST_PRODUCT_PLUS_INPUT = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[4]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]"
 # SEARCH_RESULT_PRODUCT_ONE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.CheckBox"

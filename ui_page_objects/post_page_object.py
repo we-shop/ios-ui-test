@@ -82,7 +82,7 @@ class PostPage:
 
 		print(re_read_count_of_linear_carousel_items)
 		print(re_read_count_of_linear_carousel_items - 1)
-		#assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
+		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
 		assert re_read_post_title == f"edited {read_post_title}"
 
 		# delete part
@@ -193,7 +193,7 @@ class PostPage:
 
 		# next step
 		click_on_next_btn_again = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
-		#remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
+		remove_selection_first_product = xpath_click(driver, PRODUCT_EDIT_FIRST_CHECKBOX)
 		click_step_further = acc_id_click(driver, NEXT_STEP_BTN_ADD_PRODUCT)
 
 		# next step
@@ -212,7 +212,7 @@ class PostPage:
 
 		print(re_read_count_of_linear_carousel_items)
 		print(re_read_count_of_linear_carousel_items - 1)
-		#assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
+		assert re_read_count_of_linear_carousel_items == read_count_of_linear_carousel_items - 1
 		assert re_read_question_title == f"edited {read_question_title}"
 
 		# delete part
