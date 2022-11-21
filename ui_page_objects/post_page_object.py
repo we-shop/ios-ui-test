@@ -269,6 +269,8 @@ class PostPage:
 			read_comments_count = int(el_xpath(driver, COMMENTS_IN_POST).text.split(" ")[0])
 
 		click_on_comments_btn = xpath_click(driver, GO_TO_COMMENTS_BTN)
+		wait_for_input_comment_field = el_acc_id(driver, COMMENTS_INPUT_TEXT_FIELD)
+		time.sleep(0.5)
 		type_test_comment = id_keys(driver, COMMENTS_INPUT_TEXT_FIELD, "self test comment for post")
 		click_on_send_comments_btn = acc_id_click(driver, COMMENTS_SEND_BTN)
 		time.sleep(1.1) # obligatory wait to avoid warning modal window
