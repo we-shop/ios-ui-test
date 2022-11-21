@@ -145,7 +145,7 @@ class ProductDetailPage:
 		#select_chrome_browser(driver)
 		time.sleep(5) # to read correct url, theoretically can be removed
 
-		page_url = el_acc_id(driver, BROWSER_URL_BAR).text
+		page_url = el_acc_id(driver, EXTERNAL_BROWSER_URL_BAR).text
 		assert len(page_url) > 8
 
 	# iOS in done
