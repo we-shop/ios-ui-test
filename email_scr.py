@@ -13,7 +13,7 @@ TRAVIS_EVENT_TYPE = os.getenv("TRAVIS_EVENT_TYPE")
 cur_date = datetime.today().strftime('%d-%m-%Y') # + "Test result:" + TEST_RESULT + " | " + TRAVIS_EVENT_TYPE
 
 
-recipients_list = ["abavabaraba@gmail.com", "mike_zone@ukr.net"] #, "danilo.lapegna@weshop.co.uk"]
+recipients_list = ["abavabaraba@gmail.com", "mike_zone@ukr.net", "danilo.lapegna@weshop.co.uk"]
 
 #recipients_list = ["abavabaraba@gmail.com", "mike_zone@ukr.net"] #, "sridevi.harsha@we.shop", "nik.lalev@weshop.co.uk", "smita.patil@weshop.co.uk", "shriharsha.ka@we.shop"]
 
