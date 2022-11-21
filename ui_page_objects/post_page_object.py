@@ -323,6 +323,7 @@ class PostPage:
 
 		# delete comment block
 		long_click_id(driver, COMMENT_TEXT_ID)
+		time.sleep(2.1)
 		click_on_delete_comment_btn = xpath_click(driver, FOOTER_ITEM_DELETE_COMMENT)
 
 		# asserting that stub "Be the first to comment" is displayed
