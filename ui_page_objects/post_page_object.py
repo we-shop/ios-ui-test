@@ -38,14 +38,14 @@ class PostPage:
 		# media step
 		click_use_product_image = xpath_click(driver, MEDIA_IMAGE_FROM_PRODUCT)
 		click_done_btn_to_skip_tag_step = acc_id_click(driver, DONE_BTN_ADD_PRODUCT)
-		time.sleep(3) # NEED TO REMOVE IN FUTURE
+		time.sleep(4) # NEED TO REMOVE IN FUTURE
 		next_btn_click = acc_id_click(driver, NEXT_BTN_ADD_PRODUCT)
 
 		# NEED TO ADD IMAGE CHECK IN FUTURE
 
 		# caption step and publish
 		enter_text_to_caption_input_field = xpath_keys(driver, CAPTION_INPUT_FIELD, f"Test caption for new product number {PRODUCT_ID}")
-		time.sleep(3) # NEED TO REMOVE IN FUTURE
+		time.sleep(4.5) # NEED TO REMOVE IN FUTURE
 		publish_btn_click = xpath_click(driver, PUBLISH_BTN_ADD_PRODUCT)
 
 
