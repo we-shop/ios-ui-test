@@ -115,10 +115,10 @@ def test_post_create_new_product_edit_delete(debug_model, login_model, post_mode
 	post_model.recommend_product(selenium)
 	post_model.product_edit_and_deletion(selenium)
 
-# def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_go_to_profile(selenium)
-# 	post_model.comment_and_like_self_post(selenium)
+def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_go_to_profile(selenium)
+	post_model.comment_and_like_self_post(selenium)
 
 # def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
