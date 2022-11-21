@@ -500,7 +500,8 @@ class PostPage:
 		time.sleep(0.5)		
 		type_test_comment = id_keys(driver, COMMENTS_INPUT_TEXT_FIELD, "self test comment for question")
 		click_on_send_comments_btn = acc_id_click(driver, COMMENTS_SEND_BTN)
-		
+		time.sleep(1.1)
+
 		# handle modal window
 		#click_continue_without_product = id_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN) # NEED TO TALK TO EGOR
 		#time.sleep(1.1) # obligatory wait to avoid warning modal window
@@ -569,6 +570,7 @@ class PostPage:
 		time.sleep(0.5)		
 		type_test_comment = id_keys(driver, COMMENTS_INPUT_TEXT_FIELD, "self test comment for question")
 		click_on_send_comments_btn = acc_id_click(driver, COMMENTS_SEND_BTN)
+		time.sleep(1.1)
 		
 		# handle modal window
 		#click_continue_without_product = id_click(driver, CONTINUE_WITHOUT_PRODUCT_BTN)
