@@ -314,8 +314,8 @@ class PostPage:
 		# re-enter to comments, then edit
 		click_on_comments_btn_edit_flow = xpath_click(driver, GO_TO_COMMENTS_BTN)
 		time.sleep(1)
-		#long_click_id(driver, COMMENT_TEXT_ID)
-		long_click_xpath(driver, COMMENT_TEXT_ID) #COMMENT_AVATAR_ICON)
+		long_click_id(driver, COMMENT_TEXT_ID)
+		#long_click_xpath(driver, COMMENT_TEXT_ID) #COMMENT_AVATAR_ICON) #debug
 		click_on_edit_comment_btn = xpath_click(driver, FOOTER_ITEM_EDIT_COMMENT)
 		edit_test_comment = xpath_keys(driver, COMMENTS_INPUT_TEXT_FIELD, EDITED_COMMENT)
 		click_on_send_comments_btn = id_click(driver, COMMENTS_SEND_BTN)
