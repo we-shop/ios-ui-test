@@ -344,9 +344,9 @@ def long_click_xpath(driver, locator):
 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
 	element = driver.find_element(MobileBy.XPATH, locator)
 	actions = TouchAction(driver)
-	actions.long_press(element, duration=14400)#.perform()
+	actions.long_press(element, duration=3400).release().perform()
 	time.sleep(2)
-	actions.perform()
+	#actions.perform()
 	#actions.perform()
 
 
