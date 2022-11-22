@@ -1,6 +1,6 @@
 #from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver import ActionChains
+#from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -334,7 +334,7 @@ def long_click_id(driver, locator):
 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
 	element = driver.find_element(MobileBy.ACCESSIBILITY_ID, locator)
 	actions = TouchAction(driver)
-	actions.long_press(element, duration=1400)
+	actions.long_press(element, duration=2400)
 	actions.perform()
 
 
@@ -344,7 +344,7 @@ def long_click_xpath(driver, locator):
 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
 	element = driver.find_element(MobileBy.XPATH, locator)
 	actions = TouchAction(driver)
-	actions.long_press(element, duration=1400)
+	actions.long_press(element, duration=2400)
 	actions.perform()
 
 
