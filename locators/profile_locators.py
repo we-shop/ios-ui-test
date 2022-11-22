@@ -84,6 +84,7 @@ PROFILE_FIRST_ITEM_IN_POSTS_TAB = "(//XCUIElementTypeStaticText[@name='titleLabe
 PROFILE_FIRST_ITEM_IN_QUESTION_TAB = '(//XCUIElementTypeImage[@name="foregroundMediaView"])[1]'
 
 
+
 PROFILE_QUESTIONS_TAB = '//XCUIElementTypeButton[contains(@name, "Questions")]'
 
 # FOLLOWERS_COUNT = "com.socialsuperstore:id/profileFollowersCount"
