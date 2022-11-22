@@ -97,6 +97,7 @@ class PostPage:
 		#read_toast_msg = get_toast_msg(driver)
 		read_message_after_deletion = el_acc_id(driver, DELETION_FEED_POST_MESSAGE).text
 		long_wait_element_again = long_wait_el_acc_id(driver, POST_TIME_AGO_TEXT)
+		time.sleep(1)
 		scroll_on_feed_page_start_ios(driver)
 		time.sleep(0.5) # for sure
 		re_re_read_post_title = el_acc_id(driver, FEED_POST_DESCRIPTION).text
