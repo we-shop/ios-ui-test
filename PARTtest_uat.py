@@ -121,12 +121,12 @@ import time
 # 	login_model.login_go_to_profile(selenium)
 # 	post_model.comment_and_like_self_post(selenium)
 
-# iOS done - long press issue
-def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	post_model.recommend_product(selenium)
-	post_model.comment_edit_and_delete_in_self_post(selenium)
+# # iOS done
+# def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	post_model.recommend_product(selenium)
+# 	post_model.comment_edit_and_delete_in_self_post(selenium)
 
 # def OLDtest_self_post_comment_edit_and_delete_second(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
@@ -135,12 +135,11 @@ def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model,
 # 	post_model.comment_edit_and_delete_in_self_post_second(selenium)
 
 
-
-# # iOS in progress
-# def test_post_create_new_question(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	post_model.ask_question(selenium)
+# iOS in progress
+def test_post_create_new_question(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.ask_question(selenium)
 
 # iOS Done - latest
 # def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
