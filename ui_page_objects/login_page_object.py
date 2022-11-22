@@ -67,7 +67,8 @@ class LoginPage:
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
-			pass
+			time.sleep(1.2)
+			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		update_temp_file(self.LOGIN)
 
@@ -123,7 +124,8 @@ class LoginPage:
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
-			pass
+			time.sleep(1.2)
+			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		update_temp_file(self.LOGIN)
@@ -159,7 +161,8 @@ class LoginPage:
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
-			pass
+			time.sleep(1.2)
+			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		# going to profile settings
 		go_to_settings = acc_id_click(driver, FOOTER_ITEM_PROFILE)
@@ -180,7 +183,8 @@ class LoginPage:
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
-			pass
+			time.sleep(1.2)
+			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		# commented, because can be various scenarios
 		# # going to profile settings
