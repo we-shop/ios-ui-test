@@ -1,5 +1,5 @@
-from appium.webdriver.common.mobileby import By
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.appiumby import AppiumBy
 
 # LIST OF LOCATORS FOR LOGIN PAGE MODEL
 ALREADY_HAVE_ACC_LINK = "com.socialsuperstore:id/signInBtn"

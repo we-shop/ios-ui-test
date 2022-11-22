@@ -7,8 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 import string
 import random
-from appium.webdriver.common.mobileby import By
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.appiumby import AppiumBy
 import pytest
 from locators.product_detail_locators import PRODUCT_MODAL_CONTINUE_BTN
 from appium.webdriver.common.touch_action import TouchAction

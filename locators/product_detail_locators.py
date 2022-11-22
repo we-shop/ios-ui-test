@@ -1,5 +1,5 @@
-from appium.webdriver.common.mobileby import By
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.appiumby import AppiumBy
 
 # LIST OF iOS LOCATORS FOR SEARCH PAGE MODEL
 PRODUCT_NAME_PRICE_BLOCK = '(//XCUIElementTypeStaticText[contains(@name, "Shareback")]/../XCUIElementTypeTextView)[1]' #"titleTextView" #//XCUIElementTypeTextView[@name="titleTextView"]

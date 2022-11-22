@@ -1,5 +1,5 @@
-from appium.webdriver.common.mobileby import By
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.appiumby import AppiumBy
 
 # LIST OF LOCATORS FOR POST PAGE MODEL
 FOOTER_ITEM_REC_PRODUCT = "//XCUIElementTypeButton[@name='Add to post']"

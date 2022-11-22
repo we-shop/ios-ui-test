@@ -1,5 +1,5 @@
-from appium.webdriver.common.mobileby import By
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.appiumby import AppiumBy
 
 # LIST OF iOS LOCATORS FOR SEARCH PAGE MODEL
 SEARCH_BTN_HEAD_BAR = "Find products, people & retailers"
