@@ -72,6 +72,7 @@ import time
 # 	login_model.login_go_to_profile(selenium)
 # 	profile_model.following_count_manipulations_in_profile(selenium)
 
+# iOS In progress - need to invastigate
 # def AAAAAAAAtest_profile_follow_few_users_using_search(login_model, debug_model, profile_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_go_to_profile(selenium)
@@ -102,11 +103,11 @@ import time
 # 	debug_model.switch_to_uat_version_check(selenium)
 # 	profile_model.about_version_check(selenium)
 
-# iOS in progress
-def test_post_create_new_product(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	post_model.recommend_product(selenium)
+# # iOS done
+# def test_post_create_new_product(debug_model, login_model, post_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	post_model.recommend_product(selenium)
 
 # # iOS done
 # def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
@@ -115,11 +116,11 @@ def test_post_create_new_product(debug_model, login_model, post_model, selenium)
 # 	post_model.recommend_product(selenium)
 # 	post_model.product_edit_and_deletion(selenium)
 
-# # iOS done
-# def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_go_to_profile(selenium)
-# 	post_model.comment_and_like_self_post(selenium)
+# iOS done
+def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_go_to_profile(selenium)
+	post_model.comment_and_like_self_post(selenium)
 
 # # iOS done
 # def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
