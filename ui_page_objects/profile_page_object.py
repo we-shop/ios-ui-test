@@ -675,7 +675,7 @@ class ProfilePage:
 		switch_back_to_wishlists_tab = acc_id_click(driver, PROFILE_WISHLIST_TAB)
 
 		read_created_wishlist_name = [i.text for i in elems_xpath(driver, PROFILE_FIRST_ITEM_IN_WISHLIST_GRID)]
-		read_all_hide_icons_count = len(driver.find_elements(By.ID, WISHLIST_GRID_HIDE_ICON))
+		read_all_hide_icons_count = len(driver.find_elements(AppiumBy.ID, WISHLIST_GRID_HIDE_ICON))
 
 		assert RANDOM_WISHLIST_NAME in read_created_wishlist_name
 		assert read_all_hide_icons_count == 0 # should be 0
