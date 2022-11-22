@@ -337,9 +337,9 @@ class PostPage:
 
 		# delete comment block
 		long_click_id(driver, COMMENT_TEXT_ID)
-		accept_deletion_modal_yes_btn_click = acc_id_click(driver, COMMENT_DEL_MODAL_YES_BTN)
 		click_on_delete_comment_btn = xpath_click(driver, FOOTER_ITEM_DELETE_COMMENT)
-
+		accept_deletion_modal_yes_btn_click = acc_id_click(driver, COMMENT_DEL_MODAL_YES_BTN)
+		
 		# asserting that stub "Be the first to comment" is displayed
 		read_no_comments_stub = el_acc_id(driver, NO_COMMENTS_STUB).text
 		assert "Be the first to comment on your’s post" in read_no_comments_stub
