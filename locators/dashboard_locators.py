@@ -1,5 +1,5 @@
-from appium.webdriver.common.appiumby import By
-from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.common.mobileby import By
+from appium.webdriver.common.mobileby import MobileBy
 
 # LIST OF LOCATORS FOR DASHBOARD PAGE MODEL
 DASHBOARD_WESHARES_TAB = "WeShares"

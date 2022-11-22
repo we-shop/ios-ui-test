@@ -47,7 +47,9 @@ prefs = {"download.default_directory": os.getcwd() + "/"}
 # "os_version" : "11.0"
 
 # {"app_url":"bs://576463a96efb0a64e20d5abe7652b5faa671aba4"}
+
 # /* In your test script, use this "app_url" value to specify the application under test using the "app" capability. During test execution, your app will automatically be installed and launched on the device being tested. */
+
 # caps.setCapability("app", "bs://576463a96efb0a64e20d5abe7652b5faa671aba4")
 
 

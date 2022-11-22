@@ -16,125 +16,125 @@ from appium.webdriver.common.touch_action import TouchAction
 # FUCTIONS FOR MOBILE
 def web_id_click(driver, locator):
 	try: 
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
-		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((AppiumBy.ID, locator))).click()
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, locator))).click()
 	except:
 		print(f"Element to click by ID: {locator} is not found!")
 		pytest.fail("Element to click by ID error")
 
 def web_xpath_click(driver, locator):
 	try: 
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((AppiumBy.XPATH, locator))).click()
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, locator)))
+		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, locator))).click()
 	except:
 		print(f"Element to click by XPATH: {locator} is not found!")
 		print(f"{ERROR}")
 
 # def acc_id_click(driver, locator):
 # 	try: 
-# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ACCESSIBILITY_ID, locator)))
-# 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((AppiumBy.ACCESSIBILITY_ID, locator))).click()
+# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+# 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, locator))).click()
 # 	except:
 # 		print(f"Element to click by ACCESSIBILITY ID: {locator} is not found!")
 # 		print(f"{ERROR}")
 
 def web_el_id(driver, locator):
 	try:
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
-		return driver.find_element(AppiumBy.ID, locator)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+		return driver.find_element(By.ID, locator)
 	except:
 		print(f"Element to find by ID: {locator} is not found!")
 		print(f"{ERROR}")
 
 def web_el_xpath(driver, locator):
 	try:
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-		return driver.find_element(AppiumBy.XPATH, locator)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, locator)))
+		return driver.find_element(By.XPATH, locator)
 	except:
 		print(f"Element to find by XPATH: {locator} is not found!")
 		print(f"{ERROR}")
 
 
 # def el_xpath_short_wait_with_fail(driver, locator):
-# 	WebDriverWait(driver, 2).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-# 	return driver.find_element(AppiumBy.XPATH, locator)
+# 	WebDriverWait(driver, 2).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+# 	return driver.find_element(MobileBy.XPATH, locator)
 
 # def el_id_short_wait(driver, locator):
 # 	try:
-# 		WebDriverWait(driver, 2).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
-# 		#return driver.find_element(AppiumBy.ID, locator)
+# 		WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.ID, locator)))
+# 		#return driver.find_element(By.ID, locator)
 # 	except:
 # 		#print(f"Element to find by ID (short wait): {locator} is not found!")
 # 		print(f"{ERROR}")
 
 # def el_xpath_short_wait(driver, locator):
 # 	try:
-# 		WebDriverWait(driver, 5).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-# 		#return driver.find_element(AppiumBy.ID, locator)
+# 		WebDriverWait(driver, 5).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+# 		#return driver.find_element(By.ID, locator)
 # 	except:
 # 		#print(f"Element to find by ID (short wait): {locator} is not found!")
 # 		print(f"{ERROR}")			
 
 # def el_acc_id(driver, locator):
 # 	try:
-# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ACCESSIBILITY_ID, locator)))
-# 		return driver.find_element(AppiumBy.ACCESSIBILITY_ID, locator)
+# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+# 		return driver.find_element(MobileBy.ACCESSIBILITY_ID, locator)
 # 	except:
 # 		print(f"Element to find by ACCESSIBILITY ID: {locator} is not found!")
 # 		print(f"{ERROR}")
 
 def web_elems_xpath(driver, locator):
 	try:
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-		return driver.find_elements(AppiumBy.XPATH, locator)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+		return driver.find_elements(MobileBy.XPATH, locator)
 	except:
 		print(f"Elements to find by XPATH: {locator} is not found!")
 		print(f"{ERROR}")
 
 def web_elems_id(driver, locator):
 	try:
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
-		return driver.find_elements(AppiumBy.ID, locator)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+		return driver.find_elements(By.ID, locator)
 	except:
 		print(f"Elements to find by ID: {locator} is not found!")
 		print(f"{ERROR}")		
 
 # def id_until_gone(driver, locator):
 # 	try:
-# 		WebDriverWait(driver, 10).until(EC.invisibility_of_element_located((AppiumBy.ID, locator)))
+# 		WebDriverWait(driver, 10).until(EC.invisibility_of_element_located((By.ID, locator)))
 # 	except:
 # 		print(f"Elements by ID: {locator} is not gone!")
 # 		print(f"{ERROR}")
 
 # def id_until_gone_short(driver, locator):
 # 	try:
-# 		WebDriverWait(driver, 1).until(EC.invisibility_of_element_located((AppiumBy.ID, locator)))
+# 		WebDriverWait(driver, 1).until(EC.invisibility_of_element_located((By.ID, locator)))
 # 	except:
 # 		print(f"Elements by ID: {locator} is not gone!")
 # 		print(f"{ERROR}")					
 
 def web_id_keys(driver, locator, keys):
 	try: 
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator))).send_keys(keys)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator))).send_keys(keys)
 	except:
 		print(f"Element to enter value by ID: {locator} is not found!")
 
 def web_xpath_keys(driver, locator, keys):
 	try: 
-		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, locator))).send_keys(keys)
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, locator))).send_keys(keys)
 	except:
 		print(f"Element to enter value by XPATH: {locator} is not found!")
 
 # def acc_id_keys(driver, locator, keys):
 # 	try: 
-# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ACCESSIBILITY_ID, locator))).send_keys(keys)
+# 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator))).send_keys(keys)
 # 	except:
 # 		print(f"Element to enter value by ACCESSIBILITY ID: {locator} is not found!")
 # 	toast_locator = "/hierarchy/android.widget.Toast"
 	
-# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, toast_locator)))
+# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, toast_locator)))
 # 	time.sleep(0.8) # obligatory wait, needed for script pause, between reading of 2 or more toast messages.
-# 	return driver.find_element(AppiumBy.XPATH, toast_locator).text
+# 	return driver.find_element(MobileBy.XPATH, toast_locator).text
 
 
 # random letters
@@ -182,12 +182,12 @@ def js_by_xpath_button_status(driver, locator):
 	return elem
 
 def web_get_correct_text_by_id(driver, locator, text):
-	WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
+	WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
 
 
 def web_get_correct_text_by_acc_id(driver, locator, text):
-	WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ACCESSIBILITY_ID, locator)))
-	txt = driver.find_element(AppiumBy.ACCESSIBILITY_ID, locator).text
+	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, locator)))
+	txt = driver.find_element(MobileBy.ACCESSIBILITY_ID, locator).text
 	assert text in txt
 
 
@@ -265,7 +265,7 @@ def web_get_correct_text_by_acc_id(driver, locator, text):
 # 	seconds = 5
 
 # 	while seconds > 0:
-# 		el = driver.find_element(AppiumBy.ID, locator).text
+# 		el = driver.find_element(By.ID, locator).text
 # 		if str(text) in el:
 # 			break
 # 		else:
@@ -279,8 +279,8 @@ def web_get_correct_text_by_acc_id(driver, locator, text):
 # # Solve browser choice
 # def select_chrome_browser(driver):
 # 	try:
-# 		WebDriverWait(driver, 2.5).until(EC.presence_of_element_located((AppiumBy.ID, "android:id/icon")))
-# 		all_browsers = driver.find_elements(AppiumBy.XPATH, "//android.widget.TextView")
+# 		WebDriverWait(driver, 2.5).until(EC.presence_of_element_located((By.ID, "android:id/icon")))
+# 		all_browsers = driver.find_elements(MobileBy.XPATH, "//android.widget.TextView")
 # 		chrome_click = [i.click() for i in all_browsers if i.text == "Chrome"]
 		
 # 		# then click on Just once button
@@ -292,7 +292,7 @@ def web_get_correct_text_by_acc_id(driver, locator, text):
 # # Passing "Taking you to" window function
 # def taking_you_to_win_ios(driver):
 # 	try:
-# 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((AppiumBy.XPATH, PRODUCT_MODAL_CONTINUE_BTN))).click()
+# 		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((MobileBy.XPATH, PRODUCT_MODAL_CONTINUE_BTN))).click()
 # 		pass
 # 	except:
 # 		print("Taking you to window is not displayed")
@@ -301,15 +301,15 @@ def web_get_correct_text_by_acc_id(driver, locator, text):
 
 # # Long press function
 # def long_click_id(driver, locator):
-# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.ID, locator)))
-# 	element = driver.find_element(AppiumBy.ID, locator)
+# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+# 	element = driver.find_element(By.ID, locator)
 # 	actions = TouchAction(driver)
 # 	actions.long_press(element)
 # 	actions.perform()
 
 # def long_click_xpath(driver, locator):
-# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((AppiumBy.XPATH, locator)))
-# 	element = driver.find_element(AppiumBy.XPATH, locator)
+# 	WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+# 	element = driver.find_element(MobileBy.XPATH, locator)
 # 	actions = TouchAction(driver)
 # 	actions.long_press(element)
 # 	actions.perform()

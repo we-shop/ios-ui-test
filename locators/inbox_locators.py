@@ -1,5 +1,5 @@
-from appium.webdriver.common.appiumby import By
-from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.common.mobileby import By
+from appium.webdriver.common.mobileby import MobileBy
 
 # LIST OF LOCATORS FOR INBOX PAGE MODEL
 ALL_INBOX_TITLES = "com.socialsuperstore:id/activityDescription"

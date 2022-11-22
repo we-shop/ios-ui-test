@@ -13,7 +13,7 @@ from locators.search_locators import *
 from locators.debug_locators import *
 from locators.inbox_locators import *
 from locators.product_detail_locators import *
-from appium.webdriver.common.appiumby import By
+from appium.webdriver.common.mobileby import By
 
 class InboxPage:
 	# def __init__(self, LOGIN_URL, LOGIN, PASSWORD):
