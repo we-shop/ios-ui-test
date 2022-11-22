@@ -67,14 +67,24 @@ def email_sender(recipient):
 		server.login(sender_email, password)
 		server.sendmail(sender_email, receiver_email, text)
 
-# send report email(s)
+
+# send report email(s) on fail and success
 if len(recipients_list) > 0:
-	if TEST_RESULT == '1':
-		for i in recipients_list:
-			email_sender(i)
-			time.sleep(0.5)
+	for i in recipients_list:
+		email_sender(i)
+		time.sleep(0.5)
 
 else:
 	print(f"{ERORR} RECIPIENT LIST IS EMPTY!")
+
+# send report email(s) only ON FAIL
+# if len(recipients_list) > 0:
+# 	if TEST_RESULT == '1':
+# 		for i in recipients_list:
+# 			email_sender(i)
+# 			time.sleep(0.5)
+
+# else:
+# 	print(f"{ERORR} RECIPIENT LIST IS EMPTY!")
 
 
