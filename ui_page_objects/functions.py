@@ -348,6 +348,7 @@ def long_click_xpath(driver, locator):
 	actions.perform()
 
 
+
 def scroll_down_slowly(driver):
 	driver.swipe(470, 1400, 470, 950, 330)
 
