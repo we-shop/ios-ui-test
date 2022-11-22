@@ -317,9 +317,9 @@ class PostPage:
 		long_click_id(driver, COMMENT_TEXT_ID)
 		#long_click_xpath(driver, COMMENT_TEXT_ID) #COMMENT_AVATAR_ICON) #debug
 		click_on_edit_comment_btn = xpath_click(driver, FOOTER_ITEM_EDIT_COMMENT)
-		clear_comment_field_before_edit = el_xpath(driver, COMMENTS_INPUT_TEXT_FIELD).clear()
+		clear_comment_field_before_edit = el_acc_id(driver, COMMENTS_INPUT_TEXT_FIELD).clear()
 		time.sleep(1.1)
-		edit_test_comment = xpath_keys(driver, COMMENTS_INPUT_TEXT_FIELD, EDITED_COMMENT)
+		edit_test_comment = id_keys(driver, COMMENTS_INPUT_TEXT_FIELD, EDITED_COMMENT)
 		click_on_send_comments_btn = id_click(driver, COMMENTS_SEND_BTN)
 		time.sleep(1.1) # obligatory wait to avoid warning modal window
 
