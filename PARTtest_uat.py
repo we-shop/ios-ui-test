@@ -7,64 +7,64 @@ import time
 # def atest_switch_env(debug_model, selenium):
 #	debug_model.switch_to_uat(selenium)
 
-# iOS done
-def test_login_and_logout(login_model, debug_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_with_assert(selenium)
-	login_model.logout(selenium)
+# # iOS done
+# def test_login_and_logout(login_model, debug_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_with_assert(selenium)
+# 	login_model.logout(selenium)
 
-# iOS done
-@pytest.mark.xfail #marked as should fail, because of bug
-def test_login_with_incorrect_credentials(login_model, debug_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_with_incorrect_creds(selenium)
-
-
-# iOS done
-def test_search_request_and_clear_field(login_model, debug_model, search_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	search_model.search_and_clear_field(selenium)
-
-# iOS done
-def test_add_and_remove_product_from_wishlist(login_model, debug_model, search_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	search_model.search_product_and_open_detail_page(selenium)
-	product_page_model.add_product_to_wishlist(selenium)
-
-# iOS done
-def test_add_product_to_wishlist_and_check_in_profile(login_model, debug_model, search_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	search_model.search_product_and_open_detail_page(selenium)
-	product_page_model.add_product_to_wishlist_and_check_in_profile(selenium)
-
-# iOS done
-def test_open_product_website(debug_model, login_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	product_page_model.open_product_website(selenium)
+# # iOS done
+# @pytest.mark.xfail #marked as should fail, because of bug
+# def test_login_with_incorrect_credentials(login_model, debug_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_with_incorrect_creds(selenium)
 
 
-# iOS done
-def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	product_page_model.add_product_to_post(selenium)
+# # iOS done
+# def test_search_request_and_clear_field(login_model, debug_model, search_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	search_model.search_and_clear_field(selenium)
+
+# # iOS done
+# def test_add_and_remove_product_from_wishlist(login_model, debug_model, search_model, product_page_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	search_model.search_product_and_open_detail_page(selenium)
+# 	product_page_model.add_product_to_wishlist(selenium)
+
+# # iOS done
+# def test_add_product_to_wishlist_and_check_in_profile(login_model, debug_model, search_model, product_page_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	search_model.search_product_and_open_detail_page(selenium)
+# 	product_page_model.add_product_to_wishlist_and_check_in_profile(selenium)
+
+# # iOS done
+# def test_open_product_website(debug_model, login_model, product_page_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	product_page_model.open_product_website(selenium)
 
 
-# iOS done
-def test_add_product_to_question(debug_model, login_model, product_page_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	product_page_model.add_product_to_question(selenium)
+# # iOS done
+# def test_add_product_to_post(debug_model, login_model, product_page_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	product_page_model.add_product_to_post(selenium)
 
-# iOS done
-def test_profile_check_followers_and_followings_count(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.followings_followers_count(selenium)
+
+# # iOS done
+# def test_add_product_to_question(debug_model, login_model, product_page_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	product_page_model.add_product_to_question(selenium)
+
+# # iOS done
+# def test_profile_check_followers_and_followings_count(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.followings_followers_count(selenium)
 
 # iOS done
 def test_profile_follow_unfollow_followers_following_tabs(login_model, debug_model, profile_model, selenium):
@@ -72,61 +72,61 @@ def test_profile_follow_unfollow_followers_following_tabs(login_model, debug_mod
 	login_model.login_go_to_profile(selenium)
 	profile_model.following_count_manipulations_in_profile(selenium)
 
-def AAAAAAAAtest_profile_follow_few_users_using_search(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.follow_few_users(selenium)
+# def AAAAAAAAtest_profile_follow_few_users_using_search(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.follow_few_users(selenium)
 
-# iOS done # # NEED TO TALK TO EGOR
-def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.edit_profile(selenium)
+# # iOS done # # NEED TO TALK TO EGOR
+# def test_profile_info_edit(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.edit_profile(selenium)
 
-# iOS done
-@pytest.mark.xfail
-def test_profile_delete_account_flow(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.delete_account_and_login_after(selenium)
+# # iOS done
+# @pytest.mark.xfail
+# def test_profile_delete_account_flow(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.delete_account_and_login_after(selenium)
 
-# iOS done
-def test_profile_info_pages(login_model, debug_model, profile_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	profile_model.info_pages_check(selenium)
-	profile_model.customer_support_page_check(selenium)
+# # iOS done
+# def test_profile_info_pages(login_model, debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	profile_model.info_pages_check(selenium)
+# 	profile_model.customer_support_page_check(selenium)
 
-# iOS done # configured for UAT
-def test_profile_about_version_check(debug_model, profile_model, selenium):
-	debug_model.switch_to_uat_version_check(selenium)
-	profile_model.about_version_check(selenium)
+# # iOS done # configured for UAT
+# def test_profile_about_version_check(debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat_version_check(selenium)
+# 	profile_model.about_version_check(selenium)
 
-# iOS in progress
-def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	post_model.recommend_product(selenium)
-
-# iOS done
-def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	post_model.recommend_product(selenium)
-	post_model.product_edit_and_deletion(selenium)
-
-# iOS done
-def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_go_to_profile(selenium)
-	post_model.comment_and_like_self_post(selenium)
-
-# iOS done - long press issue
-# def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
+# # iOS in progress
+# def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_only(selenium)
 # 	post_model.recommend_product(selenium)
-# 	post_model.comment_edit_and_delete_in_self_post(selenium)
+
+# # iOS done
+# def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	post_model.recommend_product(selenium)
+# 	post_model.product_edit_and_deletion(selenium)
+
+# # iOS done
+# def test_self_post_like_and_comment_check(debug_model, login_model, post_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_go_to_profile(selenium)
+# 	post_model.comment_and_like_self_post(selenium)
+
+# iOS done - long press issue
+def test_self_post_comment_edit_and_delete(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.recommend_product(selenium)
+	post_model.comment_edit_and_delete_in_self_post(selenium)
 
 # def OLDtest_self_post_comment_edit_and_delete_second(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)

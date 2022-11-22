@@ -288,6 +288,7 @@ class ProfilePage:
 		for btns in find_all_follow_btns:
 			if btns.text == "Follow":
 				btns.click()
+				time.sleep(0.4)
 				follow_count +=1
 				follow_clicked +=1
 
@@ -295,13 +296,17 @@ class ProfilePage:
 		if follow_count == 0:
 			if profile_followers == 1:
 				xpath_click(driver, FIRST_BTN_IN_FOLLOWERS_TAB)
+				time.sleep(0.4)
 				follow_unclicked += 1
 			elif profile_followers == 2:
 				xpath_click(driver, FIRST_BTN_IN_FOLLOWERS_TAB)
+				time.sleep(0.4)
 				follow_unclicked += 1
 			else:
 				xpath_click(driver, SECOND_BTN_IN_FOLLOWERS_TAB)
+				time.sleep(0.55)
 				xpath_click(driver, THIRD_BTN_IN_FOLLOWERS_TAB)
+				time.sleep(0.55)
 				follow_unclicked += 2
 
 		# going back to profile
