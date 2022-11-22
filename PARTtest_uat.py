@@ -102,11 +102,11 @@ import time
 # 	debug_model.switch_to_uat_version_check(selenium)
 # 	profile_model.about_version_check(selenium)
 
-# # iOS in progress
-# def AAtest_post_create_new_product(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	post_model.recommend_product(selenium)
+# iOS in progress
+def test_post_create_new_product(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	post_model.recommend_product(selenium)
 
 # # iOS done
 # def test_post_create_new_product_edit_delete(debug_model, login_model, post_model, selenium):
@@ -135,11 +135,11 @@ import time
 # 	post_model.comment_edit_and_delete_in_self_post_second(selenium)
 
 
-# iOS in progress
-def test_post_create_new_question(debug_model, login_model, post_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_only(selenium)
-	post_model.ask_question(selenium)
+# # iOS done
+# def test_post_create_new_question(debug_model, login_model, post_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_only(selenium)
+# 	post_model.ask_question(selenium)
 
 # iOS Done - latest
 # def test_post_create_new_question_edit_delete(debug_model, login_model, post_model, selenium):
