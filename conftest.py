@@ -158,7 +158,8 @@ def selenium(request):
 		elif request.node.rep_call.outcome == "failed":
 				test_status = 'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"<tr>", "reason": "<trs>"}}'.replace("<tr>", "failed").replace("<trs>", f"Test {request.node.rep_call.head_line} failed! Need to check!")
 		else:
-				print(f"Something wrong! Check test status {ERROR}") # may be skipped issue
+				print(request.node.rep_call.outcome)
+				#print(f"Something wrong! Check test status {ERROR}") # may be skipped issue
 		
 
 		# mark test as passed/failed
