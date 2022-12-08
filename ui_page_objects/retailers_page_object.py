@@ -10,7 +10,7 @@ from locators.login_locators import *
 from locators.search_locators import *
 from locators.debug_locators import *
 from locators.post_locators import *
-
+from locators.retailers_locators import *
 
 
 class RetailersPage:
