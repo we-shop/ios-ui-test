@@ -9,6 +9,8 @@ from ui_page_objects.post_page_object import PostPage
 from ui_page_objects.inbox_page_object import InboxPage
 from ui_page_objects.web_page_object import WebPage
 from ui_page_objects.dashboard_page_object import DashboardPage
+from ui_page_objects.retailers_page_object import RetailersPage
+
 
 from appium import webdriver
 from ui_page_objects.functions import *
@@ -253,3 +255,9 @@ def dashboard_model(request):
 def web_model(request):
 	fixture = WebPage(LOGIN_URL, LOGIN, PASSWORD, LOGIN_NEW, PASSWORD_NEW, LOGIN_INT, PASSWORD_INT, LOGIN_INT_NEW, PASSWORD_INT_NEW)
 	return fixture
+
+@pytest.fixture()
+def retailers_model(request):
+	fixture = RetailersPage()
+	return fixture
+

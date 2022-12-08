@@ -212,7 +212,6 @@ def get_correct_text_by_acc_id(driver, locator, text):
 	assert text in txt
 
 
-
 def alert_accept_notifications(driver):
 	try:
 		driver.switch_to.alert.accept()
@@ -286,6 +285,11 @@ def scroll_on_settings_page_ios(driver):
 	action.press(x=200, y=334).wait(1000).move_to(x=200, y=190).release().perform()
 	time.sleep(0.3)	
 
+def horisontal_scroll_retailers_top_carousel(driver):
+	time.sleep(2)
+	action = TouchAction(driver)
+	action.press(x=400, y=230).wait(1000).move_to(x=30, y=230).release().perform()
+	time.sleep(0.3)
 
 def send_enter_key_adb(driver):
 	driver.execute_script('mobile: shell', {'command': 'input keyevent', 'args':'KEYCODE_ENTER'}) # send Enter key example (using adb)

@@ -10,7 +10,7 @@ from ui_page_objects.functions import *
 from locators.post_locators import *
 from locators.profile_locators import *
 from locators.product_detail_locators import *
-from appium.webdriver.extensions.android.nativekey import AndroidKey
+
 
 
 from appium.webdriver.common.touch_action import TouchAction
