@@ -28,9 +28,10 @@ class RetailersPage:
 	# iOS in progress
 	def retailers_overview(self, driver):
 		wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
-		titles_from_top_carousel_before_scroll = elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
+		titles_from_top_carousel_before_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 		horisontal_scroll_retailers_top_carousel(driver)
-		titles_from_top_carousel_after_scroll = elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
+		time.sleep(1) # obligatory
+		titles_from_top_carousel_after_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 
 
 		print(titles_from_top_carousel_before_scroll)
