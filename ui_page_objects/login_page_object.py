@@ -64,11 +64,17 @@ class LoginPage:
 		handle_notification_alert(driver)
 
 		# handling info block after login
+# 		try:
+# 			xpath_click(driver, CLOSE_BTN_LOGIN)
+# 		except:
+# 			time.sleep(1.2)
+# 			xpath_click(driver, CLOSE_BTN_LOGIN)
+
 		try:
-			xpath_click(driver, CLOSE_BTN_LOGIN)
+			xpath_click(driver, "//*[contains(@value='Allow')]")
 		except:
 			time.sleep(1.2)
-			xpath_click(driver, CLOSE_BTN_LOGIN)
+			xpath_click(driver, "//*[contains(@value='Allow')]")
 
 		update_temp_file(self.LOGIN)
 
