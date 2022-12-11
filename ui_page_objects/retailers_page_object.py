@@ -31,12 +31,13 @@ class RetailersPage:
 		
 
 		# going to profile settings
-		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
+		#click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
 		# return back to weshop page
-		click_on_weshop_footer_item = acc_id_click(driver, FOOTER_ITEM_SEARCH)
+		#click_on_weshop_footer_item = acc_id_click(driver, FOOTER_ITEM_SEARCH)
 
 		wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
+		#time.sleep(5)
 		titles_from_top_carousel_before_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 		horisontal_scroll_retailers_top_carousel(driver)
 		time.sleep(1) # obligatory
