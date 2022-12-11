@@ -28,7 +28,7 @@ class RetailersPage:
 	# iOS in progress
 	def retailers_overview(self, driver):
 		#time.sleep(11)
-		#wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
+		
 
 		# going to profile settings
 		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
@@ -36,13 +36,11 @@ class RetailersPage:
 		# return back to weshop page
 		click_on_weshop_footer_item = acc_id_click(driver, FOOTER_ITEM_SEARCH)
 
+		wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
 		titles_from_top_carousel_before_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 		horisontal_scroll_retailers_top_carousel(driver)
 		time.sleep(1) # obligatory
 		titles_from_top_carousel_after_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
-
-		# going to profile settings
-		click_on_profile_footer_item = acc_id_click(driver, PROFILE_FOOTER_MENU)
 
 		print(titles_from_top_carousel_before_scroll)
 		print(titles_from_top_carousel_after_scroll)
