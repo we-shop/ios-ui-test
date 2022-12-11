@@ -467,17 +467,28 @@ class ProfilePage:
 		sign_in_btn_click = acc_id_click(driver, MAKE_LOGIN_BTN)
 
 
-		# going to profile settings
 		# handle notification alert
 		handle_notification_alert(driver)
 
-		# handling info block after login
+		# handling "weshop experience window"
+		try:
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+		except:
+			time.sleep(1.2)
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+
+		# handle notification alert (another one)
+		handle_notification_alert(driver)			
+
+		#handling info block after login
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
-			pass
+			time.sleep(1.2)
+			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 
+		# going to profile settings
 		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		click_on_settings_btn = acc_id_click(driver, PROFILE_SETTINGS_BTN)
 		scroll_down_ios(driver)
