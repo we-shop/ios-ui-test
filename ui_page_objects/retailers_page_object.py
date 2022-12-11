@@ -40,11 +40,13 @@ class RetailersPage:
 		#time.sleep(5)
 		titles_from_top_carousel_before_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 		horisontal_scroll_retailers_top_carousel(driver)
-		time.sleep(1) # obligatory
+		time.sleep(0.3) # obligatory
 		titles_from_top_carousel_after_scroll = [i.text for i in elems_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)]
 
-		print(titles_from_top_carousel_before_scroll)
-		print(titles_from_top_carousel_after_scroll)
+		assert titles_from_top_carousel_before_scroll != titles_from_top_carousel_after_scroll
+
+		#print(titles_from_top_carousel_before_scroll)
+		#print(titles_from_top_carousel_after_scroll)
 		# read count of followers and following
 		# profile_followers = int(el_xpath(driver, FOLLOWERS_COUNT).text)
 		# profile_following = int(el_xpath(driver, FOLLOWINGS_COUNT).text)
