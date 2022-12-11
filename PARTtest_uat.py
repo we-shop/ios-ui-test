@@ -9,11 +9,11 @@ import time
 # 	debug_model.switch_to_uat(selenium)
 # 	assert 0 > 1
 
-# # iOS done
-# def test_login_and_logout(login_model, debug_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_with_assert(selenium)
-# 	login_model.logout(selenium)
+# iOS done
+def test_login_and_logout(login_model, debug_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_with_assert(selenium)
+	login_model.logout(selenium)
 
 # # iOS done
 # @pytest.mark.xfail #marked as should fail, because of bug
@@ -100,10 +100,10 @@ import time
 # 	profile_model.info_pages_check(selenium)
 # 	profile_model.customer_support_page_check(selenium)
 
-# iOS done # configured for UAT
-def test_profile_about_version_check(debug_model, profile_model, selenium):
-	debug_model.switch_to_uat_version_check(selenium)
-	profile_model.about_version_check(selenium)
+# # iOS done # configured for UAT
+# def test_profile_about_version_check(debug_model, profile_model, selenium):
+# 	debug_model.switch_to_uat_version_check(selenium)
+# 	profile_model.about_version_check(selenium)
 
 # # iOS done
 # def test_post_create_new_product(debug_model, login_model, post_model, selenium):
