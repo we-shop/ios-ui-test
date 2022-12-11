@@ -9,11 +9,11 @@ import time
 # 	debug_model.switch_to_uat(selenium)
 # 	assert 0 > 1
 
-# iOS done
-def test_login_and_logout(login_model, debug_model, selenium):
-	debug_model.switch_to_uat(selenium)
-	login_model.login_with_assert(selenium)
-	login_model.logout(selenium)
+# # iOS done
+# def test_login_and_logout(login_model, debug_model, selenium):
+# 	debug_model.switch_to_uat(selenium)
+# 	login_model.login_with_assert(selenium)
+# 	login_model.logout(selenium)
 
 # # iOS done
 # @pytest.mark.xfail #marked as should fail, because of bug
@@ -230,11 +230,11 @@ def test_login_and_logout(login_model, debug_model, selenium):
 # 	login_model.login_only_new_acc(selenium)
 # 	post_model.flag_post_content(selenium)
 	
-# 	# iOS in progress
-# def test_retailes_page_overview(debug_model, login_model, retailers_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_only(selenium)
-# 	retailers_model.retailers_overview(selenium)
+	# iOS in progress
+def test_retailes_page_overview(debug_model, login_model, retailers_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_only(selenium)
+	retailers_model.retailers_overview(selenium)
 
 def atest_xxx(debug_model, login_model, post_model, selenium):
 	import time
