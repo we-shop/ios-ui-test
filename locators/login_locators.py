@@ -16,6 +16,7 @@ LOGIN_SCREEN_TITLE = "Earn shares in the world’s first shoppable social networ
 FORGOT_PASS_LINK = '//XCUIElementTypeStaticText[@name="Forgot password"]'
 CLOSE_BTN_LOGIN ='//XCUIElementTypeButton[@name="cross"]'
 PUSH_NOTIFICATION_TEXT = "//XCUIElementTypeButton[@name='NotificationCell']"
+WESHOP_EXPERIENCE_WIN_ALLOW_BTN = "//XCUIElementTypeButton[@name='Allow']"
 
 # PROFILE_FOOTER_MENU = "Profile"
 # SETTINGS_BTN_PROFILE = "com.socialsuperstore:id/settingsBtn"

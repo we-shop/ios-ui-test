@@ -71,10 +71,12 @@ class LoginPage:
 # 			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		try:
-			xpath_click(driver, "//*[contains(@value='Allow')]")
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
 		except:
 			time.sleep(1.2)
-			xpath_click(driver, "//*[contains(@value='Allow')]")
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+
+		handle_notification_alert(driver)			
 
 		update_temp_file(self.LOGIN)
 
