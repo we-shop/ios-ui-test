@@ -31,7 +31,7 @@ class RetailersPage:
 		#wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
 
 		# going to profile settings
-		click_on_profile_footer_item = acc_id_click(driver, PROFILE_FOOTER_MENU)
+		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
 		# return back to weshop page
 		click_on_weshop_footer_item = acc_id_click(driver, FOOTER_ITEM_SEARCH)
