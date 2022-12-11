@@ -63,13 +63,6 @@ class LoginPage:
 		# handle notification alert
 		handle_notification_alert(driver)
 
-		#handling info block after login
-		try:
-			xpath_click(driver, CLOSE_BTN_LOGIN)
-		except:
-			time.sleep(1.2)
-			xpath_click(driver, CLOSE_BTN_LOGIN)
-
 		# handling "weshop experience window"
 		try:
 			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
