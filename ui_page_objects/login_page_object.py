@@ -127,15 +127,27 @@ class LoginPage:
 		password_field = acc_id_keys(driver, PASS_FIELD, PASSWORD)
 		sign_in_btn_click = acc_id_click(driver, MAKE_LOGIN_BTN)		
 
-		# going to profile settings
+		# handle notification alert
 		handle_notification_alert(driver)
 
-		# handling info block after login
+		# handling "weshop experience window"
+		try:
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+		except:
+			time.sleep(1.2)
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+
+		# handle notification alert (another one)
+		handle_notification_alert(driver)			
+
+		#handling info block after login
 		try:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 		except:
 			time.sleep(1.2)
 			xpath_click(driver, CLOSE_BTN_LOGIN)
+
+		update_temp_file(self.LOGIN)
 
 		click_on_profile_footer_item = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		update_temp_file(self.LOGIN)
