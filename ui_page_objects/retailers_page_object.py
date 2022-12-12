@@ -40,8 +40,8 @@ class RetailersPage:
 		# check all retailers
 		click_on_see_more_btn_all_ret = xpath_click(driver, SEE_MORE_BTN_ALL_RETAILERS)
 
-		get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
-		print(get_names_of_all_retailers)
+		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
+		#print(get_names_of_all_retailers)
 
 		#print(titles_from_top_carousel_before_scroll)
 		#print(titles_from_top_carousel_after_scroll)
