@@ -45,8 +45,8 @@ class RetailersPage:
 		#print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
 		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
 
-		get_all = elems_xpath_special(driver, RETAILERS_LIST_ALL_ITEMS)
-		print(len(get_all))
+		#get_all = elems_xpath_special(driver, RETAILERS_LIST_ALL_ITEMS)
+		#print(len(get_all))
 		#print(get_names_of_all_retailers)
 
 		#go_to_selected_retailer_site = xpath_click(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
