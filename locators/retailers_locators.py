@@ -5,6 +5,7 @@ RETAILERS_TOP_CAROUSEL_ITEM_TITLES = "//XCUIElementTypeCell[1]/XCUIElementTypeOt
 
 # all retailers block
 SEE_MORE_BTN_ALL_RETAILERS = '(//XCUIElementTypeStaticText[@name="See more"])[1]'
+RETAILERS_FIRST_ELEM_IN_ALL_LIST = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "")]'
 RETAILERS_LIST_ALL_ITEMS = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeStaticText[contains(@name, "")]'
 ALL_RETAILERS_SEARCH_INPUT = '(//XCUIElementTypeSearchField[@name="Search supported retailers"])[1]'
 SHOP_REDIRECT_TO_RETAILER_BTN = '/XCUIElementTypeButton[contains(@name, "Shop direct")]'
