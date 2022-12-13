@@ -93,6 +93,16 @@ def elems_xpath(driver, locator):
 		print(f"Elements to find by XPATH: {locator} is not found!")
 		print(f"{ERROR}")
 
+def elems_xpath_special(driver, locator):
+	try:
+		#WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+		return driver.find_elements(MobileBy.XPATH, locator)
+	except:
+		print(f"Elements to find by XPATH: {locator} is not found!")
+		print(f"{ERROR}")
+
+
+
 def elems_id(driver, locator):
 	try:
 		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))

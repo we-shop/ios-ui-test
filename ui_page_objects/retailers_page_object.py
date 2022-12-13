@@ -40,10 +40,14 @@ class RetailersPage:
 		# check all retailers
 		click_on_see_more_btn_all_ret = xpath_click(driver, SEE_MORE_BTN_ALL_RETAILERS)
 		wait_all_ret_list_first_elem = long_wait_el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST)
-		time.sleep(1)
-		print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
-		get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
-		print(get_names_of_all_retailers)
+		
+		assert len(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
+		#print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
+		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
+
+		get_all = elems_xpath_special(driver, RETAILERS_LIST_ALL_ITEMS)
+		print(len(get_all))
+		#print(get_names_of_all_retailers)
 
 		#go_to_selected_retailer_site = xpath_click(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
 
