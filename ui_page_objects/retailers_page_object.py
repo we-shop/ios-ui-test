@@ -27,7 +27,8 @@ class RetailersPage:
 
 	# iOS in progress
 	def retailers_overview(self, driver):
-		RANGE_ITEMS_INDEXES = list(range(1, 9))
+		RANGE_ITEMS_INDEXES = list(range(1, 4)) #list(range(1, 9))
+		RANDOM_INX = random.randint(0, 2)
 
 		# check carousel
 		wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
@@ -43,14 +44,26 @@ class RetailersPage:
 		click_on_see_more_btn_all_ret = xpath_click(driver, SEE_MORE_BTN_ALL_RETAILERS)
 		wait_all_ret_list_first_elem = long_wait_el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST)
 		
-		assert len(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
+		assert len(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text) > 2 # "HP" can be as exception, but it's far away (deep in list)
 		#print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
 		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
 
-		wait_all_present_retailers_xpaths = [f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[{i}]/XCUIElementTypeStaticText[contains(@name, "")]' for i in RANGE_ITEMS_INDEXES]
+		wait_all_present_retailers_xpaths = [el_xpath(driver, f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[{i}]/XCUIElementTypeStaticText[contains(@name, "")]') for i in RANGE_ITEMS_INDEXES]
+		get_title_of_click_retailer = wait_all_present_retailers_xpaths[RANDOM_INX].text
+		click_on_random_retailer_in_all_lst = wait_all_present_retailers_xpaths[RANDOM_INX].click()
+		print(get_title_of_click_retailer)
 
-		for i in wait_all_present_retailers_xpaths:
-			print(el_xpath(driver, i).text)
+		# retailer detail page
+		get_title_on_retailer_detail_page = el_xpath(driver, RETAILER_DETAIL_TITLE).text
+		print(get_title_on_retailer_detail_page)
+
+		assert get_title_on_retailer_detail_page == get_title_of_click_retailer
+
+
+		
+		
+
+		#print(el_xpath(driver, ).text)
 		
 		#get_all = elems_xpath_special(driver, RETAILERS_LIST_ALL_ITEMS)
 		#print(len(get_all))

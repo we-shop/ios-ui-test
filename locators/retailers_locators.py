@@ -8,15 +8,15 @@ SEE_MORE_BTN_ALL_RETAILERS = '(//XCUIElementTypeStaticText[@name="See more"])[1]
 RETAILERS_FIRST_ELEM_IN_ALL_LIST = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "")]'
 RETAILERS_LIST_ALL_ITEMS = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeStaticText[contains(@name, "")]'
 ALL_RETAILERS_SEARCH_INPUT = '(//XCUIElementTypeSearchField[@name="Search supported retailers"])[1]'
-SHOP_REDIRECT_TO_RETAILER_BTN = '/XCUIElementTypeButton[contains(@name, "Shop direct")]'
 ALL_RETAILERS_NAV_BAR_BACK_BTN = '//XCUIElementTypeNavigationBar/XCUIElementTypeButton[1]'
 ALL_RETAILERS_NAV_BAR_SEARCH_BTN = '//XCUIElementTypeNavigationBar/XCUIElementTypeButton[2]'
 ALL_RETAILERS_NAV_BAR_SHARE_BTN = '//XCUIElementTypeNavigationBar/XCUIElementTypeButton[3]'
 
+# detail page
 RETAILER_DETAIL_REDIRECT_MODAL_TITLE = 'Taking you to retailer in just a moment'
 RETAILER_DETAIL_REDIRECT_MODAL_CONTINUE_BTN = '//XCUIElementTypeButton[contains(@name, "Continue")]'
-
-
+RETAILER_DETAIL_TITLE = '//XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[contains(@name, "")]'
+SHOP_REDIRECT_TO_RETAILER_BTN = '/XCUIElementTypeButton[contains(@name, "Shop direct")]'
 
 
 
