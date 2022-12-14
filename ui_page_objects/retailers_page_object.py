@@ -27,6 +27,8 @@ class RetailersPage:
 
 	# iOS in progress
 	def retailers_overview(self, driver):
+		RANGE_ITEMS_INDEXES = list(range(1, 9))
+
 		# check carousel
 		wait_for_carousel = long_wait_el_xpath(driver, RETAILERS_TOP_CAROUSEL_ITEM_TITLES)
 		#time.sleep(5)
@@ -45,6 +47,11 @@ class RetailersPage:
 		#print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
 		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
 
+		wait_all_present_retailers_xpaths = [f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "{i}")]' for i in RANGE_ITEMS_INDEXES]
+
+		for i in wait_all_present_retailers_xpaths:
+			print(el_xpath(driver, i).text)
+		
 		#get_all = elems_xpath_special(driver, RETAILERS_LIST_ALL_ITEMS)
 		#print(len(get_all))
 		#print(get_names_of_all_retailers)
