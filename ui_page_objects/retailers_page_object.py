@@ -47,7 +47,7 @@ class RetailersPage:
 		#print(el_xpath(driver, RETAILERS_FIRST_ELEM_IN_ALL_LIST).text)
 		#get_names_of_all_retailers = [i.text for i in elems_xpath(driver, RETAILERS_LIST_ALL_ITEMS)]
 
-		wait_all_present_retailers_xpaths = [f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "{i}")]' for i in RANGE_ITEMS_INDEXES]
+		wait_all_present_retailers_xpaths = [f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[{i}]/XCUIElementTypeStaticText[contains(@name, "")]' for i in RANGE_ITEMS_INDEXES]
 
 		for i in wait_all_present_retailers_xpaths:
 			print(el_xpath(driver, i).text)
