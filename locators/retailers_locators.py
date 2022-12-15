@@ -16,7 +16,7 @@ ALL_RETAILERS_NAV_BAR_SHARE_BTN = '//XCUIElementTypeNavigationBar/XCUIElementTyp
 RETAILER_DETAIL_REDIRECT_MODAL_TITLE = 'Taking you to retailer in just a moment'
 RETAILER_DETAIL_REDIRECT_MODAL_CONTINUE_BTN = '//XCUIElementTypeButton[contains(@name, "Continue")]'
 RETAILER_DETAIL_TITLE = '//XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[contains(@name, "")]'
-SHOP_REDIRECT_TO_RETAILER_BTN = '/XCUIElementTypeButton[contains(@name, "Shop direct")]'
+SHOP_REDIRECT_TO_RETAILER_BTN = '//XCUIElementTypeButton[contains(@name, "Shop direct")]'
 
 
 
