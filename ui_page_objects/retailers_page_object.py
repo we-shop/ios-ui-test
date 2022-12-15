@@ -63,12 +63,14 @@ class RetailersPage:
 		wait_for_shop_direct_btn = long_wait_el_xpath(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
 		click_on_shop_direct_btn = xpath_click(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
 		wait_modal_title_text = el_acc_id(driver, RETAILER_DETAIL_REDIRECT_MODAL_TITLE)
-		click_on_continue_btn = xpath_click(driver, RETAILER_DETAIL_REDIRECT_MODAL_CONTINUE_BTN)
+		wait_for_on_continue_btn = el_xpath(driver, RETAILER_DETAIL_REDIRECT_MODAL_CONTINUE_BTN)
+
+		assert wait_for_on_continue_btn.is_enabled()
 
 		wait_for_browser_url_line = long_wait_el_xpath(driver, BROWSER_URL_BAR)
 		print(el_xpath(driver, BROWSER_URL_BAR).text)
 
-		time.sleep(2)
+		time.sleep(2)	
 		
 
 		#print(el_xpath(driver, ).text)
