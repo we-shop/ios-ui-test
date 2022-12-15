@@ -222,11 +222,11 @@ import time
 # 	login_model.login_go_to_profile(selenium)
 # 	profile_model.wishlist_crud(selenium)
 
-# # iOS done, but can be extended
-# def test_home_feed_carousel(debug_model, login_model, post_model, selenium):
-# 	debug_model.switch_to_uat(selenium)
-# 	login_model.login_go_to_profile(selenium)
-# 	post_model.home_feed_carousel(selenium)
+# iOS done, but can be extended
+def test_home_feed_carousel(debug_model, login_model, post_model, selenium):
+	debug_model.switch_to_uat(selenium)
+	login_model.login_go_to_profile(selenium)
+	post_model.home_feed_carousel(selenium)
 
 # def test_flag_post_content(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)

@@ -20,13 +20,16 @@ SHOP_REDIRECT_TO_RETAILER_BTN = '/XCUIElementTypeButton[contains(@name, "Shop di
 
 
 
+# BROWSER_URL_BAR = "//XCUIElementTypeOther[@name='URL']" #"TabBarItemTitle"
+# EXTERNAL_BROWSER_URL_BAR = "TabBarItemTitle"
+
 
 # Mike (Mykhailo) Pastushenko
 #   22:13
 # Search retailers all list (//XCUIElementTypeSearchField[@name="Search supported retailers"])[1]
 # 22:17
 # All lst //XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther
-
+#//XCUIElementTypeSearchField[@name="Search"]
 
 # Mike (Mykhailo) Pastushenko
 #   22:33
