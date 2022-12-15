@@ -51,16 +51,16 @@ class RetailersPage:
 		wait_all_present_retailers_xpaths = [el_xpath(driver, f'//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[{i}]/XCUIElementTypeStaticText[contains(@name, "")]') for i in RANGE_ITEMS_INDEXES]
 		get_title_of_click_retailer = wait_all_present_retailers_xpaths[RANDOM_INX].text
 		click_on_random_retailer_in_all_lst = wait_all_present_retailers_xpaths[RANDOM_INX].click()
-		print(get_title_of_click_retailer)
+		#print(get_title_of_click_retailer)
 
 		# retailer detail page
 		get_title_on_retailer_detail_page = el_xpath(driver, RETAILER_DETAIL_TITLE).text
-		print(get_title_on_retailer_detail_page)
+		#print(get_title_on_retailer_detail_page)
 
 		assert get_title_on_retailer_detail_page == get_title_of_click_retailer
 
 		# go to retailers page (site)
-		click_on_shop_direct_btn = xpath_click(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
+		click_on_shop_direct_btn = long_wait_el_xpath(driver, SHOP_REDIRECT_TO_RETAILER_BTN)
 		wait_modal_title_text = el_acc_id(driver, RETAILER_DETAIL_REDIRECT_MODAL_TITLE)
 		click_on_continue_btn = xpath_click(driver, RETAILER_DETAIL_REDIRECT_MODAL_CONTINUE_BTN)
 
