@@ -68,9 +68,10 @@ class RetailersPage:
 		assert wait_for_on_continue_btn.is_enabled()
 
 		wait_for_browser_url_line = long_wait_el_xpath(driver, BROWSER_URL_BAR)
-		print(el_xpath(driver, BROWSER_URL_BAR).text)
-
-		time.sleep(2)	
+		#print(el_xpath(driver, BROWSER_URL_BAR).text)
+		print(el_acc_id(driver, EXTERNAL_BROWSER_URL_BAR).text)
+		#EXTERNAL_BROWSER_URL_BAR
+		time.sleep(2)
 		
 
 		#print(el_xpath(driver, ).text)
