@@ -6,6 +6,7 @@ ALREADY_HAVE_ACC_LINK = "com.socialsuperstore:id/signInBtn"
 LOG_FIELD = "loginTextField"
 PASS_FIELD = "passwordTextField"
 SIGN_IN_BTN = '//XCUIElementTypeButton[@name="Sign in"]'
+CREATE_ACC_BTN = '//XCUIElementTypeButton[@name="Create an account"]'
 MAKE_LOGIN_BTN = "continueButton"
 ACCEPT_NOTIFICATION_MODAL_BTN = '//XCUIElementTypeAlert[@name="“WeQA” Would Like to Send You Notifications"]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[3]'
 INCORRECT_PASSWORD_MSG = "This account doesn’t exist, try checking your details again."
@@ -17,6 +18,14 @@ FORGOT_PASS_LINK = '//XCUIElementTypeStaticText[@name="Forgot password"]'
 CLOSE_BTN_LOGIN ='//XCUIElementTypeButton[@name="cross"]'
 PUSH_NOTIFICATION_TEXT = "//XCUIElementTypeButton[@name='NotificationCell']"
 WESHOP_EXPERIENCE_WIN_ALLOW_BTN = "//XCUIElementTypeButton[@name='Allow']"
+
+
+# REGISTRATION BLOCK
+WHO_INVITED_YOU_INPUT = 
+STEPS_COUNTER = 
+NEXT_STEP_BTN = 
+
+
 
 # PROFILE_FOOTER_MENU = "Profile"
 # SETTINGS_BTN_PROFILE = "com.socialsuperstore:id/settingsBtn"

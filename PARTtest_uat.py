@@ -154,6 +154,11 @@ def test_post_create_new_question_edit_delete(debug_model, login_model, post_mod
 	post_model.ask_question(selenium)
 	post_model.question_edit_and_deletion(selenium)
 
+
+def test_registration_positive_flow(debug_model, login_model, selenium):
+	debug_model.switch_to_uat(selenium)	
+	login_model.pass_registration_flow(selenium)
+
 # def test_self_question_like_and_comment_check(debug_model, login_model, post_model, selenium):
 # 	debug_model.switch_to_uat(selenium)
 # 	login_model.login_go_to_profile(selenium)

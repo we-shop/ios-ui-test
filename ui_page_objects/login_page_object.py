@@ -266,6 +266,11 @@ class LoginPage:
 		assert login_screen_title_text == "Earn shares in the world’s first shoppable social network owned by you"
 
 
+
+	def pass_registration_flow(self, driver):
+		pass
+
+		
 ######################################
 # funtctions for push up notifications
 ######################################
