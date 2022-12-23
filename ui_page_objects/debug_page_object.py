@@ -39,6 +39,16 @@ class DebugPage:
 		# updating data about env
 		create_temp_file_and_write_data("int")
 
+	# iOS done
+	def switch_to_uat_only(self, driver):
+		# switching to UAT and going to login screen
+		debug_btn_click = xpath_click(driver, DEBUG_BTN)
+		change_env_to_uat_click = xpath_click(driver, UAT_ENV_RADIO_BTN)
+		driver.back()
+
+		# updating data about env
+		create_temp_file_and_write_data("uat")
+
 	# iOS done	
 	def switch_to_prod(self, driver):
 		# switching to UAT and going to login screen
