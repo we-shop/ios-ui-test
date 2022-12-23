@@ -20,18 +20,77 @@ PUSH_NOTIFICATION_TEXT = "//XCUIElementTypeButton[@name='NotificationCell']"
 WESHOP_EXPERIENCE_WIN_ALLOW_BTN = "//XCUIElementTypeButton[@name='Allow']"
 
 
-# REGISTRATION BLOCK
-WHO_INVITED_YOU_INPUT = 
-STEPS_COUNTER = 
-NEXT_STEP_BTN = 
+# STEP BUTTNON NAMES
+NEXT_STEP_FIRST_BUTTON_TEXT = "Next step: Your details"
+NEXT_STEP_SECOND_BUTTON_TEXT = "Next step: Set a password"
+NEXT_STEP_THIRD_BUTTON_TEXT = "Next step: Your birthday"
+NEXT_STEP_FOURTH_BUTTON_TEXT = "Next step: Your gender"
+NEXT_STEP_FIFTH_BUTTON_TEXT = "Next step: Your username"
+NEXT_STEP_SIXTH_BUTTON_TEXT = "Next steps: Your interests"
+NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
+FINAL_STEP_BUTTON_TEXT = "Start shopping"
+
+# REGISTRATION BLOCK - FIRST STEP
+WHO_INVITED_YOU_INPUT = "//XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"
+STEPS_COUNTER = '//XCUIElementTypeOther[2]/XCUIElementTypeStaticText[contains(@name, "")]'
+NEXT_STEP_BTN = '//XCUIElementTypeButton[@name="continueButton"]' #"continueButton" # 
+
+
+# REGISTRATION BLOCK - SECOND STEP
+REG_FIRST_NAME_INPUT = "firstNameField"
+REG_LAST_NAME_INPUT = "lastNameField"
+REG_EMAIL_INPUT = "emailField"
+
+# REGISTRATION BLOCK - THIRD STEP
+REG_PASSWORD_INPUT = "passwordField"
+
+# REGISTRATION BLOCK - FOURTH STEP
+REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
+REG_DATE_MM - "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
+REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
+REG_DATE_STEP_CANCEL_BTN = "Cancel"
+REG_DATE_STEP_DONE_BTN = "Done"
+
+# driver.find_element_by_ios_predicate('wdName == "Buttons"') # ios predicate example - need to debug and investigate
+
+# REGISTRATION BLOCK - FIFTH STEP
+REG_MALE_GENDER = '//XCUIElementTypeStaticText[@name="Male"]'
+REG_FEMALE_GENDER = '//XCUIElementTypeStaticText[@name="Female"]'
+REG_NON_BINARY_GENDER = '//XCUIElementTypeStaticText[@name="Non-Binary"]'
+REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to say"]'
+
+# REGISTRATION BLOCK - SIXTH STEP
+REG_USERNAME_INPUT_FIELD = "usernameField"
+REG_FIRST_SUGGESTED_USERNAME = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]" # first cell - suggested username
+REG_ALL SUGGESTED USERNAMES = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell"
+
+# REGISTRATION BLOCK - SEVENTH STEP
+REG_FIRST_INTEREST_ITEM = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "")]'
+ALL_INTEREST_ITEMS =  '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeStaticText[contains(@name, "")]'
+
+
+# REGISTRATION BLOCK - FINAL STEP
+REG_TERMS_AND_COND_RADIO_BTN = 'termsConditionButton'
+REG_UPDATES_RADIO_BTN = 'updatesButton'
+REG_ACC_HOLDER_AGREEMENT_LINK = '//XCUIElementTypeLink[@name="WeShop Account Holder Agreement"]'
+REG_PRIVACT_AND_POLICY_LINK = '//XCUIElementTypeLink[@name="Privacy Policy"]'
+
+
+# AFTER REG LOCATORS
+LOGIN_MODAL_SLIDE_NEXT_BTN = '//XCUIElementTypeButton[@name="Next"]'
+LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW = '//XCUIElementTypeButton[@name="cross"]/..'
+LOGIN_MODAL_SLIDE_START_SHOP_BTN = '//XCUIElementTypeButton[@name="Start shopping"]'
+
+
+#NEED TO switch to profile and verifi first last name and username
 
 
 
-# PROFILE_FOOTER_MENU = "Profile"
-# SETTINGS_BTN_PROFILE = "com.socialsuperstore:id/settingsBtn"
-# PROFILE_FIRST_N_LAST_NAMES = "com.socialsuperstore:id/nameTextView"
-# PROFILE_USERNAME = "com.socialsuperstore:id/usernameTextView"
 
-# SIGN_OUT_BTN = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[3]/android.view.ViewGroup[2]/android.widget.TextView"
-# ACCEPT_MODAL_BTN_LOGOUT = "com.socialsuperstore:id/positiveButton"
-# APP_VERSION_LOGIN_SCREEN = "com.socialsuperstore:id/version"
+
+
+
+
+
+
+
