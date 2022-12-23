@@ -268,13 +268,22 @@ class LoginPage:
 
 
 	def pass_registration_flow(self, driver):
-		pass
+		# start registration flow registration flow
+		click_on_create_account = xpath_click(driver, CREATE_ACC_BTN)
+
+		# registration first step
+		print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
+		print(el_xpath(driver, STEPS_COUNTER).text)
+		#assert 
+		who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop") # "weshop" is default username - can be changed
+		time.sleep(2)
 
 		
 ######################################
 # funtctions for push up notifications
 ######################################
 	def push_up_subscribe_notification_check(self, driver):
+		# TEST CODE - FOR DEBUG
 		# start registration flow registration flow
 		click_on_create_account = xpath_click(driver, CREATE_ACC_BTN)
 
