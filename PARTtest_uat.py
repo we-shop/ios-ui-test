@@ -242,7 +242,7 @@ import time
 
 # iOS in progress
 def test_registration_positive_flow(debug_model, login_model, selenium):
-	debug_model.switch_to_uat(selenium)	
+	debug_model.switch_to_uat_only(selenium)	
 	login_model.pass_registration_flow(selenium)
 	
 
