@@ -62,7 +62,7 @@ REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to
 # REGISTRATION BLOCK - SIXTH STEP
 REG_USERNAME_INPUT_FIELD = "usernameField"
 REG_FIRST_SUGGESTED_USERNAME = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]" # first cell - suggested username
-REG_ALL SUGGESTED USERNAMES = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell"
+REG_ALL_SUGGESTED USERNAMES = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell"
 
 # REGISTRATION BLOCK - SEVENTH STEP
 REG_FIRST_INTEREST_ITEM = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "")]'
