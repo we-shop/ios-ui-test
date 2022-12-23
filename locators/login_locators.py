@@ -46,7 +46,7 @@ REG_PASSWORD_INPUT = "passwordField"
 
 # REGISTRATION BLOCK - FOURTH STEP
 REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
-REG_DATE_MM - "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
+REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
 REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
 REG_DATE_STEP_CANCEL_BTN = "Cancel"
 REG_DATE_STEP_DONE_BTN = "Done"
