@@ -283,7 +283,9 @@ class LoginPage:
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text == "Next step: Your details"
+		assert el_xpath(driver, STEPS_COUNTER) == "1/7"
 
+		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
 		# registration second step
 		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
@@ -294,6 +296,9 @@ class LoginPage:
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_SECOND_BUTTON_TEXT).text == "Next step: Set a password"
+		assert el_xpath(driver, STEPS_COUNTER) == "2/7"
+
+		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
 
 		# registration third step
@@ -303,7 +308,9 @@ class LoginPage:
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_THIRD_BUTTON_TEXT).text == "Next step: Your birthday"
+		assert el_xpath(driver, STEPS_COUNTER) == "3/7"
 
+		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
 
 		NEXT_STEP_FOURTH_BUTTON_TEXT = "Next step: Your gender"
