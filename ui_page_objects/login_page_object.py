@@ -271,7 +271,7 @@ class LoginPage:
 		STATIC_FIRST_NAME = "testfrstname" # can be changed
 		RANDOM_LAST_NAME = rand_letters(7)
 		RANDOM_EMAIL = rand_letters(10) + "@" + rand_letters(3) + ".com"
-		DEFAULT_STATIC_PASS = os.environ("PASSWORD")
+		DEFAULT_STATIC_PASS = os.environ["PASSWORD"]
 
 		# start registration flow registration flow
 		click_on_create_account = xpath_click(driver, CREATE_ACC_BTN)
@@ -312,7 +312,7 @@ class LoginPage:
 		NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
 		FINAL_STEP_BUTTON_TEXT = "Start shopping"
 
-		
+
 
 
 		#print(el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text
