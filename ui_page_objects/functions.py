@@ -57,6 +57,25 @@ def el_xpath(driver, locator):
 		print(f"{ERROR}")
 
 
+def el_xpath_clickable(driver, locator):
+	try:
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
+		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((MobileBy.XPATH, locator)))
+		return driver.find_element(MobileBy.XPATH, locator)
+	except:
+		print(f"Element to find by XPATH: {locator} is not found!")
+		print(f"{ERROR}")
+
+def el_id_clickable(driver, locator):
+	try:
+		WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, locator)))
+		WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, locator)))
+		return driver.find_element(By.ID, locator)
+	except:
+		print(f"Element to find by ID: {locator} is not found!")
+		print(f"{ERROR}")
+
+
 def el_xpath_short_wait_with_fail(driver, locator):
 	WebDriverWait(driver, 2).until(EC.presence_of_element_located((MobileBy.XPATH, locator)))
 	return driver.find_element(MobileBy.XPATH, locator)

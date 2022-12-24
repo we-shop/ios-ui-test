@@ -281,7 +281,7 @@ class LoginPage:
 
 		who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop")
 
-		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text == "Next step: Your details"
 
 
@@ -292,7 +292,7 @@ class LoginPage:
 		enter_last_name = id_keys(driver, REG_LAST_NAME_INPUT, RANDOM_LAST_NAME)
 		enter_email_value = id_keys(driver, REG_EMAIL_INPUT, RANDOM_EMAIL)
 
-		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_SECOND_BUTTON_TEXT).text == "Next step: Set a password"
 
 
@@ -301,7 +301,7 @@ class LoginPage:
 
 		enter_password = id_keys(driver, REG_PASSWORD_INPUT, DEFAULT_STATIC_PASS)
 
-		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_THIRD_BUTTON_TEXT).text == "Next step: Your birthday"
 
 
