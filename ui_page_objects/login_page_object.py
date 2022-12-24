@@ -268,17 +268,40 @@ class LoginPage:
 
 
 	def pass_registration_flow(self, driver):
+		RANDOM_LAST_NAME = rand_letters(7)
+
 		# start registration flow registration flow
 		click_on_create_account = xpath_click(driver, CREATE_ACC_BTN)
 
 		# registration first step
-		print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
-		print(el_xpath(driver, STEPS_COUNTER).text)
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == False
+
+		who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop")
+
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == True
+		#assert el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT)
+
+		print(el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text)
+
+
+
+		#print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
+		#print(el_xpath(driver, STEPS_COUNTER).text)
 		#assert 
-		who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop") # "weshop" is default username - can be changed
+		#who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop") # "weshop" is default username - can be changed
 		time.sleep(2)
 
-		
+
+
+
+
+
+
+
+
+
+
+
 ######################################
 # funtctions for push up notifications
 ######################################
