@@ -268,25 +268,54 @@ class LoginPage:
 
 
 	def pass_registration_flow(self, driver):
+		STATIC_FIRST_NAME = "testfrstname" # can be changed
 		RANDOM_LAST_NAME = rand_letters(7)
+		RANDOM_EMAIL = rand_letters(10) + "@" + rand_letters(3) + ".com"
+		DEFAULT_STATIC_PASS = os.environ("PASSWORD")
 
 		# start registration flow registration flow
 		click_on_create_account = xpath_click(driver, CREATE_ACC_BTN)
 
 		# registration first step
-		print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
-		#assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == False
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
 		who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop")
 
-		#time.sleep(0.5)
-		#assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == True
-		print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
-		#assert el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT)
-
-		print(el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text)
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text == "Next step: Your details"
 
 
+		# registration second step
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+
+		enter_first_name = id_keys(driver, REG_FIRST_NAME_INPUT, STATIC_FIRST_NAME)
+		enter_last_name = id_keys(driver, REG_LAST_NAME_INPUT, RANDOM_LAST_NAME)
+		enter_email_value = id_keys(driver, REG_EMAIL_INPUT, RANDOM_EMAIL)
+
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_acc_id(driver, NEXT_STEP_SECOND_BUTTON_TEXT).text == "Next step: Set a password"
+
+
+		# registration third step
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+
+		enter_password = id_keys(driver, REG_PASSWORD_INPUT, DEFAULT_STATIC_PASS)
+
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_acc_id(driver, NEXT_STEP_THIRD_BUTTON_TEXT).text == "Next step: Your birthday"
+
+
+
+		NEXT_STEP_FOURTH_BUTTON_TEXT = "Next step: Your gender"
+		NEXT_STEP_FIFTH_BUTTON_TEXT = "Next step: Your username"
+		NEXT_STEP_SIXTH_BUTTON_TEXT = "Next steps: Your interests"
+		NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
+		FINAL_STEP_BUTTON_TEXT = "Start shopping"
+
+		
+
+
+		#print(el_acc_id(driver, NEXT_STEP_FIRST_BUTTON_TEXT).text
 
 		#print(el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled"))
 		#print(el_xpath(driver, STEPS_COUNTER).text)
