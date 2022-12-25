@@ -61,6 +61,8 @@ REG_MALE_GENDER = '//XCUIElementTypeStaticText[@name="Male"]'
 REG_FEMALE_GENDER = '//XCUIElementTypeStaticText[@name="Female"]'
 REG_NON_BINARY_GENDER = '//XCUIElementTypeStaticText[@name="Non-Binary"]'
 REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to say"]'
+REG_ALL_GENDERS_BTNS = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeButton'
+REG_ALL_GENDERS_TEXT = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeStaticText'
 
 # REGISTRATION BLOCK - SIXTH STEP
 REG_USERNAME_INPUT_FIELD = "usernameField"

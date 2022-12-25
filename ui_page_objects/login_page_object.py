@@ -322,9 +322,9 @@ class LoginPage:
 
 		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
 
-		REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
-		REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
-		REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
+		#REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
+		#REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
+		#REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
 		
 		REG_DATE_STEP_CANCEL_BTN = "Cancel"
 		REG_DATE_STEP_DONE_BTN = "Done"
@@ -334,6 +334,8 @@ class LoginPage:
 		assert el_xpath(driver, STEPS_COUNTER).text == "4/7"
 
 		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
+		#REG_ALL_GENDERS_TEXT
+
 
 		# registration fifth step
 		# assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
