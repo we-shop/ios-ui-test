@@ -320,6 +320,17 @@ class LoginPage:
 		xpath_keys(driver, REG_DATE_MM, "10")
 		#time.sleep(3)
 
+		# NEED TO FINISH
+		# def random_date_dd():
+		# 	pass
+
+		# def random_date_mm():
+		# 	pass
+
+		# def random_date_yy():
+
+		# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
 
 		#REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
@@ -351,15 +362,19 @@ class LoginPage:
 		get_randomized_gender_text = elems_xpath(driver, REG_ALL_GENDERS_TEXT)[random_gender_indx].text
 
 		click_in_randomized_gender = all_genders_lst[random_gender_indx].click()
-		print(get_randoized_gender_text)
-
+		print(get_randomized_gender_text)
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_FIFTH_BUTTON_TEXT).text == "Next step: Your username"
-		assert el_xpath(driver, STEPS_COUNTER).text == "5/7"		
+		assert el_xpath(driver, STEPS_COUNTER).text == "5/7"
 
 		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
+
+		# registration sixths step
+		# REG_USERNAME_INPUT_FIELD
+		# REG_FIRST_SUGGESTED_USERNAME
+		# REG_ALL_SUGGESTED_USERNAMES
 		# assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		# assert el_acc_id(driver, NEXT_STEP_THIRD_BUTTON_TEXT).text == "Next step: Your birthday"
 		# assert el_xpath(driver, STEPS_COUNTER).text == "4/7"

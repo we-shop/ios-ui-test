@@ -411,3 +411,11 @@ def scroll_down_main(driver):
 	})	
 
 
+def random_date_dd():
+	pass
+
+def random_date_mm():
+	pass
+
+def random_date_yy():
+	pass
