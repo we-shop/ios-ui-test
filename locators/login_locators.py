@@ -48,6 +48,9 @@ REG_PASSWORD_INPUT = "passwordField"
 REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
 REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
 REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
+REG_DATE_WHEEL_DD = '//XCUIElementTypeDatePicker[@name="datePicker"]/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]'
+REG_DATE_WHEEL_MM = '//XCUIElementTypeDatePicker[@name="datePicker"]/XCUIElementTypePicker/XCUIElementTypePickerWheel[2]'
+REG_DATE_WHEEL_YYYY = '//XCUIElementTypeDatePicker[@name="datePicker"]/XCUIElementTypePicker/XCUIElementTypePickerWheel[3]'
 REG_DATE_STEP_CANCEL_BTN = "Cancel"
 REG_DATE_STEP_DONE_BTN = "Done"
 

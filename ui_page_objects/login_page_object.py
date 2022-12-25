@@ -312,8 +312,45 @@ class LoginPage:
 
 		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
+		# registration fourth step
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
-		NEXT_STEP_FOURTH_BUTTON_TEXT = "Next step: Your gender"
+		click_on_dd_field = xpath_click(driver, REG_DATE_DD)
+
+		xpath_keys(driver, REG_DATE_WHEEL_DD, "10")
+		time.sleep(3)
+
+		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
+
+		REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
+		REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
+		REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
+		
+		REG_DATE_STEP_CANCEL_BTN = "Cancel"
+		REG_DATE_STEP_DONE_BTN = "Done"
+
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_acc_id(driver, NEXT_STEP_FOURTH_BUTTON_TEXT).text == "Next step: Your gender"
+		assert el_xpath(driver, STEPS_COUNTER).text == "4/7"
+
+		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
+
+		# registration fifth step
+		# assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+
+		# enter_password = id_keys(driver, REG_PASSWORD_INPUT, DEFAULT_STATIC_PASS)
+
+		# assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		# assert el_acc_id(driver, NEXT_STEP_THIRD_BUTTON_TEXT).text == "Next step: Your birthday"
+		# assert el_xpath(driver, STEPS_COUNTER).text == "4/7"
+
+		# click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
+
+		# REG_MALE_GENDER = '//XCUIElementTypeStaticText[@name="Male"]'
+		# REG_FEMALE_GENDER = '//XCUIElementTypeStaticText[@name="Female"]'
+		# REG_NON_BINARY_GENDER = '//XCUIElementTypeStaticText[@name="Non-Binary"]'
+		# REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to say"]'
+
 		NEXT_STEP_FIFTH_BUTTON_TEXT = "Next step: Your username"
 		NEXT_STEP_SIXTH_BUTTON_TEXT = "Next steps: Your interests"
 		NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
