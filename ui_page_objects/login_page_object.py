@@ -326,8 +326,8 @@ class LoginPage:
 		#REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
 		#REG_DATE_YYYY = "//XCUIElementTypeOther/XCUIElementTypeTextField[3]"
 		
-		REG_DATE_STEP_CANCEL_BTN = "Cancel"
-		REG_DATE_STEP_DONE_BTN = "Done"
+		#REG_DATE_STEP_CANCEL_BTN = "Cancel"
+		#REG_DATE_STEP_DONE_BTN = "Done"
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_FOURTH_BUTTON_TEXT).text == "Next step: Your gender"
