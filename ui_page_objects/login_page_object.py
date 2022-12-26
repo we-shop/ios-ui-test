@@ -324,7 +324,10 @@ class LoginPage:
 		click_on_yyyy_field = xpath_click(driver, REG_DATE_YYYY)
 		enter_date_yyyy = xpath_keys(driver, REG_DATE_YYYY, random_date_yyyy())
 
-		#click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
+
+		click_on_mm_field = xpath_click(driver, REG_DATE_MM)
+		time.sleep(1)
+		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
 
 		#REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
 		#REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
