@@ -369,21 +369,13 @@ class LoginPage:
 
 		all_usrnames_get_text_randomized_elem = all_usrnames_lst[random_usrname_indx].text
 		print(all_usrnames_get_text_randomized_elem)
-		click_on_random_username = xpath_click(driver, all_usrnames_lst[random_usrname_indx])
+		click_on_random_username = xpath_click(driver, REG_ALL_SUGGESTED_USERNAMES[random_usrname_indx])
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_SIXTH_BUTTON_TEXT).text == "Next steps: Your interests"
 		assert el_xpath(driver, STEPS_COUNTER).text == "6/7"
 
 		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
-
-
-		all_genders_lst = elems_xpath(driver, REG_ALL_GENDERS_TEXT)
-
-		random_gender_indx = random.randint(0, len(all_genders_lst)-1)
-		get_randomized_gender_text = elems_xpath(driver, REG_ALL_GENDERS_TEXT)[random_gender_indx].text
-
-		click_in_randomized_gender = all_genders_lst[random_gender_indx].click()
 
 
 		# registration seventh step

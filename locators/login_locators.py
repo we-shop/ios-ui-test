@@ -67,7 +67,7 @@ REG_ALL_GENDERS_TEXT = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementT
 # REGISTRATION BLOCK - SIXTH STEP
 REG_USERNAME_INPUT_FIELD = "usernameField"
 REG_FIRST_SUGGESTED_USERNAME = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]" # first cell - suggested username
-REG_ALL_SUGGESTED_USERNAMES = "//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell"
+REG_ALL_SUGGESTED_USERNAMES = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell/XCUIElementTypeStaticText[contains(@name, "")]'
 
 # REGISTRATION BLOCK - SEVENTH STEP
 REG_FIRST_INTEREST_ITEM = '//XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[contains(@name, "")]'
