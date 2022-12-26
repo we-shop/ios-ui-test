@@ -367,7 +367,7 @@ class LoginPage:
 
 		assert len(all_usrnames_lst) == 3
 
-		all_usrnames_text_randomized = [i.text for i in elems_xpath(driver, REG_ALL_SUGGESTED_USERNAMES)][random_usrname_indx]
+		all_usrnames_text_randomized = [i.text for i in all_usrnames_lst][random_usrname_indx]
 		click_on_random_username = xpath_click(driver, all_usrnames_lst[random_usrname_indx])
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
