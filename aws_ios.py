@@ -13,9 +13,9 @@ pp = pprint.PrettyPrinter(indent=4)
 # get apps from s3 bucket
 ########################################
 # Local credentials
-# ACCESS_KEY = "xtest"
-# SECRET_KEY = "xtest"
-# SESSION_TOKEN = "xtest"
+# ACCESS_KEY = "test"
+# SECRET_KEY = "test"
+# SESSION_TOKEN = "test"
 
 # AWS credentials
 # ACCESS_KEY = os.getenv("ACCESS_KEY_ID")
@@ -89,13 +89,16 @@ def ios_get_app_path():
 				ios_lst.append(i.key)
 
 
+	# getting highhest id of existing app
+	getting_id_of_ios_build = str(max([int(re.search(r'/(\d+)/', i).group(1)) for i in ios_lst]))
 	#get_direct = [i.key for i in s3.Bucket('ss-travis-ci').objects.filter(Prefix=sorted(ios_lst)[-1])][0] # debug
 
 	# get direct ios path, looks like this "we-shop/iOS/9143/WeShop.ipa"
-	get_direct_path_ios = sorted(ios_lst)[-1]
+	#getting_id_of_ios_build = re.findall("\\d+", get_direct_path_ios)[0] # old
+	get_direct_path_ios = f"we-shop/iOS/{getting_id_of_ios_build}/WeShop.ipa"
 
 	# get build id, looks like this "9143"
-	getting_id_of_ios_build = re.findall("\\d+", get_direct_path_ios)[0]
+	# getting_id_of_ios_build = re.findall("\\d+", get_direct_path_ios)[0] # old
 
 	return get_direct_path_ios, getting_id_of_ios_build
 
@@ -197,6 +200,8 @@ def check_ios_app_tags(path_to_file, tag_set):
 
 
 generate_json(check_ios_app_tags(LATEST_APP_PATH_AND_ID[0], get_tag_of_certain_file(LATEST_APP_PATH_AND_ID[1])))
+
+#print(LATEST_APP_PATH_AND_ID)
 
 # debug block, can be removed
 # json_f = open(os.getcwd() + "/ios_caps.json")
