@@ -315,21 +315,25 @@ class LoginPage:
 		# registration fourth step
 		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
-		click_on_mm_field = xpath_click(driver, REG_DATE_MM)
-		#time.sleep(1)
+		click_on_mm_field = xpath_click(driver, REG_DATE_DD)
+		el_xpath(driver, REG_DATE_DD).set_value("11")
+		time.sleep(3)
 		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
 
-		el_xpath(driver, REG_DATE_DD).clear()
-		click_on_dd_field = xpath_click(driver, REG_DATE_DD)
-		enter_date_dd = xpath_keys(driver, REG_DATE_DD, random_date_dd())
+		#el_xpath(driver, REG_DATE_DD).clear()
+		# click_on_dd_field = xpath_click(driver, REG_DATE_DD)
+		# enter_date_dd = xpath_keys(driver, REG_DATE_DD, random_date_dd())
+		# el_xpath(driver, REG_DATE_DD).set_value("11")
 
-		el_xpath(driver, REG_DATE_MM).clear()
-		click_on_mm_field = xpath_click(driver, REG_DATE_MM)
-		enter_date_mm = xpath_keys(driver, REG_DATE_MM, random_date_mm())
 
-		el_xpath(driver, REG_DATE_YYYY).clear()
-		click_on_yyyy_field = xpath_click(driver, REG_DATE_YYYY)
-		enter_date_yyyy = xpath_keys(driver, REG_DATE_YYYY, random_date_yyyy())
+
+		# #el_xpath(driver, REG_DATE_MM).clear()
+		# click_on_mm_field = xpath_click(driver, REG_DATE_MM)
+		# enter_date_mm = xpath_keys(driver, REG_DATE_MM, random_date_mm())
+
+		# #el_xpath(driver, REG_DATE_YYYY).clear()
+		# click_on_yyyy_field = xpath_click(driver, REG_DATE_YYYY)
+		# enter_date_yyyy = xpath_keys(driver, REG_DATE_YYYY, random_date_yyyy())
 
 		#REG_DATE_DD = "//XCUIElementTypeOther/XCUIElementTypeTextField[1]"
 		#REG_DATE_MM = "//XCUIElementTypeOther/XCUIElementTypeTextField[2]"
