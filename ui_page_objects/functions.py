@@ -262,6 +262,13 @@ def handle_notification_alert(driver):
 	finally:
 		driver.switch_to.alert.accept()
 
+def handle_notification_alert_long(driver):
+	try:
+		WebDriverWait(driver, 11).until(EC.alert_is_present())
+	except:
+		WebDriverWait(driver, 4).until(EC.alert_is_present())
+	finally:
+		driver.switch_to.alert.accept()
 
 # FILE MANIPUPATION FUNCTIONS
 def create_temp_file_and_write_data(data):

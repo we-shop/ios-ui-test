@@ -437,7 +437,7 @@ class LoginPage:
 		click_on_start_shopping_btn_in_window = xpath_click(driver, LOGIN_MODAL_SLIDE_START_SHOP_BTN)
 
 		# handle notification alert
-		handle_notification_alert(driver)
+		handle_notification_alert_long(driver)
 
 		# handling "weshop experience window"
 		try:
