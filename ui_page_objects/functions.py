@@ -13,7 +13,7 @@ import pytest
 from locators.product_detail_locators import PRODUCT_MODAL_CONTINUE_BTN
 from appium.webdriver.common.touch_action import TouchAction
 import os
-
+from datetime import datetime
 
 # FUCTIONS FOR MOBILE
 def id_click(driver, locator):
@@ -412,10 +412,25 @@ def scroll_down_main(driver):
 
 
 def random_date_dd():
-	pass
+	cur_date_filter_dd = int(datetime.today().strftime('%d'))
+	randomize_date = random.randint(1, cur_date_filter_dd)
+
+	return str(randomize_date)
 
 def random_date_mm():
-	pass
+	import calendar
 
-def random_date_yy():
-	pass
+	months_names = [calendar.month_name[i] for i in range(1, 13)]
+
+	ready_months_array = {a:b for a, b in zip(range(1,13), months_names)}
+	randomizing_month = ready_months_array[random.randint(1,12)]
+
+	return randomizing_month
+
+
+def random_date_yyyy():
+	randomized_year = random.randint(1975, 2001)
+
+	return str(randomized_year)
+
+	
