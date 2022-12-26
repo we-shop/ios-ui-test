@@ -344,8 +344,6 @@ class LoginPage:
 		# registration fifth step
 		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
-		# enter_password = id_keys(driver, REG_PASSWORD_INPUT, DEFAULT_STATIC_PASS)
-
 		all_genders_lst = elems_xpath(driver, REG_ALL_GENDERS_TEXT)
 
 		random_gender_indx = random.randint(0, len(all_genders_lst)-1)
@@ -362,6 +360,20 @@ class LoginPage:
 
 
 		# registration sixths step
+		random_usrname_indx = random.randint(1,3)
+		all_usrnames_lst = elems_xpath(driver, REG_ALL_SUGGESTED_USERNAMES)
+
+		assert len(all_usrnames_lst) == 3
+
+		all_usrnames_text_randomized = [i.text for i in elems_xpath(driver, REG_ALL_SUGGESTED_USERNAMES)][random_usrname_indx]
+		click_on_random_username = xpath_click(driver, all_usrnames_lst[random_usrname_indx])
+
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+		assert el_acc_id(driver, NEXT_STEP_SIXTH_BUTTON_TEXT).text == "Next steps: Your interests"
+		assert el_xpath(driver, STEPS_COUNTER).text == "6/7"
+
+		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
+
 		# REG_USERNAME_INPUT_FIELD
 		# REG_FIRST_SUGGESTED_USERNAME
 		# REG_ALL_SUGGESTED_USERNAMES
@@ -376,7 +388,6 @@ class LoginPage:
 		# REG_NON_BINARY_GENDER = '//XCUIElementTypeStaticText[@name="Non-Binary"]'
 		# REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to say"]'
 
-		NEXT_STEP_SIXTH_BUTTON_TEXT = "Next steps: Your interests"
 		NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
 		FINAL_STEP_BUTTON_TEXT = "Start shopping"
 
