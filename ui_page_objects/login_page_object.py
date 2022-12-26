@@ -421,6 +421,15 @@ class LoginPage:
 
 		click_on_start_shopping_btn = xpath_click(driver, NEXT_STEP_BTN)
 
+		# handle notification alert
+		handle_notification_alert_long(driver)
+
+		# handling "weshop experience window"
+		try:
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
+		except:
+			time.sleep(1.2)
+			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
 
 		# after registration block
 		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
@@ -436,17 +445,8 @@ class LoginPage:
 
 		click_on_start_shopping_btn_in_window = xpath_click(driver, LOGIN_MODAL_SLIDE_START_SHOP_BTN)
 
-		# handle notification alert
-		handle_notification_alert_long(driver)
-
-		# handling "weshop experience window"
-		try:
-			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
-		except:
-			time.sleep(1.2)
-			xpath_click(driver, WESHOP_EXPERIENCE_WIN_ALLOW_BTN)
-
-		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE)	
+		# qqq
+		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
 		time.sleep(3)
 
