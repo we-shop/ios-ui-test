@@ -316,7 +316,7 @@ class LoginPage:
 		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
 		click_on_mm_field = xpath_click(driver, REG_DATE_DD)
-		el_xpath(driver, REG_DATE_DD).set_value("11")
+		el_xpath(driver, REG_DATE_WHEEL_DD).set_value("11")
 		time.sleep(3)
 		click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
 
