@@ -80,6 +80,9 @@ REG_TERMS_AND_COND_RADIO_BTN = 'termsConditionButton'
 REG_UPDATES_RADIO_BTN = 'updatesButton'
 REG_ACC_HOLDER_AGREEMENT_LINK = '//XCUIElementTypeLink[@name="WeShop Account Holder Agreement"]'
 REG_PRIVACT_AND_POLICY_LINK = '//XCUIElementTypeLink[@name="Privacy Policy"]'
+REG_TERMS_WEB_PAGE_TITLE = '//XCUIElementTypeStaticText[@name="WESHOP TERMS OF SERVICE"]'
+REG_PRIVACY_WEB_PAGE_TITLE = '//XCUIElementTypeStaticText[@name="Privacy Policy"]'
+REG_FINAL_STEP_CLOSE_BTN = 'Close'
 
 
 # AFTER REG LOCATORS

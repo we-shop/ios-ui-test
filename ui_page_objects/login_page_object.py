@@ -390,8 +390,42 @@ class LoginPage:
 		assert el_acc_id(driver, NEXT_STEP_SEVENTH_BUTTON_TEXT).text == "Final step: Legal bits"
 		assert el_xpath(driver, STEPS_COUNTER).text == "7/7"
 
+
+		click_on_few_interests = [elems_xpath(driver, ALL_INTEREST_ITEMS)[i].click() for i in range(1, 5)]
 		click_on_next_step = xpath_click(driver, NEXT_STEP_BTN)
 
+
+		# registration final step (start shopping)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+		assert el_acc_id(driver, FINAL_STEP_BUTTON_TEXT).text == "Start shopping"
+
+		# checking links
+		click_on_account_holder_agreement_link = xpath_click(driver, REG_ACC_HOLDER_AGREEMENT_LINK)
+		assert el_xpath(driver, REG_TERMS_WEB_PAGE_TITLE).is_displayed()
+		go_back_to_final_step = acc_id_click(driver, REG_FINAL_STEP_CLOSE_BTN)
+
+		click_on_privacy_policy_link = xpath_click(driver, REG_PRIVACT_AND_POLICY_LINK)
+		assert el_xpath(driver, REG_PRIVACY_WEB_PAGE_TITLE).is_displayed()
+		go_back_to_final_step_again = acc_id_click(driver, REG_FINAL_STEP_CLOSE_BTN)
+
+		# handling check boxes
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+		click_on_receive_offers_checkbox = acc_id_click(driver, REG_UPDATES_RADIO_BTN)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+
+		click_on_agree_terms_checkbox = acc_id_click(driver, REG_TERMS_AND_COND_RADIO_BTN)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+
+		click_on_receive_offers_checkbox_again = acc_id_click(driver, REG_UPDATES_RADIO_BTN)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+
+		click_on_agree_terms_checkbox_again = acc_id_click(driver, REG_TERMS_AND_COND_RADIO_BTN)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+
+		click_on_agree_terms_checkbox_re_again = acc_id_click(driver, REG_TERMS_AND_COND_RADIO_BTN)
+		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
+
+		click_on_start_shopping_btn = xpath_click(driver, NEXT_STEP_BTN)
 
 
 		# REG_USERNAME_INPUT_FIELD
@@ -408,8 +442,10 @@ class LoginPage:
 		# REG_NON_BINARY_GENDER = '//XCUIElementTypeStaticText[@name="Non-Binary"]'
 		# REG_PREFER_NOT_TO_SAY_GENDER = '//XCUIElementTypeStaticText[@name="Prefer not to say"]'
 
-		NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
-		FINAL_STEP_BUTTON_TEXT = "Start shopping"
+		#NEXT_STEP_SEVENTH_BUTTON_TEXT = "Final step: Legal bits"
+		
+
+		#FINAL_STEP_BUTTON_TEXT = "Start shopping"
 
 
 
@@ -420,7 +456,7 @@ class LoginPage:
 		#print(el_xpath(driver, STEPS_COUNTER).text)
 		#assert 
 		#who_invited_you_input_send_keys = xpath_keys(driver, WHO_INVITED_YOU_INPUT, "weshop") # "weshop" is default username - can be changed
-		time.sleep(2)
+		time.sleep(3)
 
 
 
