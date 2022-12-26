@@ -315,10 +315,13 @@ class LoginPage:
 		# registration fourth step
 		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
 
-		#click_on_dd_field = xpath_click(driver, REG_DATE_DD)
-
+		click_on_dd_field = xpath_click(driver, REG_DATE_DD)
 		enter_date_dd = xpath_keys(driver, REG_DATE_DD, random_date_dd())
+
+		click_on_mm_field = xpath_click(driver, REG_DATE_MM)
 		enter_date_mm = xpath_keys(driver, REG_DATE_MM, random_date_mm())
+
+		click_on_yyyy_field = xpath_click(driver, REG_DATE_YYYY)
 		enter_date_yyyy = xpath_keys(driver, REG_DATE_YYYY, random_date_yyyy())
 
 		#click_on_done_wheel_btn = acc_id_click(driver, REG_DATE_STEP_DONE_BTN)
