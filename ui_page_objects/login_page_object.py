@@ -360,6 +360,8 @@ class LoginPage:
 
 
 		# registration sixths step
+		assert el_xpath(driver, NEXT_STEP_BTN).get_attribute("enabled") == "false"
+		
 		random_usrname_indx = random.randint(0, 2)
 		all_usrnames_lst = elems_xpath(driver, REG_ALL_SUGGESTED_USERNAMES)
 
