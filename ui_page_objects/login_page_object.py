@@ -322,9 +322,9 @@ class LoginPage:
 
 		#el_xpath(driver, REG_DATE_DD).clear()
 		# click_on_dd_field = xpath_click(driver, REG_DATE_DD)
-		enter_date_dd = xpath_keys(driver, REG_DATE_WHEEL_DD, random_date_dd())
+		enter_date_dd = xpath_keys(driver, REG_DATE_WHEEL_MM, random_date_dd())
 		time.sleep(3)
-		enter_date_mm = xpath_keys(driver, REG_DATE_WHEEL_MM, random_date_mm())
+		enter_date_mm = xpath_keys(driver, REG_DATE_WHEEL_DD, random_date_mm())
 		time.sleep(3)
 		enter_date_yyyy = xpath_keys(driver, REG_DATE_WHEEL_YYYY, random_date_yyyy())
 		time.sleep(3)
