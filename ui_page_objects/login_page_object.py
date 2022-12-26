@@ -384,7 +384,7 @@ class LoginPage:
 
 
 		# registration seventh step
-		scroll_down = scroll_down_deep(driver)
+		scroll_on_settings_page_ios(driver)
 
 		assert el_xpath_clickable(driver, NEXT_STEP_BTN).get_attribute("enabled") == "true"
 		assert el_acc_id(driver, NEXT_STEP_SEVENTH_BUTTON_TEXT).text == "Final step: Legal bits"
