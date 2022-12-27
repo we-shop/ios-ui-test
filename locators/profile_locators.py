@@ -15,9 +15,13 @@ FEED_PAGE_AVATAR_ICON = "avatarView"
 
 # PROFILE ITEMS
 PROFILE_FIRST_N_LAST_NAMES = "nameLabel"
-PROFILE_USERNAME = "usernameLabel"
+PROFILE_USERNAME = "usernameLabel" # can be old
+PROFILE_USERNAME_IN_TOP_HEAD_PART = '//XCUIElementTypeNavigationBar[@name="wishlistsNavigationBar"]/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]' # can be new
 PROFILE_BIO = 'infoLabel'
+PROFILE_BIO_STUB_NEW_ACC = 'readMoreLabel'
+PROFILE_SHARE_BUTTON = 'profile share'
 PROFILE_SETTINGS_BTN = 'profile settings' #"settingsFollowButton"
+PROFILE_SETTINGS_BTN_COMPLETE_PRF_NEW_ACC = 'settingsFollowButton'
 PROFILE_SETTINGS_EDIT_BTN = 'viewProfileButton' #"settingsFollowButton" #"viewProfileButton" 
 PROFILE_SETTINGS_MANAGE_CREDS = "Manage your credentials"
 PROFILE_SETTINGS_NOTIF_N_COM = "Notifications & communication"
