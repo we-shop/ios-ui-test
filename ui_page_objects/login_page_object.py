@@ -457,7 +457,7 @@ class LoginPage:
 
 		read_username_from_profile = el_xpath(driver, PROFILE_USERNAME_IN_TOP_HEAD_PART).text
 		print(read_username_from_profile)
-		assert read_username_from_profile == all_usrnames_get_text_randomized_elem
+		assert read_username_from_profile.split("@")[1] == all_usrnames_get_text_randomized_elem
 		assert STATIC_FIRST_NAME + " " + RANDOM_LAST_NAME == el_acc_id(driver, nameLabel).text
 		time.sleep(3)
 
