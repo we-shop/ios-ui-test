@@ -436,19 +436,19 @@ class LoginPage:
 		handle_notification_alert(driver)
 
 		# after registration block
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
-		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		click_on_next_btn_inside_window = xpath_click(driver, LOGIN_MODAL_SLIDE_NEXT_BTN)
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
-		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		re_click_on_next_btn_inside_window = xpath_click(driver, LOGIN_MODAL_SLIDE_NEXT_BTN)
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
-		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
-		print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
+		#assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 5
+		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		click_on_start_shopping_btn_in_window = xpath_click(driver, LOGIN_MODAL_SLIDE_START_SHOP_BTN)
 
@@ -460,14 +460,6 @@ class LoginPage:
 		assert read_username_from_profile == all_usrnames_get_text_randomized_elem
 		assert STATIC_FIRST_NAME + " " + RANDOM_LAST_NAME == el_acc_id(driver, nameLabel).text
 		time.sleep(3)
-
-
-
-
-
-
-
-
 
 
 
