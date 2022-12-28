@@ -87,7 +87,7 @@ REG_FINAL_STEP_CLOSE_BTN = 'Close'
 
 # AFTER REG LOCATORS
 LOGIN_MODAL_SLIDE_NEXT_BTN = '//XCUIElementTypeButton[@name="Next"]'
-LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW = '/XCUIElementTypeOther[1]/XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]'
+LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW = '//XCUIElementTypeOther[1]/XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]'
 LOGIN_MODAL_SLIDE_START_SHOP_BTN = '//XCUIElementTypeButton[@name="Start shopping"]'
 
 
