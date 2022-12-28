@@ -436,19 +436,13 @@ class LoginPage:
 		handle_notification_alert(driver)
 
 		# after registration block
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 10
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		click_on_next_btn_inside_window = xpath_click(driver, LOGIN_MODAL_SLIDE_NEXT_BTN)
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 10
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		re_click_on_next_btn_inside_window = xpath_click(driver, LOGIN_MODAL_SLIDE_NEXT_BTN)
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 		assert len(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text) > 10
-		#print(el_xpath(driver, LOGIN_TEXT_INSIDE_MODAL_SLIDE_WINDOW).text)
 
 		click_on_start_shopping_btn_in_window = xpath_click(driver, LOGIN_MODAL_SLIDE_START_SHOP_BTN)
 
@@ -456,14 +450,10 @@ class LoginPage:
 		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 
 		read_username_from_profile = el_xpath(driver, PROFILE_USERNAME_IN_TOP_HEAD_PART).text
-		#print(read_username_from_profile)
+
 		assert read_username_from_profile.split("@")[1] == all_usrnames_get_text_randomized_elem
 		assert STATIC_FIRST_NAME + " " + RANDOM_LAST_NAME == el_acc_id(driver, PROFILE_FIRST_N_LAST_NAMES).text
 		assert el_acc_id(driver, PROFILE_SETTINGS_BTN_COMPLETE_PRF_NEW_ACC).get_attribute("label") == "Complete your profile"
-		
-		time.sleep(3)
-
-
 
 
 	######################################
