@@ -514,7 +514,7 @@ class ProfilePage:
 
 		search_user_one = id_keys(driver, SEARCH_INPUT_FIELD, USER_1)
 		click_on_suggested_item_in_search = xpath_click(driver, SEARCH_RESULT_SECOND_ITEM)
-		read_opened_profile = el_id(driver, PROFILE_USERNAME).text
+		read_opened_profile = el_xpath(driver, PROFILE_USERNAME).text
 		assert read_opened_profile == USER_1
 		read_profile_first_and_last_name = el_id(driver, PROFILE_FIRST_AND_LAST_NAME).text
 

@@ -197,9 +197,9 @@ class LoginPage:
 			xpath_click(driver, CLOSE_BTN_LOGIN)
 
 		# going to profile settings
-		go_to_settings = acc_id_click(driver, FOOTER_ITEM_PROFILE)
+		go_to_profile = acc_id_click(driver, FOOTER_ITEM_PROFILE)
 		profile_first_n_last_name_text = el_acc_id(driver, PROFILE_FIRST_N_LAST_NAMES).text
-		profile_username_name_text = el_acc_id(driver, PROFILE_USERNAME).text
+		profile_username_name_text = el_xpath(driver, PROFILE_USERNAME).text
 
 		assert profile_username_name_text == f"@{USERNAME}"
 

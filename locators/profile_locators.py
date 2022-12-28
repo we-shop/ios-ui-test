@@ -15,8 +15,8 @@ FEED_PAGE_AVATAR_ICON = "avatarView"
 
 # PROFILE ITEMS
 PROFILE_FIRST_N_LAST_NAMES = "nameLabel"
-PROFILE_USERNAME = "usernameLabel" # can be old
-PROFILE_USERNAME_IN_TOP_HEAD_PART = '//XCUIElementTypeNavigationBar[@name="wishlistsNavigationBar"]/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]' # can be new
+PROFILE_USERNAME = '//XCUIElementTypeNavigationBar[@name="wishlistsNavigationBar"]/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]' #"usernameLabel" # changed to new
+PROFILE_USERNAME_IN_TOP_HEAD_PART = '//XCUIElementTypeNavigationBar[@name="wishlistsNavigationBar"]/XCUIElementTypeOther/XCUIElementTypeStaticText[contains(@name, "")]' # new
 PROFILE_BIO = 'infoLabel'
 PROFILE_BIO_STUB_NEW_ACC = 'readMoreLabel'
 PROFILE_SHARE_BUTTON = 'profile share'
